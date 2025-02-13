@@ -253,7 +253,7 @@ header {
   margin: 0 auto;
 }
 .submenu-text:hover {
-  color: #007aff;
+  color: #6762fe;
 }
 
 .submenu-text:hover img {
@@ -310,7 +310,7 @@ header li {
 }
 
 .navbar-main-menus li a:hover svg path {
-  /* fill: #007aff; */
+  /* fill: #6762fe; */
   stroke: #6762fe;
 }
 
@@ -373,13 +373,13 @@ svg.toggle-close {
 }
 
 .navbar-drawer-sidebar ul li a:hover {
-  color: #007aff;
+  color: #6762fe;
   font-weight: 600;
 }
 
 .navbar-drawer-sidebar ul li a:hover svg path {
-  fill: #007aff;
-  stroke: #007aff;
+  fill: #6762fe;
+  stroke: #6762fe;
 }
 
 .navbar-drawer-sidebar ul li a svg path {
@@ -480,7 +480,7 @@ svg.toggle-close {
 }
 
 .dropdown-content-side h6:hover {
-  color: #007aff;
+  color: #6762fe;
 }
 
 .dropdown-content-side p {
@@ -1389,13 +1389,16 @@ iframe::-webkit-scrollbar {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-}
+  transition: background-color 0.3s ease;
+  }
+  .btn-Use-Template:hover {
+    background-color: #5753d6;
+  }
+  .more-template-btn {
+    margin-top: 50px;
+  }
 
-.more-template-btn {
-  margin-top: 50px;
-}
-
-.btn-Use-Template::before {
+/* .btn-Use-Template::before {
   content: "";
   background-color: #ffffff1f;
   height: 300px;
@@ -1411,15 +1414,15 @@ iframe::-webkit-scrollbar {
 
 .btn-Use-Template:hover::before {
   transform: translateY(-50%) translateX(-50%) scale(1);
-}
+} */
 
 /* .btn-Preview::before {
   content: "";
   background-color: #fff;
-  border: 3px solid #007aff;
+  border: 3px solid #6762fe;
   height: 300px;
   width: 300px;
-  color: #007aff;
+  color: #6762fe;
   border-radius: 50%; 
   position: absolute;
   top: 50%;

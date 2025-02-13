@@ -166,7 +166,12 @@ class CommonComponent1 extends HTMLElement {
          justify-content: center;
          align-items: center;
          background-color: #6762FE;
+         transition: background-color 0.3s ease;
        }
+         .btn-gradient-signUp:hover {
+        background-color: #5753d6;
+      }
+        
        @media (max-width: 1559px) {
               h1 {
                 font-size: 40px;
