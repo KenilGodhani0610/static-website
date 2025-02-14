@@ -603,7 +603,7 @@ class CommonComponent1 extends HTMLElement {
            line-height: 32px;
          }
          .text_base {
-           font-size: 12px;
+          
            line-height: 20px;
          }
              .text_xl {

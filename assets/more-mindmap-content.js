@@ -1565,7 +1565,7 @@ class CommonComponent extends HTMLElement {
        @media (max-width: 360px) {
             h3 {
             font-size: 18px;
-            line-height: 21px;
+            line-height: 23px;
             }
             .home-banner {
                 padding: 18px 0;
