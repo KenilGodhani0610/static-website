@@ -58,17 +58,17 @@ class CommonComponent8 extends HTMLElement {
         font-size: 18px;
         font-weight: 400;
         line-height: 28px;
-        color: #070529;
+        color: #18181B;
       }
       .text_2xl {
         font-size: 22px;
         font-weight: 400;
         line-height: 33px;
-        color: #070529;
+        color: #18181B;
       }
       .text_base {
         font-size: 16px;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 24px;
         color: #72698c;
       }
@@ -120,7 +120,7 @@ class CommonComponent8 extends HTMLElement {
       } */
       .home-banner-subtitle {
         margin-top: -10px;
-        font-weight: 300;
+        font-weight: 400;
         max-width: 1005px;
         padding-bottom: 24px;
         z-index: 99;
@@ -730,7 +730,7 @@ class CommonComponent8 extends HTMLElement {
         color: #171617;
         text-align: left;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 24px;
         padding: 30px 0;
       }
@@ -815,7 +815,7 @@ class CommonComponent8 extends HTMLElement {
         font-weight: 500;
         line-height: 31.61px;
         text-align: center;
-        background-color: #070529;
+        background-color: #18181B;
         color: #fff;
         border-radius: 75px;
         padding: 19px 29px;
@@ -831,7 +831,7 @@ class CommonComponent8 extends HTMLElement {
         border-radius:32px;
       }
       .capability-sub-title {
-        color: #070529;
+        color: #18181B;
         max-width: 954px;
         margin: 0 auto;
       }
@@ -869,7 +869,7 @@ class CommonComponent8 extends HTMLElement {
       }
       .capability-content-data {
         padding: 20px 0;
-        color:#070529;
+        color:#18181B;
       }
       /* teams-section */
       .teams-section {

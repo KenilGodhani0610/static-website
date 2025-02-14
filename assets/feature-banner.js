@@ -68,11 +68,11 @@ class CommonComponent1 extends HTMLElement {
          font-size: 16px;
          font-weight: 400;
          line-height: 24px;
-         color: #070529;
+         color: #18181B;
        }
        .text_lg {
          font-size: 18px;
-         font-weight: 300;
+         font-weight: 400;
          line-height: 27px;
        }
        .text_xl {
@@ -83,7 +83,7 @@ class CommonComponent1 extends HTMLElement {
        }
        .text_sm {
          font-size: 14px;
-         font-weight: 300;
+         font-weight: 400;
          line-height: 24px;
          color: #171617;
        }
@@ -117,7 +117,7 @@ class CommonComponent1 extends HTMLElement {
        .content-section p {
          max-width: 531px;
          margin: 20px 0 40px;
-          color:#070529;
+          color:#18181B;
        }
        
       .banner-video {

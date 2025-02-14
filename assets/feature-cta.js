@@ -67,7 +67,7 @@ class CommonComponent100 extends HTMLElement {
 
     .testimotinal-subtext {
       padding: 16px 0 26px;
-      color: rgba(255, 255, 255, 0.75);
+      color: #fff;
       line-height: 29px;
       font-size: 20px;
       line-height: 26px;
@@ -86,7 +86,7 @@ class CommonComponent100 extends HTMLElement {
       border-radius: 220px;
       outline: none;
       border: 0px;
-      color: #070529;
+      color: #18181B;
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
@@ -137,7 +137,6 @@ class CommonComponent100 extends HTMLElement {
 
       .testimotinal-subtext {
         padding: 12px 0 24px;
-        color: rgba(255, 255, 255, 0.75);
         line-height: 28px;
         font-size: 18px;
         line-height: 25px;

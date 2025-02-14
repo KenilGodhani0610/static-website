@@ -59,11 +59,11 @@ class CommonComponent7 extends HTMLElement {
            font-size: 16px;
            font-weight: 400;
            line-height: 28px;
-           color: #070529;
+           color: #18181B;
          }
          .text_lg {
            font-size: 18px;
-           font-weight: 300;
+           font-weight: 400;
            line-height: 27px;
          }
          .text_xl {
@@ -74,7 +74,7 @@ class CommonComponent7 extends HTMLElement {
          }
          .text_sm {
            font-size: 14px;
-           font-weight: 300;
+           font-weight: 400;
            line-height: 24px;
            color: #171617;
          }
@@ -237,7 +237,7 @@ class CommonComponent7 extends HTMLElement {
          }
         .more-mindmap-content {
       padding: 20px 0 50px;
-      color: #070529;
+      color: #18181B;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -623,10 +623,10 @@ class CommonComponent7 extends HTMLElement {
          }
          .accordion .accordion-content p {
            font-size: 1rem;
-           font-weight: 300;
+           font-weight: 400;
            margin: 1em 0 0;
            max-width: 850px;
-           color: #070529;
+           color: #18181B;
          }
          /* section 9 */
          .blog-section-box {

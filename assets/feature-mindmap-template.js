@@ -64,24 +64,24 @@ class CommonComponent6 extends HTMLElement {
          font-size: 16px;
          font-weight: 400;
          line-height: 26px;
-         color: #070529;
+         color: #18181B;
        }
        .text_lg {
          font-size: 18px;
-         font-weight: 300;
+         font-weight: 400;
          line-height: 27px;
        }
        .text_xl {
          font-size: 20px;
          font-weight: 500;
          line-height: 25.2px;
-         color: #070529;
+         color: #18181B;
        }
        .text_sm {
          font-size: 14px;
-         font-weight: 300;
+         font-weight: 400;
          line-height: 24px;
-         color: #070529;
+         color: #18181B;
        }
        .text-2xl {
          font-size: 24px;
@@ -242,7 +242,7 @@ class CommonComponent6 extends HTMLElement {
        }
       .more-mindmap-content {
       padding: 20px 0 50px;
-      color: #070529;
+      color: #18181B;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -288,7 +288,7 @@ class CommonComponent6 extends HTMLElement {
        .benefit-box h5 {
          font-weight: 500;
          margin: 0 auto;
-         color: #070529;
+         color: #18181B;
          padding: 29px 0 18px;
        }
        .benefit-icon {
@@ -364,7 +364,7 @@ class CommonComponent6 extends HTMLElement {
       .category-section .sub-title {
         max-width: 997px;
         margin: 0 auto;
-        color: #070529;
+        color: #18181B;
       }
           .mobile-mind-template {
           display: none !important;
@@ -400,7 +400,7 @@ class CommonComponent6 extends HTMLElement {
           line-height: 17px;
           font-weight: 400;
           text-align: center;
-          color: #070529;
+          color: #18181B;
           max-width: 73px;
           margin:  0 auto;
         }
@@ -410,7 +410,7 @@ class CommonComponent6 extends HTMLElement {
             line-height: 27px;
             font-weight: 400;
             text-align: center;
-            color: #070529;
+            color: #18181B;
         }
         .mindmap-swiper-slide .swiper-box-title3 {
           font-size: 20px;
@@ -418,7 +418,7 @@ class CommonComponent6 extends HTMLElement {
           padding-top: 34px;
           font-weight: 500;
           text-align: center;
-          color: #070529;
+          color: #18181B;
         }
         .active-slide {
           width: 350px;
@@ -640,10 +640,10 @@ class CommonComponent6 extends HTMLElement {
        }
        .accordion .accordion-content p {
          font-size: 1rem;
-         font-weight: 300;
+         font-weight: 400;
          margin: 1em 0 0;
          max-width: 850px;
-         color: #070529;
+         color: #18181B;
        }
        /* section 9 */
        .blog-section-box {
