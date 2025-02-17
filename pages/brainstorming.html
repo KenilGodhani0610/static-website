@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    Revolutionize Cloud Architecture Design and Collaboration | Cloudairy
+    Brainstorming  | Cloudairy
   </title>
   <!-- Meta description -->
   <meta name="description"
-    content="Empower your cloud teams with Cloudairy Cloudchart, the visual collaboration platform for cloud architecture design. Streamline workflows, boost productivity, and accelerate innovation." />
-  <meta property="og:title" content="Cloudairy | From Vision to Reality" />
+    content="Cloudairy's Venn diagram maker offers customizable venn diagram templates to create insightful Venn diagrams." />
+  <meta property="og:title" content="Brainstorming  | Cloudairy" />
   <meta property="og:description"
-    content="At Cloudairy, visual thinking is the key to unlocking potential. Cloudairy Cloudchart is your collaborative whiteboard reimagined, empowering teams to brainstorm, design, and plan seamlessly" />
+    content="Cloudairy's Venn diagram maker offers customizable venn diagram templates to create insightful Venn diagrams." />
   <!-- external css file-->
   <link rel="stylesheet" href="../assets/main.css" />
   <link rel="stylesheet" href="../assets/media.css" />
@@ -23,9 +23,279 @@
   <script src="../assets/feature-benefit.js" defer></script>
   <script src="../assets/feature-prefect-mindmapping.js" defer></script>
   <script src="../assets/feature-mindmap-template.js" defer></script>
-  <script src="../assets/feature-visualize-4box.js" defer></script>
   <script src="../assets/feature-visualize-4box-fullbg.js" defer></script>
+  <script src="../assets/feature-cta.js" defer></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXLLRV7XF4"></script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KBT98X9R');</script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VXLLRV7XF4');
+  </script>
   <style>
+    /* category-section */
+    .category-section {
+      background: #F9FAFC;
+      backdrop-filter: blur(130.98451232910156px);
+    }
+
+    .category-section .sub-title {
+      max-width: 997px;
+      margin: 0 auto;
+      color: #18181B;
+    }
+
+    .mobile-mind-template {
+      display: none !important;
+    }
+
+    .set-mindmap-swiper {
+      position: relative;
+      padding-bottom: 50px;
+    }
+
+    .set-mindmap-swiper .swiper-container {
+      height: 300px;
+      overflow: hidden;
+      max-width: 1500px;
+      padding-left: 175px;
+      padding-bottom: 40px;
+      cursor: pointer;
+    }
+
+    .set-mindmap-swiper .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 12px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+    }
+
+    .set-mindmap-swiper .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #6762FE !important;
+    }
+
+    .set-mindmap-swiper .swiper-pagination-bullet {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #d9d9d9;
+    }
+
+    .set-mindmap-swiper .swiper-container>.swiper-slide__content {
+      position: absolute;
+      top: 0;
+    }
+
+    .set-mindmap-swiper .swiper-slide {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid #e1e1e1e1;
+      transition: all 200ms linear;
+      transform: scale(0.6);
+      box-sizing: border-box;
+      margin-right: 0;
+
+      &.swiper-slide-prev {
+        transform: scale(0.8);
+        background: #fff;
+      }
+
+      &.swiper-slide-next {
+        transform: scale(0.8);
+        background: #fff;
+      }
+
+      &.swiper-slide-active {
+        transform: scale(1);
+        background: #fff;
+
+        .swiper-box-title1 {
+          font-weight: 600;
+          color: #18181B;
+        }
+      }
+    }
+
+    .set-mindmap-swiper .swiper-slide-prev {
+      margin-left: -60px !important;
+    }
+
+    .set-mindmap-swiper .swiper-slide-next {
+      margin-right: -60px !important;
+    }
+
+
+    .set-mindmap-swiper .swiper-slide__content {
+      height: 300px;
+    }
+
+    .set-mindmap-swiper .swiper-button-next {
+      display: none;
+    }
+
+    .set-mindmap-swiper .swiper-button-prev {
+      display: none;
+    }
+
+    .swiper-box-title1 {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding-top: 20px;
+      color: #18181B;
+      font-weight: 400;
+      font-size: 18px;
+      max-width: 200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .swiper-silde-box1 img {
+      width: 100%;
+    }
+
+    .mindmap-template {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mindmap-swiper-slide {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 15.03px;
+      padding: 10px;
+      cursor: pointer;
+      width: 200px;
+      height: 267px;
+    }
+
+    .swiper-silde-box {
+      background-color: #f4f4f4f8;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 25px;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title1 {
+      padding-top: 16px;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 500;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: -7px;
+      height: 100%;
+      color: #18181B;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title2 {
+      font-size: 18px;
+      padding-top: 24px;
+      line-height: 27px;
+      font-weight: 400;
+      text-align: center;
+      color: #18181B;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: -7px;
+      height: 100%;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title3 {
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 34px;
+      font-weight: 500;
+      text-align: center;
+      color: #171617;
+    }
+
+    .active-slide {
+      width: 350px;
+      min-width: 350px;
+      height: 357px;
+      min-height: 357px;
+      box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .active-slide img {
+      width: 200px;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .active-prev-next-slide {
+      /* width: 250px; */
+      min-width: 250px;
+      max-width: 250px;
+      height: 292px;
+      min-height: 292px;
+      max-height: 292px;
+      padding: 10px;
+    }
+
+    .active-prev-next-slide .swiper-silde-box2 {
+      /* width: 230px; */
+      height: 180px;
+      max-height: 180px;
+      min-height: 180px;
+    }
+
+    .swiper-silde-box2 img {
+      height: 160px !important;
+      object-fit: contain;
+    }
+
+    .swiper-silde-box1 img {
+      height: 160px !important;
+      /* width: 258px !important; */
+      object-fit: contain;
+    }
+
+    .swiper-silde-box-last .swiper-silde-box3 {
+      width: 138px;
+      height: 110px;
+      max-height: 110px;
+      min-height: 110px;
+    }
+
+    .swiper-silde-box3 img {
+      height: 160px !important;
+      /* width: 160px !important; */
+      object-fit: contain;
+    }
+
+
     h1 {
       font-size: 42px;
       font-weight: 700;
@@ -43,13 +313,12 @@
     }
 
     h3 {
-      font-size: 40px;
+      font-size: 44px;
       font-weight: 600;
-      line-height: 52px;
+      line-height: 60px;
       color: #18181B;
       text-align: center;
     }
-
 
     h4 {
       font-size: 28px;
@@ -61,7 +330,7 @@
     .text_base {
       font-size: 16px;
       font-weight: 400;
-      line-height: 28px;
+      line-height: 26px;
       color: #18181B;
     }
 
@@ -121,9 +390,9 @@
     /* Ai section */
     .AI-grid {
       background-color: #F9FAFC;
+      border: 1.82px solid #EEF0F5;
       border-radius: 32px;
       padding: 70px 88px;
-      border: 1.82px solid #EEF0F5;
     }
 
     .Ai-gredient-text {
@@ -151,7 +420,7 @@
     }
 
     .Ai-section-subtitle {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 27px;
       color: #18181B;
@@ -191,6 +460,8 @@
     }
 
     .cycle-tab-container .nav-tabs {
+      /* max-width: 820px; */
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 7px;
@@ -246,18 +517,17 @@
 
     .cycle-tab-item {
       text-align: center;
-      border-bottom: solid 5px #EBEEF5E5;
-      position: relative;
+      border-bottom: solid 5px #EBEEF5E5
     }
 
     .cycle-tab-item:after {
       display: block;
       content: "";
       padding-bottom: 20px;
-      border-bottom: solid 5px #5a05fe;
+      border-bottom: solid 5px #6762FE;
       transform: scaleX(0);
       transition: transform 0.3s ease-out;
-      color: #18181B;
+      color: #fff;
       margin-bottom: -5px;
     }
 
@@ -267,8 +537,6 @@
       transition: transform 0.3s ease-in;
     }
 
-    .nav-link:focus,
-    .nav-link:hover,
     .cycle-tab-item.active a {
       border-color: transparent !important;
       color: #6762FE;
@@ -279,13 +547,17 @@
       stroke: #6762FE !important;
     }
 
+    .cycle-tab-item.active .aaa svg path {
+      fill: none !important;
+      stroke: #6762FE !important;
+    }
 
     .key-feature-section {
       display: flex;
       gap: 58px;
     }
 
-    .mobile-key-feature-hide {
+    .hide-mobile-key-feature-section {
       display: none;
     }
 
@@ -362,6 +634,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       height: 110px;
+      color: #18181BCC;
     }
 
     .key-image-section img {
@@ -528,122 +801,6 @@
       -webkit-text-stroke-color: #e5e2f9;
     }
 
-    /* section 6 */
-    .category-section {
-      background-image: url("IMAGE_PATHhome/category-shadow.png");
-    }
-
-    .category-section .sub-title {
-      max-width: 997px;
-      margin: 0 auto;
-      color: #18181B;
-    }
-
-    .mobile-mind-template {
-      display: none !important;
-    }
-
-    .mindmap-template {
-      display: flex;
-      gap: 34px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .mindmap-swiper-slide {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 12px 12px 33px;
-      cursor: pointer;
-      width: 200px;
-      height: 267px;
-    }
-
-    .swiper-silde-box {
-      background-color: #e9eafd;
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title1 {
-      padding-top: 16px;
-      font-size: 12px;
-      line-height: 17px;
-      font-weight: 400;
-      text-align: center;
-      color: #18181B;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title2 {
-      font-size: 20px;
-      padding-top: 24px;
-      line-height: 18px;
-      font-weight: 400;
-      text-align: center;
-      color: #18181B;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title3 {
-      font-size: 20px;
-      line-height: 30px;
-      padding-top: 34px;
-      font-weight: 500;
-      text-align: center;
-      color: #171617;
-    }
-
-    .active-slide {
-      width: 350px;
-      min-width: 350px;
-      height: 357px;
-      min-height: 357px;
-      box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.04);
-    }
-
-    .active-slide img {
-      width: 330px;
-      height: 250px;
-      border-radius: 10px;
-    }
-
-    .active-prev-next-slide {
-      width: 250px;
-      min-width: 250px;
-      max-width: 250px;
-      height: 292px;
-      min-height: 292px;
-      max-height: 292px;
-      padding: 10px;
-    }
-
-    .active-prev-next-slide img {
-      width: 230px;
-      height: 180px;
-      max-height: 180px;
-      min-height: 180px;
-    }
-
-    .swiper-silde-box-last img {
-      width: 138px;
-      height: 110px;
-      max-height: 110px;
-      min-height: 110px;
-    }
-
-    .swiper-silde-box-last {
-      padding: 6px;
-      width: 150px;
-      min-width: 150px;
-      max-width: 150px;
-      height: 184px;
-      min-height: 184px;
-      max-height: 184px;
-    }
-
     /* section 7 */
     .testimonial-section {
       position: relative;
@@ -722,8 +879,8 @@
 
     /* section 8 */
     .accordion {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
       padding-top: 50px;
       max-width: 1350px;
@@ -731,15 +888,21 @@
     }
 
     .accordion-bg {
-      background-color: #F9FAFC;
+      background-color: #F7F6FD;
       border-radius: 14px;
+    }
+
+    .accordian-part {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
     .accordion .accordion-item {
       background-color: #F9FAFC;
       border: 1.82px solid #EEF0F5;
       border-radius: 14px;
-      padding: 40px;
+      padding: 28px;
       position: relative;
     }
 
@@ -758,8 +921,8 @@
 
     .accordion button .accordion-title {
       padding: 0;
-      font-weight: 600;
-      color: #1b1139;
+      font-weight: 500;
+      color: #18181B;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
     }
@@ -776,7 +939,7 @@
       display: block;
       position: absolute;
       content: "";
-      top: 9px;
+      top: 0px;
       left: 3px;
       width: 20px;
       height: 3px;
@@ -788,7 +951,7 @@
       display: block;
       position: absolute;
       content: "";
-      top: 0px;
+      top: -8px;
       left: 12px;
       width: 3px;
       height: 20px;
@@ -798,7 +961,7 @@
 
     .accordion button[aria-expanded="true"] .icon-faqs::before,
     .accordion button[aria-expanded="true"] .icon-faqs::after {
-      background: #52bd95 !important;
+      background: #6762FE !important;
     }
 
     .accordion button[aria-expanded="true"] .icon-faqs::after {
@@ -856,20 +1019,20 @@
       color: #18181B;
     }
 
-    .swiper-container {
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-    }
+    /* .swiper-container {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
 
-    .swiper-wrapper {
-      display: flex;
-      gap: 16px;
-    }
+        .swiper-wrapper {
+            display: flex;
+            gap: 16px;
+        }
 
-    .swiper-slide {
-      margin-bottom: 20px;
-    }
+        .swiper-slide {
+            margin-bottom: 20px;
+        } */
 
     .blog-section .swiper-pagination {
       position: absolute;
@@ -884,6 +1047,10 @@
       } */
 
     @media (max-width: 1559px) {
+      .set-mindmap-swiper .swiper-container {
+        padding-left: 105px;
+      }
+
       h1 {
         font-size: 40px;
         line-height: 50px;
@@ -913,7 +1080,7 @@
       }
 
       .main-bg-sction {
-        height: 760px;
+        height: 780px;
       }
 
       .key-feature-section {
@@ -964,7 +1131,7 @@
       }
 
       .main-bg-sction {
-        height: 741px;
+        height: 770px;
       }
 
       .mindmap-swiper-slide {
@@ -977,6 +1144,45 @@
     }
 
     @media (max-width: 1319px) {
+      .desktop-mind-template {
+        display: none !important;
+      }
+
+      .mobile-mind-template {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 24px;
+      }
+
+      .active-prev-next-slide .swiper-silde-box2 {
+        display: flex;
+        align-items: center;
+      }
+
+      .mobile-mind-template .swiper-silde-box img {
+        width: 60%;
+        height: 60% !important;
+      }
+
+      .active-prev-next-slide {
+        min-height: 245px;
+        max-height: 245px;
+        border: 1px solid #e1e1e1e1;
+        border-radius: 10px;
+      }
+
+      .swiper-silde-box {
+        border-radius: 10px;
+      }
+
+      .mindmap-template {
+        justify-content: left;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
       h1 {
         font-size: 42px;
         line-height: 52px;
@@ -1006,7 +1212,7 @@
       }
 
       .main-bg-sction {
-        height: 630px;
+        height: 640px;
       }
 
       /* section 1 */
@@ -1046,7 +1252,7 @@
         display: none;
       }
 
-      .mobile-key-feature-hide {
+      .hide-mobile-key-feature-section {
         display: block;
       }
 
@@ -1055,7 +1261,11 @@
         padding: 40px 16px;
         background-color: #F9FAFC;
         border: 1.82px solid #EEF0F5;
-        border-radius: 16px;
+        border-radius: 20px;
+      }
+
+      .mobile-key-feature-section .key-content-subtitle {
+        color: #18181B !important;
       }
 
       .image-faqs-box {
@@ -1069,7 +1279,7 @@
 
       .container {
         /* background-color: white; */
-        border: 1px solid #EBEEF5E5;
+        border: 1px solid #D9D9D9;
         color: black;
         border-radius: 10px;
         /* margin: 20px 0; */
@@ -1077,7 +1287,7 @@
 
       .question {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 600;
         padding: 20px;
         position: relative;
         display: flex;
@@ -1089,12 +1299,18 @@
         justify-content: space-between;
       }
 
-      /* .question .active{
-          color: #18181B !important;
-        } */
+      .image-faqs-box .container .active {
+        color: #6762FE !important;
+        font-size: 15px;
+      }
 
-      .question.active img {
+      .question.active svg {
         rotate: 180deg;
+      }
+
+      .question.active svg path {
+        stroke: #6762fe !important;
+        fill: none !important
       }
 
       .answercont {
@@ -1105,6 +1321,8 @@
 
       .answercont img {
         padding: 0 205px 20px;
+        width: 100%;
+        height: 100%;
       }
 
       .answer {
@@ -1129,36 +1347,6 @@
       /* section 3 */
       .mind-mapping-section {
         margin-top: 60px;
-      }
-
-      .dekstop-mind-template {
-        display: none;
-      }
-
-      .mobile-mind-template {
-        display: flex !important;
-        overflow-x: auto;
-      }
-
-      .mindmap-template {
-        justify-content: left;
-      }
-
-      .mobile-mind-template .swiper-silde-box img {
-        max-width: 100px;
-        min-width: 100px;
-        width: 100px;
-        height: 100px;
-        padding: 10px;
-      }
-
-      .active-prev-next-slide {
-        min-height: 232px;
-        max-height: 232px;
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
       }
 
       .more-mindmap-section {
@@ -1225,11 +1413,29 @@
       .testimonial-section {
         min-height: 420px;
       }
+
+      .accordion .accordion-item {
+        padding: 20px 60px 20px 20px;
+      }
+
+      .accordion button .icon-faqs::after {
+        top: -18px;
+        left: 8px;
+        width: 3px;
+        height: 19px;
+      }
+
+      .accordion button .icon-faqs::before {
+        top: -10px;
+        left: 0px;
+        width: 19px;
+        height: 3px;
+      }
     }
 
     @media (max-width: 1240px) {
       .main-bg-sction {
-        height: 630px;
+        height: 640px;
       }
 
       .home-banner-section {
@@ -1391,10 +1597,17 @@
         min-width: 211px;
         max-width: 261px;
         height: 203px;
-        min-height: 225px;
+        min-height: 246px;
         max-height: 309px;
         padding: 7px;
+        border: 1px solid #eef0f5;
       }
+
+      .active-prev-next-slide .swiper-silde-box2 {
+        width: 195px;
+      }
+
+
 
       .mobile-key-feature-section h2 {
         padding-bottom: 8px;
@@ -1578,6 +1791,17 @@
         gap: 16px;
         border-radius: 12px;
       }
+
+      .accordion {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .accordian-part {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1615,6 +1839,8 @@
 
       .answercont img {
         padding: 0 20px 20px;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -1678,6 +1904,11 @@
         line-height: 34px;
       }
 
+      h3 {
+        font-size: 19px;
+        line-height: 24px;
+      }
+
       .text_base {
         font-size: 13px;
         line-height: 22px;
@@ -1699,7 +1930,7 @@
       }
 
       .main-bg-sction {
-        height: 747px;
+        height: 735px;
       }
 
       .home-banner-section {
@@ -1739,14 +1970,68 @@
       }
     }
 
+    @media (max-width: 540px) {
+      .main-bg-sction {
+        height: 655px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .main-bg-sction {
+        height: 650px;
+      }
+    }
+
+    @media (max-width: 490px) {
+      .main-bg-sction {
+        height: 685px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .main-bg-sction {
+        height: 688px;
+      }
+
+      .accordion button {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .accordion {
+        padding-top: 22px;
+      }
+    }
+
+    @media (max-width: 455px) {
+      .main-bg-sction {
+        height: 689px;
+      }
+    }
+
     @media (max-width: 425px) {
+      .active-prev-next-slide .swiper-silde-box2 {
+        height: 150px;
+        max-height: 150px;
+        min-height: 150px;
+        padding: 10px;
+      }
+
+      .active-prev-next-slide {
+        min-height: 203px;
+      }
+
+      .mindmap-template {
+        gap: 16px;
+      }
+
       h1 {
         font-size: 26px;
         line-height: 34px;
       }
 
       h3 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 24px;
       }
 
@@ -1761,7 +2046,7 @@
       }
 
       .main-bg-sction {
-        height: 725px;
+        height: 700px;
       }
 
       .home-banner {
@@ -1864,24 +2149,28 @@
       .mobile-key-feature-section h2 {
         font-size: 18px;
         line-height: 24px;
-        padding-bottom: 4px;
+        padding-bottom: 8px;
       }
 
       .mobile-key-feature-section {
-        padding: 30px 16px;
+        padding: 30px 16px 16px;
       }
 
       .question {
         font-size: 14px;
+
       }
 
       .answercont img {
         padding: 0 14px 14px;
+        width: 100%;
+        height: 100%;
       }
 
       .answer {
         padding: 0 14px 14px;
       }
+
     }
 
     @media (max-width: 375px) {
@@ -1927,7 +2216,7 @@
       }
 
       .main-bg-sction {
-        height: 675px;
+        height: 685px;
       }
 
       .mind-mapping-section {
@@ -1957,7 +2246,7 @@
       }
 
       .main-bg-sction {
-        height: 645px;
+        height: 666px;
       }
 
       h4 {
@@ -2001,9 +2290,9 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
-  
+
               <ul id="productMenu" class="dropdown-menu">
                 <div class="product-menu">
                   <div class="product-submenu platform-menu">
@@ -2032,7 +2321,7 @@
                       <img src="https://cdn.cloudairy.com/image/header/product/iconfive.svg" alt="icon5" />
                       <p>Templates</p>
                     </a>
-  
+
                   </div>
                   <div class="capability-menu">
                     <h6>Capabilities</h6>
@@ -2142,7 +2431,7 @@
                 </div>
               </ul>
             </li>
-  
+
             <li>
               <a class="navbar-menu header-menu-hover" onclick="toggleMenu1()">Solutions
                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2150,7 +2439,7 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
               <ul id="productMenu1" class="dropdown-menu">
                 <div class="product-menu">
@@ -2312,7 +2601,7 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
               <ul id="productMenu2" class="dropdown-menu resourcesMenu" style="padding: 20px 30px;">
                 <div class="product-menu">
@@ -2324,8 +2613,8 @@
                       <p>Templates</p>
                     </a>
                     <!-- <a href="about-us" class="submenu-text">
-                              <p>About Us</p>
-                            </a> -->
+                                <p>About Us</p>
+                              </a> -->
                   </div>
                 </div>
               </ul>
@@ -2354,7 +2643,7 @@
             </path>
           </svg>
         </div>
-  
+
         <div class="navbar-drawer-sidebar">
           <ul>
             <li style="border-bottom: 1px solid #d4d4d4">
@@ -2376,27 +2665,27 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text hover-comingsoon">
-  
+
                           <p>Unified Workspace</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="real-time-collaborations" class="submenu-text">
-  
+
                           <p>Real Time Collaboration</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Al Powered Assistance</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Secured Data Storage</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="template" class="submenu-text">
-  
+
                           <p>Templates</p>
                         </a>
                       </div>
@@ -2407,43 +2696,43 @@
                       </h6>
                       <div>
                         <a href="diagram-maker" class="submenu-text">
-  
+
                           <p>Diagramming Tool</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Data Visualization</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Retrospective Tool</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="mind-maps" class="submenu-text">
-  
+
                           <p>Mindmapping Tool</p>
                         </a>
                         <a href="agile" class="submenu-text">
-  
+
                           <p>Agile and Scrum Support</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Animate Connectors</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Smart Goal Setting</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="strategic-planning" class="submenu-text">
-  
+
                           <p>Strategic Planning Tool</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Project and Task Management</p>
                           <div class="coming-soon">Coming Soon</div>
                           <a href="" class="submenu-text">
@@ -2459,40 +2748,40 @@
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="online-whiteboard" class="submenu-text">
-  
+
                             <p>Online Whiteboard</p>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>UX Design Maker</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Automated Diagram Generation</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="version-control" class="submenu-text">
-  
+
                             <p>Version Control</p>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Product Development Software</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Online Sticky Notes</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Al Powered Diagrams</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Scrum Tool</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
@@ -2502,7 +2791,7 @@
                 </div>
               </div>
             </li>
-  
+
             <li style="border-bottom: 1px solid #d4d4d4">
               <div class="navbar-accordion">
                 <div class="navbar-accordion-item">
@@ -2519,37 +2808,37 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text">
-  
+
                           <p>Solutions Architect</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Product Management</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Engineering</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>UX Design</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Sales</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Project Management</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>IT</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
@@ -2561,7 +2850,7 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text">
-  
+
                           <p>Al Flowchart</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
@@ -2661,16 +2950,16 @@
                     <div>
                       <div>
                         <a href="blog" class="submenu-text">
-  
+
                           <p>Blog</p>
-  
+
                         </a>
                         <a href="template" class="submenu-text">
-  
+
                           <p>Template</p>
-  
+
                         </a>
-  
+
                       </div>
                     </div>
                   </div>
@@ -2687,13 +2976,14 @@
               <a href="sales">Contact Sales</a>
             </li>
             <div style="
-                          flex-direction: column;
-                          gap: 10px;
-                          align-items: center;
-                          margin-top: 15px;
-                        " class="navbar-sidetoggle-button">
+                            flex-direction: column;
+                            gap: 10px;
+                            align-items: center;
+                            margin-top: 15px;
+                          " class="navbar-sidetoggle-button">
               <a rel="canonical" href="https://app.cloudairy.com/signup" class="btn-outline">Log in</a>
-              <a rel="canonical" href="https://app.cloudairy.com/login" class="btn-gradient">Sign up free</a>
+              <a rel="canonical" href="https://app.cloudairy.com/login" class="btn-gradient">Sign up
+                free</a>
             </div>
           </ul>
         </div>
@@ -2703,21 +2993,20 @@
   <!-- End: header -->
   <!-- section 1 -->
   <section class="loading">
-    <feature-banner data-title="Spark Your Ideas with Cloudairy's Brainstorming Tools  "
-      text_base="Cloudairy's collaborative tools are designed to spark innovation and drive productivity. Whether you're brainstorming new ideas, planning projects, or solving complex problems, our tools provide a dynamic and efficient environment for your team to collaborate and create.  "
-      data-image="https://fast.wistia.net/embed/iframe/enwi81jcun"></feature-banner>
+    <feature-banner data-title="Spark Your Ideas with Cloudairy's Brainstorming Tools "
+      text_base="Cloudairy's collaborative tools are designed to spark innovation and drive productivity. Whether you're brainstorming new ideas, planning projects, or solving complex problems, our tools provide a dynamic and efficient environment for your team to collaborate and create. "
+      data-image="https://fast.wistia.net/embed/iframe/vhdv2eq3zl" title_max-width="380px"></feature-banner>
   </section>
   <!-- section 2 -->
   <!-- AI section -->
   <section class="container-fluid section-padding Key-feature-hide">
-    <div class="AI-grid">
+    <div class="AI-grid"> 
       <h3 style="color: #18181B">
-        Why Cloudairy is the Best Choice for Brainstorming?
+        How Cloudairy simplifies venn diagram creation ?
       </h3>
       <p class="Ai-section-subtitle">
-        Cloudairy transforms brainstorming with AI-driven tools, real-time
-        collaboration, and intuitive features, helping teams generate,
-        organize, and act on ideas effortlessly.
+        Design professional Venn diagrams with ease using Cloudairy’s drag-and-drop interface, AI-powered
+        suggestions, and real-time editing capabilities.
       </p>
 
       <div class="cycle-tab-container">
@@ -2726,107 +3015,134 @@
             <a class="nav-link" role="tab" data-toggle="tab" href="#profile"
               style="gap: 12px; display: flex; flex-direction: column;align-items: center;">
               <div>
-                <svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M22.5023 8.5402C22.087 8.54014 21.6797 8.6545 21.3252 8.87072C20.9706 9.08694 20.6825 9.39666 20.4924 9.76589C20.3024 10.1351 20.2177 10.5496 20.2478 10.9638C20.2778 11.378 20.4214 11.7759 20.6627 12.1138L18.3432 16.1311C18.2712 16.1247 18.1989 16.1213 18.1266 16.1211C17.6561 16.1202 17.1973 16.2675 16.8152 16.5419L12.7973 14.2224C12.8045 14.1502 12.808 14.0778 12.8079 14.0053C12.8081 13.6492 12.7242 13.298 12.5631 12.9805C12.4019 12.6629 12.168 12.3879 11.8804 12.1778C11.5929 11.9678 11.2597 11.8286 10.9082 11.7717C10.5567 11.7147 10.1966 11.7416 9.85746 11.8502C9.51829 11.9587 9.20954 12.1458 8.95636 12.3963C8.70319 12.6467 8.51275 12.9534 8.40055 13.2914C8.28835 13.6294 8.25756 13.9891 8.3107 14.3412C8.36384 14.6933 8.49939 15.028 8.70633 15.3178L5.3582 21.117C5.23388 21.3324 5.20021 21.5883 5.26458 21.8285C5.32896 22.0687 5.48612 22.2735 5.70148 22.3978C5.91685 22.5221 6.17278 22.5558 6.41297 22.4914C6.65316 22.427 6.85794 22.2699 6.98226 22.0545L10.3298 16.2563C10.4018 16.2632 10.4741 16.2668 10.5464 16.2669C11.0168 16.2672 11.4755 16.12 11.858 15.8461L15.8758 18.1656C15.8689 18.2374 15.8653 18.3095 15.8652 18.3816C15.8649 18.7377 15.9487 19.0889 16.1098 19.4065C16.2708 19.7241 16.5047 19.9992 16.7922 20.2094C17.0797 20.4195 17.4128 20.5587 17.7643 20.6158C18.1159 20.6728 18.4759 20.646 18.8151 20.5375C19.1543 20.429 19.4631 20.242 19.7163 19.9916C19.9695 19.7412 20.16 19.4345 20.2723 19.0965C20.3846 18.7585 20.4154 18.3988 20.3623 18.0467C20.3092 17.6945 20.1737 17.3599 19.9668 17.07L22.2863 13.0522C22.3581 13.0595 22.4302 13.0633 22.5023 13.0633C22.7993 13.0633 23.0934 13.0048 23.3678 12.8912C23.6421 12.7775 23.8915 12.611 24.1014 12.401C24.3114 12.191 24.478 11.9417 24.5917 11.6673C24.7053 11.3929 24.7638 11.0988 24.7638 10.8018C24.7638 10.5049 24.7053 10.2108 24.5917 9.93641C24.478 9.66204 24.3114 9.41273 24.1014 9.20273C23.8915 8.99274 23.6421 8.82616 23.3678 8.71251C23.0934 8.59886 22.7993 8.54036 22.5023 8.54036L22.5023 8.5402ZM20.8837 31.7114H9.11258L11.2507 27.5356H18.7462L20.8837 31.7114ZM2.21828 25.1134V5.9495C2.21843 5.8045 2.27609 5.66549 2.37862 5.56296C2.48114 5.46043 2.62016 5.40277 2.76516 5.40263H27.2317C27.3767 5.40285 27.5158 5.46052 27.6184 5.56301C27.721 5.66551 27.7788 5.80447 27.7792 5.9495V25.1136C27.7789 25.2587 27.7212 25.3978 27.6186 25.5004C27.5159 25.603 27.3768 25.6608 27.2317 25.6611H2.76562C2.62054 25.6609 2.48146 25.6031 2.37893 25.5004C2.2764 25.3978 2.21879 25.2587 2.21875 25.1136L2.21828 25.1134ZM27.2317 27.5353H20.8525L22.9901 31.7111H25.4798C25.7284 31.7111 25.9669 31.8098 26.1427 31.9857C26.3185 32.1615 26.4173 32.3999 26.4173 32.6486C26.4173 32.8972 26.3185 33.1357 26.1427 33.3115C25.9669 33.4873 25.7284 33.5861 25.4798 33.5861H23.95L26.5351 38.6342C26.6485 38.8556 26.6693 39.1129 26.593 39.3496C26.5166 39.5863 26.3494 39.783 26.128 39.8963C25.9066 40.0097 25.6493 40.0305 25.4126 39.9542C25.1759 39.8778 24.9792 39.7106 24.8659 39.4892L21.8437 33.5866H8.1532L5.13047 39.4897C5.01709 39.711 4.82044 39.8782 4.5838 39.9545C4.34715 40.0308 4.08988 40.01 3.86859 39.8966C3.6473 39.7832 3.48012 39.5866 3.40381 39.3499C3.32751 39.1133 3.34834 38.856 3.46172 38.6347L6.04633 33.5866H4.51656C4.26792 33.5866 4.02946 33.4878 3.85365 33.312C3.67783 33.1362 3.57906 32.8978 3.57906 32.6491C3.57906 32.4005 3.67783 32.162 3.85365 31.9862C4.02946 31.8104 4.26792 31.7116 4.51656 31.7116H7.00633L9.14383 27.5358H2.76562C2.12353 27.5351 1.50795 27.2797 1.05392 26.8257C0.599894 26.3716 0.344494 25.756 0.34375 25.114V5.9495C0.344453 5.30739 0.59984 4.69179 1.05388 4.23775C1.50791 3.78372 2.12352 3.52833 2.76562 3.52763H12.6354V2.36192C12.639 1.73763 12.8895 1.14013 13.3322 0.69995C13.7749 0.259772 14.3739 0.0126953 14.9982 0.0126953C15.6225 0.0126953 16.2214 0.259772 16.6641 0.69995C17.1068 1.14013 17.3573 1.73763 17.3609 2.36192V3.52786H27.2317C27.8739 3.52846 28.4897 3.78379 28.9439 4.23782C29.3981 4.69186 29.6536 5.30752 29.6544 5.94973V25.1138C29.6536 25.756 29.398 26.3716 28.9438 26.8256C28.4896 27.2797 27.8739 27.535 27.2317 27.5356V27.5353Z"
-                    fill="#848382" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                  <path
+                    d="M6.75 14.8688H15.5C17.5675 14.8688 19.25 13.1863 19.25 11.1188V6.44629C19.25 4.37879 17.5675 2.69629 15.5 2.69629H6.75C4.6825 2.69629 3 4.37879 3 6.44629V11.1188C3 13.1863 4.6825 14.8688 6.75 14.8688ZM5.5 6.44629C5.5 5.75754 6.06 5.19629 6.75 5.19629H15.5C16.19 5.19629 16.75 5.75754 16.75 6.44629V11.1188C16.75 11.8075 16.19 12.3688 15.5 12.3688H6.75C6.06 12.3688 5.5 11.8075 5.5 11.1188V6.44629ZM19.25 33.9463V20.6588C19.25 18.5913 17.5675 16.9088 15.5 16.9088H6.75C4.6825 16.9088 3 18.5913 3 20.6588V33.9463C3 36.0138 4.6825 37.6963 6.75 37.6963H15.5C17.5675 37.6963 19.25 36.0138 19.25 33.9463ZM5.5 33.9463V20.6588C5.5 19.97 6.06 19.4088 6.75 19.4088H15.5C16.19 19.4088 16.75 19.97 16.75 20.6588V33.9463C16.75 34.635 16.19 35.1963 15.5 35.1963H6.75C6.06 35.1963 5.5 34.635 5.5 33.9463ZM34.25 25.5238H25.5C23.4325 25.5238 21.75 27.2063 21.75 29.2738V33.9463C21.75 36.0138 23.4325 37.6963 25.5 37.6963H34.25C36.3175 37.6963 38 36.0138 38 33.9463V29.2738C38 27.2063 36.3175 25.5238 34.25 25.5238ZM35.5 33.9463C35.5 34.635 34.94 35.1963 34.25 35.1963H25.5C24.81 35.1963 24.25 34.635 24.25 33.9463V29.2738C24.25 28.585 24.81 28.0238 25.5 28.0238H34.25C34.94 28.0238 35.5 28.585 35.5 29.2738V33.9463ZM34.25 2.69629H25.5C23.4325 2.69629 21.75 4.37879 21.75 6.44629V19.7338C21.75 21.8013 23.4325 23.4838 25.5 23.4838H34.25C36.3175 23.4838 38 21.8013 38 19.7338V6.44629C38 4.37879 36.3175 2.69629 34.25 2.69629ZM35.5 19.7338C35.5 20.4225 34.94 20.9838 34.25 20.9838H25.5C24.81 20.9838 24.25 20.4225 24.25 19.7338V6.44629C24.25 5.75754 24.81 5.19629 25.5 5.19629H34.25C34.94 5.19629 35.5 5.75754 35.5 6.44629V19.7338Z"
+                    fill="#18181B" />
                 </svg>
-                <div>Interactive Digital Whiteboards</div>
+
+
+                <div>Customizable templates</div>
             </a>
           </li>
           <li class="cycle-tab-item">
             <a class="nav-link" role="tab" data-toggle="tab" href="#profile2"
               style="gap: 12px; display: flex; flex-direction: column;align-items: center;">
-              <div>
-                <svg width="41" height="40" viewBox="0 0 41 40" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_170_4156)">
-                    <path
-                      d="M13.6312 40H1.67187C1.025 40 0.5 39.475 0.5 38.8281V37.5227C0.5 33.5797 3.70781 30.3711 7.65156 30.3711C11.5953 30.3711 14.8031 33.5789 14.8031 37.5227V38.8281C14.8031 39.475 14.2781 40 13.6312 40ZM2.84375 37.6562H12.4594V37.5227C12.4594 34.8719 10.3023 32.7148 7.65156 32.7148C5.00078 32.7148 2.84375 34.8719 2.84375 37.5227V37.6562Z"
-                      fill="#848382" />
-                    <path
-                      d="M7.65039 32.7148C5.06602 32.7148 2.96289 30.6117 2.96289 28.0273C2.96289 25.443 5.06602 23.3398 7.65039 23.3398C10.2348 23.3398 12.3379 25.443 12.3379 28.0273C12.3379 30.6117 10.2348 32.7148 7.65039 32.7148ZM7.65039 25.6836C6.3582 25.6836 5.30664 26.7352 5.30664 28.0273C5.30664 29.3195 6.3582 30.3711 7.65039 30.3711C8.94258 30.3711 9.99414 29.3195 9.99414 28.0273C9.99414 26.7352 8.94258 25.6836 7.65039 25.6836Z"
-                      fill="#848382" />
-                    <path
-                      d="M39.3285 40H27.3691C26.7223 40 26.1973 39.475 26.1973 38.8281V37.5227C26.1973 33.5797 29.4051 30.3711 33.3488 30.3711C37.2926 30.3711 40.5004 33.5789 40.5004 37.5227V38.8281C40.5004 39.475 39.9754 40 39.3285 40ZM28.541 37.6562H38.1566V37.5227C38.1566 34.8719 35.9996 32.7148 33.3488 32.7148C30.698 32.7148 28.541 34.8719 28.541 37.5227V37.6562Z"
-                      fill="#848382" />
-                    <path
-                      d="M33.3496 32.7148C30.7652 32.7148 28.6621 30.6117 28.6621 28.0273C28.6621 25.443 30.7652 23.3398 33.3496 23.3398C35.934 23.3398 38.0371 25.443 38.0371 28.0273C38.0371 30.6117 35.934 32.7148 33.3496 32.7148ZM33.3496 25.6836C32.0574 25.6836 31.0059 26.7352 31.0059 28.0273C31.0059 29.3195 32.0574 30.3711 33.3496 30.3711C34.6418 30.3711 35.6934 29.3195 35.6934 28.0273C35.6934 26.7352 34.6418 25.6836 33.3496 25.6836Z"
-                      fill="#848382" />
-                    <path
-                      d="M26.4809 16.6602H14.5215C13.8746 16.6602 13.3496 16.1352 13.3496 15.4883V14.1828C13.3496 10.2398 16.5574 7.03125 20.5012 7.03125C24.4449 7.03125 27.6527 10.2391 27.6527 14.1828V15.4883C27.6527 16.1352 27.1277 16.6602 26.4809 16.6602ZM15.6934 14.3164H25.309V14.1828C25.309 11.532 23.152 9.375 20.5012 9.375C17.8504 9.375 15.6934 11.532 15.6934 14.1828V14.3164Z"
-                      fill="#848382" />
-                    <path
-                      d="M20.5 9.375C17.9156 9.375 15.8125 7.27188 15.8125 4.6875C15.8125 2.10312 17.9156 0 20.5 0C23.0844 0 25.1875 2.10312 25.1875 4.6875C25.1875 7.27188 23.0844 9.375 20.5 9.375ZM20.5 2.34375C19.2078 2.34375 18.1562 3.39531 18.1562 4.6875C18.1562 5.97969 19.2078 7.03125 20.5 7.03125C21.7922 7.03125 22.8438 5.97969 22.8438 4.6875C22.8438 3.39531 21.7922 2.34375 20.5 2.34375Z"
-                      fill="#848382" />
-                    <path
-                      d="M20.436 32.7152C18.6016 32.7152 16.8016 32.4402 15.0875 31.898C14.4703 31.7027 14.1282 31.0441 14.3235 30.4277C14.5188 29.8105 15.1766 29.4691 15.7938 29.6637C17.2789 30.1332 18.8407 30.3715 20.436 30.3715C22.0313 30.3715 23.7032 30.1168 25.2344 29.6137C25.8493 29.4113 26.5118 29.7465 26.7133 30.3613C26.9149 30.9762 26.5805 31.6387 25.9657 31.8402C24.1977 32.4207 22.3375 32.7152 20.436 32.7152Z"
-                      fill="#848382" />
-                    <path
-                      d="M5.71009 20.6814C5.64056 20.6814 5.57025 20.6752 5.49916 20.6619C4.86244 20.5463 4.44056 19.9361 4.55619 19.2994C4.889 17.4689 5.51869 15.6939 6.42572 14.0221C7.3015 12.4096 8.4015 10.9588 9.69603 9.71113C10.1617 9.26191 10.9038 9.2752 11.3531 9.7416C11.8023 10.2072 11.789 10.9494 11.3226 11.3986C10.2015 12.4799 9.24681 13.7385 8.48587 15.14C7.69681 16.5924 7.15072 18.133 6.86244 19.7189C6.75931 20.2846 6.26634 20.6814 5.71087 20.6814H5.71009Z"
-                      fill="#848382" />
-                    <path
-                      d="M35.2886 20.6812C34.7331 20.6812 34.2401 20.2851 34.137 19.7187C33.8487 18.1335 33.3026 16.5929 32.5136 15.1398C31.7526 13.7382 30.798 12.4788 29.6769 11.3983C29.2112 10.9491 29.1972 10.2069 29.6464 9.74132C30.0956 9.27569 30.837 9.26163 31.3034 9.71085C32.598 10.9585 33.698 12.4085 34.5737 14.0218C35.4816 15.6937 36.1105 17.4687 36.4433 19.2991C36.5589 19.9359 36.137 20.546 35.5003 20.6616C35.4292 20.6749 35.3589 20.6812 35.2894 20.6812H35.2886Z"
-                      fill="#848382" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_170_4156">
-                      <rect width="40" height="40" fill="white" transform="translate(0.5)" />
-                    </clipPath>
-                  </defs>
+              <div class="aaa">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M27.7321 33.4998V32.2062C27.7321 31.3329 27.4247 30.4717 26.7629 29.9019C24.8922 28.2911 22.4517 27.3164 19.7821 27.3164C17.1125 27.3164 14.672 28.2911 12.8013 29.9019C12.1395 30.4717 11.832 31.3329 11.832 32.2062V33.4998"
+                    stroke="#18181B" stroke-width="2.12001" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M19.78 22.8998C22.2193 22.8998 24.1967 20.9224 24.1967 18.4831C24.1967 16.0438 22.2193 14.0664 19.78 14.0664C17.3407 14.0664 15.3633 16.0438 15.3633 18.4831C15.3633 20.9224 17.3407 22.8998 19.78 22.8998Z"
+                    stroke="#18181B" stroke-width="2.12001" />
+                  <path
+                    d="M29.5 18.4834C31.8871 18.4834 34.0683 19.4697 35.735 21.0979C36.3091 21.6588 36.5667 22.4542 36.5667 23.2568V24.6668"
+                    stroke="#18181B" stroke-width="2.12001" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M29.4982 14.0667C31.4496 14.0667 33.0316 12.4848 33.0316 10.5334C33.0316 8.58194 31.4496 7 29.4982 7C27.5468 7 25.9648 8.58194 25.9648 10.5334C25.9648 12.4848 27.5468 14.0667 29.4982 14.0667Z"
+                    stroke="#18181B" stroke-width="2.12001" />
+                  <path
+                    d="M10.0667 18.4834C7.67958 18.4834 5.49849 19.4697 3.83173 21.0979C3.25751 21.6588 3 22.4542 3 23.2568V24.6668"
+                    stroke="#18181B" stroke-width="2.12001" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.0646 14.0667C12.016 14.0667 13.598 12.4848 13.598 10.5334C13.598 8.58194 12.016 7 10.0646 7C8.11319 7 6.53125 8.58194 6.53125 10.5334C6.53125 12.4848 8.11319 14.0667 10.0646 14.0667Z"
+                    stroke="#18181B" stroke-width="2.12001" />
                 </svg>
-                <div>Real-Time Collaboration </div>
+
+
+                <div>User-friendly interface</div>
             </a>
           </li>
           <li class="cycle-tab-item">
             <a class="nav-link" role="tab" data-toggle="tab" href="#profile3"
               style="gap: 12px; display: flex; flex-direction: column;align-items: center;">
               <div>
-                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                   <path
-                    d="M6.75 14.6725H15.5C17.5675 14.6725 19.25 12.99 19.25 10.9225V6.25C19.25 4.1825 17.5675 2.5 15.5 2.5H6.75C4.6825 2.5 3 4.1825 3 6.25V10.9225C3 12.99 4.6825 14.6725 6.75 14.6725ZM5.5 6.25C5.5 5.56125 6.06 5 6.75 5H15.5C16.19 5 16.75 5.56125 16.75 6.25V10.9225C16.75 11.6112 16.19 12.1725 15.5 12.1725H6.75C6.06 12.1725 5.5 11.6112 5.5 10.9225V6.25ZM19.25 33.75V20.4625C19.25 18.395 17.5675 16.7125 15.5 16.7125H6.75C4.6825 16.7125 3 18.395 3 20.4625V33.75C3 35.8175 4.6825 37.5 6.75 37.5H15.5C17.5675 37.5 19.25 35.8175 19.25 33.75ZM5.5 33.75V20.4625C5.5 19.7738 6.06 19.2125 6.75 19.2125H15.5C16.19 19.2125 16.75 19.7738 16.75 20.4625V33.75C16.75 34.4387 16.19 35 15.5 35H6.75C6.06 35 5.5 34.4387 5.5 33.75ZM34.25 25.3275H25.5C23.4325 25.3275 21.75 27.01 21.75 29.0775V33.75C21.75 35.8175 23.4325 37.5 25.5 37.5H34.25C36.3175 37.5 38 35.8175 38 33.75V29.0775C38 27.01 36.3175 25.3275 34.25 25.3275ZM35.5 33.75C35.5 34.4387 34.94 35 34.25 35H25.5C24.81 35 24.25 34.4387 24.25 33.75V29.0775C24.25 28.3887 24.81 27.8275 25.5 27.8275H34.25C34.94 27.8275 35.5 28.3887 35.5 29.0775V33.75ZM34.25 2.5H25.5C23.4325 2.5 21.75 4.1825 21.75 6.25V19.5375C21.75 21.605 23.4325 23.2875 25.5 23.2875H34.25C36.3175 23.2875 38 21.605 38 19.5375V6.25C38 4.1825 36.3175 2.5 34.25 2.5ZM35.5 19.5375C35.5 20.2262 34.94 20.7875 34.25 20.7875H25.5C24.81 20.7875 24.25 20.2262 24.25 19.5375V6.25C24.25 5.56125 24.81 5 25.5 5H34.25C34.94 5 35.5 5.56125 35.5 6.25V19.5375Z"
-                    fill="#848382" />
+                    d="M34.168 37.8333H5.83464C3.83464 37.8333 2.16797 36.1667 2.16797 34.1667V5.66667C2.16797 3.66667 3.83464 2 5.83464 2H34.168C36.168 2 37.8346 3.66667 37.8346 5.66667V34.1667C37.8346 36.1667 36.168 37.8333 34.168 37.8333ZM5.83464 3.66667C4.66797 3.66667 3.66797 4.66667 3.66797 5.83333V34.3333C3.66797 35.5 4.5013 36.5 5.83464 36.5H34.168C35.3346 36.5 36.3346 35.5 36.3346 34.3333V5.66667C36.3346 4.5 35.3346 3.5 34.168 3.5H5.83464V3.66667Z"
+                    fill="#18181B" stroke="#18181B" stroke-width="0.5" />
+                  <path
+                    d="M3 9.5H37.1667V11H3V9.5ZM6.66667 5.5C6.16667 5.5 5.66667 6 5.66667 6.5C5.66667 7 6.16667 7.5 6.66667 7.5C7.16667 7.5 7.83333 7 7.83333 6.5C7.83333 6 7.33333 5.5 6.66667 5.5ZM11.3333 5.5C10.6667 5.5 10.1667 6 10.1667 6.5C10.1667 7 10.6667 7.5 11.3333 7.5C11.8333 7.5 12.3333 7 12.3333 6.5C12.3333 6 11.8333 5.5 11.3333 5.5ZM15.6667 5.5C15.1667 5.5 14.6667 6 14.6667 6.5C14.6667 7 15.1667 7.5 15.6667 7.5C16.1667 7.5 16.6667 7 16.6667 6.5C16.8333 6 16.3333 5.5 15.6667 5.5ZM10 33.1667C8.5 33.1667 7.33333 32 7.33333 30.5C7.33333 29 8.66667 27.8333 10 27.8333C11.5 27.8333 12.6667 29 12.6667 30.5C12.6667 31.8333 11.5 33.1667 10 33.1667ZM10 29.1667C9.33333 29.1667 8.83333 29.6667 8.83333 30.3333C8.83333 31 9.33333 31.6667 10 31.6667C10.6667 31.6667 11.1667 31.1667 11.1667 30.5C11.1667 29.8333 10.6667 29.1667 10 29.1667ZM24 19.1667C22.5 19.1667 21.3333 18 21.3333 16.5C21.3333 15 22.5 13.8333 24 13.8333C25.5 13.8333 26.6667 15 26.6667 16.5C26.6667 18 25.5 19.1667 24 19.1667ZM24 15.1667C23.3333 15.1667 22.8333 15.6667 22.8333 16.3333C22.8333 17 23.3333 17.5 24 17.5C24.6667 17.5 25.1667 17 25.1667 16.3333C25.1667 15.8333 24.6667 15.1667 24 15.1667Z"
+                    fill="#18181B" stroke="#18181B" stroke-width="0.5" />
+                  <path
+                    d="M12.332 29.1668L11.332 28.1668L21.6654 17.6668L22.832 18.6668L12.332 29.1668ZM29.6654 13.8335H32.9987V15.3335H29.6654V13.8335ZM29.6654 17.5002H32.9987V19.0002H29.6654V17.5002ZM29.6654 21.1668H32.9987V22.6668H29.6654V21.1668ZM29.6654 24.8335H32.9987V26.3335H29.6654V24.8335ZM29.6654 28.5002H32.9987V30.0002H29.6654V28.5002ZM29.6654 32.1668H32.9987V33.6668H29.6654V32.1668Z"
+                    fill="#18181B" stroke="#18181B" stroke-width="0.5" />
                 </svg>
 
-                <div>Extensive Template Library </div>
+
+                <div>Dynamic editing tools </div>
             </a>
           </li>
           <li class="cycle-tab-item">
             <a class="nav-link" role="tab" data-toggle="tab" href="#profile4"
               style="gap: 12px; display: flex; flex-direction: column;align-items: center;">
               <div>
-                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M29.5844 6.875H22.0625V4.625C22.0625 4.39294 21.9703 4.17038 21.8062 4.00628C21.6421 3.84219 21.4196 3.75 21.1875 3.75H19.8125C19.5804 3.75 19.3579 3.84219 19.1938 4.00628C19.0297 4.17038 18.9375 4.39294 18.9375 4.625V6.875H11.4156C9.84696 6.87583 8.34278 7.49935 7.23356 8.60856C6.12435 9.71778 5.50083 11.222 5.5 12.7906V16.3156C5.5 20.1936 7.04051 23.9127 9.78265 26.6549C12.5248 29.397 16.2439 30.9375 20.1219 30.9375H21.1875C21.4196 30.9375 21.6421 30.8453 21.8062 30.6812C21.9703 30.5171 22.0625 30.2946 22.0625 30.0625V28.6875C22.0625 28.4554 21.9703 28.2329 21.8062 28.0688C21.6421 27.9047 21.4196 27.8125 21.1875 27.8125H20.1219C17.0727 27.8125 14.1484 26.6012 11.9924 24.4451C9.83628 22.2891 8.625 19.3648 8.625 16.3156V12.7906C8.625 12.0505 8.91901 11.3407 9.44235 10.8174C9.9657 10.294 10.6755 10 11.4156 10H29.5844C30.3245 10 31.0343 10.294 31.5576 10.8174C32.081 11.3407 32.375 12.0505 32.375 12.7906V16.5625C32.373 17.4199 32.2681 18.2739 32.0625 19.1062C32.008 19.3207 32.0371 19.5479 32.1439 19.7417C32.2506 19.9355 32.4271 20.0815 32.6375 20.15L33.95 20.5781C34.0634 20.6157 34.1833 20.6297 34.3022 20.619C34.4212 20.6084 34.5367 20.5734 34.6417 20.5163C34.7466 20.4591 34.8386 20.3811 34.9121 20.2869C34.9855 20.1927 35.0389 20.0844 35.0688 19.9688C35.3529 18.8556 35.4978 17.7114 35.5 16.5625V12.7906C35.4992 11.222 34.8757 9.71778 33.7664 8.60856C32.6572 7.49935 31.153 6.87583 29.5844 6.875Z"
-                    fill="#848382" />
-                  <path
-                    d="M15.5 20C16.8807 20 18 18.8807 18 17.5C18 16.1193 16.8807 15 15.5 15C14.1193 15 13 16.1193 13 17.5C13 18.8807 14.1193 20 15.5 20Z"
-                    fill="#848382" />
-                  <path
-                    d="M25.5 20C26.8807 20 28 18.8807 28 17.5C28 16.1193 26.8807 15 25.5 15C24.1193 15 23 16.1193 23 17.5C23 18.8807 24.1193 20 25.5 20Z"
-                    fill="#848382" />
-                  <path
-                    d="M35.416 29.0002L38.2472 30.1158C38.3055 30.1388 38.3556 30.1789 38.3908 30.2307C38.426 30.2825 38.4449 30.3438 38.4449 30.4064C38.4449 30.4691 38.426 30.5303 38.3908 30.5822C38.3556 30.634 38.3055 30.674 38.2472 30.6971L35.416 31.8127C34.9148 32.0108 34.4596 32.3097 34.0785 32.6908C33.6974 33.0719 33.3985 33.5271 33.2004 34.0283L32.0847 36.8408C32.0617 36.8991 32.0217 36.9491 31.9699 36.9844C31.918 37.0196 31.8568 37.0384 31.7941 37.0384C31.7314 37.0384 31.6702 37.0196 31.6184 36.9844C31.5666 36.9491 31.5265 36.8991 31.5035 36.8408L30.3879 34.0283C30.1902 33.5268 29.8915 33.0714 29.5103 32.6902C29.1292 32.3091 28.6737 32.0104 28.1722 31.8127L25.3597 30.6971C25.3015 30.674 25.2514 30.634 25.2162 30.5822C25.181 30.5303 25.1621 30.4691 25.1621 30.4064C25.1621 30.3438 25.181 30.2825 25.2162 30.2307C25.2514 30.1789 25.3015 30.1388 25.3597 30.1158L28.1722 29.0002C28.6737 28.8025 29.1292 28.5038 29.5103 28.1226C29.8915 27.7415 30.1902 27.286 30.3879 26.7846L31.5035 23.9721C31.5265 23.9138 31.5666 23.8637 31.6184 23.8285C31.6702 23.7933 31.7314 23.7744 31.7941 23.7744C31.8568 23.7744 31.918 23.7933 31.9699 23.8285C32.0217 23.8637 32.0617 23.9138 32.0847 23.9721L33.2004 26.7846C33.3985 27.2857 33.6974 27.741 34.0785 28.122C34.4596 28.5031 34.9148 28.802 35.416 29.0002Z"
-                    fill="#848382" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                  <g clip-path="url(#clip0_293_363)">
+                    <path
+                      d="M13.6312 40H1.67187C1.025 40 0.5 39.475 0.5 38.8281V37.5227C0.5 33.5797 3.70781 30.3711 7.65156 30.3711C11.5953 30.3711 14.8031 33.5789 14.8031 37.5227V38.8281C14.8031 39.475 14.2781 40 13.6312 40ZM2.84375 37.6562H12.4594V37.5227C12.4594 34.8719 10.3023 32.7148 7.65156 32.7148C5.00078 32.7148 2.84375 34.8719 2.84375 37.5227V37.6562Z"
+                      fill="#18181B" />
+                    <path
+                      d="M7.64844 32.7148C5.06406 32.7148 2.96094 30.6117 2.96094 28.0273C2.96094 25.443 5.06406 23.3398 7.64844 23.3398C10.2328 23.3398 12.3359 25.443 12.3359 28.0273C12.3359 30.6117 10.2328 32.7148 7.64844 32.7148ZM7.64844 25.6836C6.35625 25.6836 5.30469 26.7352 5.30469 28.0273C5.30469 29.3195 6.35625 30.3711 7.64844 30.3711C8.94063 30.3711 9.99219 29.3195 9.99219 28.0273C9.99219 26.7352 8.94063 25.6836 7.64844 25.6836Z"
+                      fill="#18181B" />
+                    <path
+                      d="M39.3266 40H27.3672C26.7203 40 26.1953 39.475 26.1953 38.8281V37.5227C26.1953 33.5797 29.4031 30.3711 33.3469 30.3711C37.2906 30.3711 40.4984 33.5789 40.4984 37.5227V38.8281C40.4984 39.475 39.9734 40 39.3266 40ZM28.5391 37.6562H38.1547V37.5227C38.1547 34.8719 35.9977 32.7148 33.3469 32.7148C30.6961 32.7148 28.5391 34.8719 28.5391 37.5227V37.6562Z"
+                      fill="#18181B" />
+                    <path
+                      d="M33.3516 32.7148C30.7672 32.7148 28.6641 30.6117 28.6641 28.0273C28.6641 25.443 30.7672 23.3398 33.3516 23.3398C35.9359 23.3398 38.0391 25.443 38.0391 28.0273C38.0391 30.6117 35.9359 32.7148 33.3516 32.7148ZM33.3516 25.6836C32.0594 25.6836 31.0078 26.7352 31.0078 28.0273C31.0078 29.3195 32.0594 30.3711 33.3516 30.3711C34.6438 30.3711 35.6953 29.3195 35.6953 28.0273C35.6953 26.7352 34.6438 25.6836 33.3516 25.6836Z"
+                      fill="#18181B" />
+                    <path
+                      d="M26.4828 16.6602H14.5234C13.8766 16.6602 13.3516 16.1352 13.3516 15.4883V14.1828C13.3516 10.2398 16.5594 7.03125 20.5031 7.03125C24.4469 7.03125 27.6547 10.2391 27.6547 14.1828V15.4883C27.6547 16.1352 27.1297 16.6602 26.4828 16.6602ZM15.6953 14.3164H25.3109V14.1828C25.3109 11.532 23.1539 9.375 20.5031 9.375C17.8523 9.375 15.6953 11.532 15.6953 14.1828V14.3164Z"
+                      fill="#18181B" />
+                    <path
+                      d="M20.5 9.375C17.9156 9.375 15.8125 7.27188 15.8125 4.6875C15.8125 2.10312 17.9156 0 20.5 0C23.0844 0 25.1875 2.10312 25.1875 4.6875C25.1875 7.27188 23.0844 9.375 20.5 9.375ZM20.5 2.34375C19.2078 2.34375 18.1562 3.39531 18.1562 4.6875C18.1562 5.97969 19.2078 7.03125 20.5 7.03125C21.7922 7.03125 22.8438 5.97969 22.8438 4.6875C22.8438 3.39531 21.7922 2.34375 20.5 2.34375Z"
+                      fill="#18181B" />
+                    <path
+                      d="M20.4369 32.7152C18.6026 32.7152 16.8026 32.4402 15.0885 31.898C14.4713 31.7027 14.1291 31.0441 14.3244 30.4277C14.5198 29.8105 15.1776 29.4691 15.7948 29.6637C17.2799 30.1332 18.8416 30.3715 20.4369 30.3715C22.0323 30.3715 23.7041 30.1168 25.2354 29.6137C25.8502 29.4113 26.5127 29.7465 26.7143 30.3613C26.9159 30.9762 26.5815 31.6387 25.9666 31.8402C24.1987 32.4207 22.3385 32.7152 20.4369 32.7152Z"
+                      fill="#18181B" />
+                    <path
+                      d="M5.71205 20.6814C5.64251 20.6814 5.5722 20.6752 5.50111 20.6619C4.86439 20.5463 4.44251 19.9361 4.55814 19.2994C4.89095 17.4689 5.52064 15.6939 6.42767 14.0221C7.30345 12.4096 8.40345 10.9588 9.69798 9.71113C10.1636 9.26191 10.9058 9.2752 11.355 9.7416C11.8042 10.2072 11.7909 10.9494 11.3245 11.3986C10.2035 12.4799 9.24876 13.7385 8.48783 15.14C7.69876 16.5924 7.15267 18.133 6.86439 19.7189C6.76126 20.2846 6.2683 20.6814 5.71283 20.6814H5.71205Z"
+                      fill="#18181B" />
+                    <path
+                      d="M35.2905 20.6812C34.7351 20.6812 34.2421 20.2851 34.139 19.7187C33.8507 18.1335 33.3046 16.5929 32.5155 15.1398C31.7546 13.7382 30.7999 12.4788 29.6788 11.3983C29.2132 10.9491 29.1991 10.2069 29.6483 9.74132C30.0976 9.27569 30.839 9.26163 31.3054 9.71085C32.5999 10.9585 33.6999 12.4085 34.5757 14.0218C35.4835 15.6937 36.1124 17.4687 36.4452 19.2991C36.5608 19.9359 36.139 20.546 35.5023 20.6616C35.4312 20.6749 35.3608 20.6812 35.2913 20.6812H35.2905Z"
+                      fill="#18181B" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_293_363">
+                      <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                    </clipPath>
+                  </defs>
                 </svg>
 
-                <div>AI-Powered Idea Generation</div>
+
+                <div>Real-time collaboration</div>
             </a>
           </li>
           <li class="cycle-tab-item">
             <a class="nav-link" role="tab" data-toggle="tab" href="#profile5"
               style="gap: 12px; display: flex; flex-direction: column;align-items: center;">
               <div>
-                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
                   <path
-                    d="M35.5 18.195V17.5C35.5 13.5218 33.9196 9.70644 31.1066 6.8934C28.2936 4.08035 24.4782 2.5 20.5 2.5C16.5218 2.5 12.7064 4.08035 9.8934 6.8934C7.08035 9.70644 5.5 13.5218 5.5 17.5V18.195C4.74248 18.6304 4.11276 19.2574 3.67397 20.013C3.23519 20.7686 3.00276 21.6262 3 22.5V26.25C3 27.5761 3.52678 28.8479 4.46447 29.7855C5.40215 30.7232 6.67392 31.25 8 31.25H9.25C9.91304 31.25 10.5489 30.9866 11.0178 30.5178C11.4866 30.0489 11.75 29.413 11.75 28.75V20C11.75 19.337 11.4866 18.7011 11.0178 18.2322C10.5489 17.7634 9.91304 17.5 9.25 17.5H8C8 14.1848 9.31696 11.0054 11.6612 8.66117C14.0054 6.31696 17.1848 5 20.5 5C23.8152 5 26.9946 6.31696 29.3388 8.66117C31.683 11.0054 33 14.1848 33 17.5H31.75C31.087 17.5 30.4511 17.7634 29.9822 18.2322C29.5134 18.7011 29.25 19.337 29.25 20V28.75C29.25 29.413 29.5134 30.0489 29.9822 30.5178C30.4511 30.9866 31.087 31.25 31.75 31.25H32.6525C32.4348 31.6288 32.1214 31.9437 31.7436 32.1631C31.3657 32.3825 30.9369 32.4987 30.5 32.5H27.77C27.5124 31.7714 27.036 31.1401 26.4059 30.6926C25.7758 30.2451 25.0228 30.0032 24.25 30H21.75C20.7554 30 19.8016 30.3951 19.0983 31.0983C18.3951 31.8016 18 32.7554 18 33.75C18 34.7446 18.3951 35.6984 19.0983 36.4016C19.8016 37.1049 20.7554 37.5 21.75 37.5H24.25C25.0228 37.4968 25.7758 37.2549 26.4059 36.8074C27.036 36.3599 27.5124 35.7286 27.77 35H30.5C31.721 34.9962 32.8982 34.5449 33.8089 33.7315C34.7195 32.9181 35.3003 31.7991 35.4412 30.5863C36.2143 30.1557 36.8588 29.5271 37.3085 28.765C37.7582 28.0029 37.9968 27.1349 38 26.25V22.5C37.9972 21.6262 37.7648 20.7686 37.326 20.013C36.8872 19.2574 36.2575 18.6304 35.5 18.195ZM9.25 20V28.75H8C7.33696 28.75 6.70107 28.4866 6.23223 28.0178C5.76339 27.5489 5.5 26.913 5.5 26.25V22.5C5.5 21.837 5.76339 21.2011 6.23223 20.7322C6.70107 20.2634 7.33696 20 8 20H9.25ZM24.25 35H21.75C21.4185 35 21.1005 34.8683 20.8661 34.6339C20.6317 34.3995 20.5 34.0815 20.5 33.75C20.5 33.4185 20.6317 33.1005 20.8661 32.8661C21.1005 32.6317 21.4185 32.5 21.75 32.5H24.25C24.5815 32.5 24.8995 32.6317 25.1339 32.8661C25.3683 33.1005 25.5 33.4185 25.5 33.75C25.5 34.0815 25.3683 34.3995 25.1339 34.6339C24.8995 34.8683 24.5815 35 24.25 35ZM35.5 26.25C35.5 26.913 35.2366 27.5489 34.7678 28.0178C34.2989 28.4866 33.663 28.75 33 28.75H31.75V20H33C33.663 20 34.2989 20.2634 34.7678 20.7322C35.2366 21.2011 35.5 21.837 35.5 22.5V26.25Z"
-                    fill="#848382" />
+                    d="M29.5844 6.875H22.0625V4.625C22.0625 4.39294 21.9703 4.17038 21.8062 4.00628C21.6421 3.84219 21.4196 3.75 21.1875 3.75H19.8125C19.5804 3.75 19.3579 3.84219 19.1938 4.00628C19.0297 4.17038 18.9375 4.39294 18.9375 4.625V6.875H11.4156C9.84696 6.87583 8.34278 7.49935 7.23356 8.60856C6.12435 9.71778 5.50083 11.222 5.5 12.7906V16.3156C5.5 20.1936 7.04051 23.9127 9.78265 26.6549C12.5248 29.397 16.2439 30.9375 20.1219 30.9375H21.1875C21.4196 30.9375 21.6421 30.8453 21.8062 30.6812C21.9703 30.5171 22.0625 30.2946 22.0625 30.0625V28.6875C22.0625 28.4554 21.9703 28.2329 21.8062 28.0688C21.6421 27.9047 21.4196 27.8125 21.1875 27.8125H20.1219C17.0727 27.8125 14.1484 26.6012 11.9924 24.4451C9.83628 22.2891 8.625 19.3648 8.625 16.3156V12.7906C8.625 12.0505 8.91901 11.3407 9.44235 10.8174C9.9657 10.294 10.6755 10 11.4156 10H29.5844C30.3245 10 31.0343 10.294 31.5576 10.8174C32.081 11.3407 32.375 12.0505 32.375 12.7906V16.5625C32.373 17.4199 32.2681 18.2739 32.0625 19.1062C32.008 19.3207 32.0371 19.5479 32.1439 19.7417C32.2506 19.9355 32.4271 20.0815 32.6375 20.15L33.95 20.5781C34.0634 20.6157 34.1833 20.6297 34.3022 20.619C34.4212 20.6084 34.5367 20.5734 34.6417 20.5163C34.7466 20.4591 34.8386 20.3811 34.9121 20.2869C34.9855 20.1927 35.0389 20.0844 35.0688 19.9688C35.3529 18.8556 35.4978 17.7114 35.5 16.5625V12.7906C35.4992 11.222 34.8757 9.71778 33.7664 8.60856C32.6572 7.49935 31.153 6.87583 29.5844 6.875Z"
+                    fill="#18181B" />
+                  <path
+                    d="M15.5 20C16.8807 20 18 18.8807 18 17.5C18 16.1193 16.8807 15 15.5 15C14.1193 15 13 16.1193 13 17.5C13 18.8807 14.1193 20 15.5 20Z"
+                    fill="#18181B" />
+                  <path
+                    d="M25.5 20C26.8807 20 28 18.8807 28 17.5C28 16.1193 26.8807 15 25.5 15C24.1193 15 23 16.1193 23 17.5C23 18.8807 24.1193 20 25.5 20Z"
+                    fill="#18181B" />
+                  <path
+                    d="M35.418 29.0002L38.2492 30.1158C38.3075 30.1388 38.3575 30.1789 38.3927 30.2307C38.428 30.2825 38.4468 30.3438 38.4468 30.4064C38.4468 30.4691 38.428 30.5303 38.3927 30.5822C38.3575 30.634 38.3075 30.674 38.2492 30.6971L35.418 31.8127C34.9168 32.0108 34.4615 32.3097 34.0805 32.6908C33.6994 33.0719 33.4005 33.5271 33.2023 34.0283L32.0867 36.8408C32.0637 36.8991 32.0236 36.9491 31.9718 36.9844C31.92 37.0196 31.8588 37.0384 31.7961 37.0384C31.7334 37.0384 31.6722 37.0196 31.6203 36.9844C31.5685 36.9491 31.5285 36.8991 31.5055 36.8408L30.3898 34.0283C30.1921 33.5268 29.8934 33.0714 29.5123 32.6902C29.1311 32.3091 28.6757 32.0104 28.1742 31.8127L25.3617 30.6971C25.3034 30.674 25.2534 30.634 25.2182 30.5822C25.1829 30.5303 25.1641 30.4691 25.1641 30.4064C25.1641 30.3438 25.1829 30.2825 25.2182 30.2307C25.2534 30.1789 25.3034 30.1388 25.3617 30.1158L28.1742 29.0002C28.6757 28.8025 29.1311 28.5038 29.5123 28.1226C29.8934 27.7415 30.1921 27.286 30.3898 26.7846L31.5055 23.9721C31.5285 23.9138 31.5685 23.8637 31.6203 23.8285C31.6722 23.7933 31.7334 23.7744 31.7961 23.7744C31.8588 23.7744 31.92 23.7933 31.9718 23.8285C32.0236 23.8637 32.0637 23.9138 32.0867 23.9721L33.2023 26.7846C33.4005 27.2857 33.6994 27.741 34.0805 28.122C34.4615 28.5031 34.9168 28.802 35.418 29.0002Z"
+                    fill="#18181B" />
                 </svg>
 
-                <div>Multimedia Support </div>
+                <div>AI-powered assistance</div>
             </a>
           </li>
         </ul>
-        <div class="tab-conten t">
+        <div class="tab-content">
           <div class="tab-pane fade active in" id="profile" role="tabpanel" aria-labelledby="home-tab">
             <div class="Ai-mind-map-section">
               <div style="
@@ -2835,19 +3151,19 @@
                     justify-content: center;
                   ">
                 <p class="text-2xl" style="color: #18181B">
-                  Interactive Digital Whiteboards
+                  Customizable templates
                 </p>
                 <h3>
-                  Experience the versatility of virtual canvases that closely
-                  resemble traditional whiteboards, allowing teams to
-                  collaborate in a dynamic environment. Sketch ideas, create
-                  mind maps, visualize concepts in real time and enhance your
-                  creative processes. 
+                  Gain immediate access to a diverse range of professionally designed templates
+                  tailored for Venn diagrams or create one
+                  from scratch ,and have complete control to shape the visual elements according to
+                  your unique specifications and
+                  requirements. 
                 </h3>
               </div>
               <div class="Ai-mind-map-section-img">
-                <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image1.png"
-                  alt="capability1" style="width: 100%; height: 100%" />
+                <img src="IMAGE_PATHveen-diagram/customizable-templates-venn-diagram.svg" alt="capability1"
+                  style="width: 100%; height: 100%" />
               </div>
             </div>
           </div>
@@ -2859,89 +3175,90 @@
                     justify-content: center;
                   ">
                 <p class="text-2xl" style="color: #18181B">
-                  Real-Time Collaboration
+                  User-friendly interface
                 </p>
                 <h3>
-                  Engage with team members simultaneously, regardless of
-                  location, to share ideas, provide feedback, and build upon
-                  each other's contributions instantly. The ability to
-                  communicate seamlessly enhances teamwork and accelerates the
-                  brainstorming process. 
+                  Utilize an intuitive interface that allows you to add, move, and resize circles
+                  effortlessly, ensuring a smooth design
+                  experience for both beginners and advanced users further enabling you to focus on
+                  the content of your diagram rather
+                  than struggling with the software. 
                 </h3>
               </div>
               <div class="Ai-mind-map-section-img">
-                <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image2.png"
-                  alt="capability1" style="width: 100%; height: 100%" />
+                <img src="IMAGE_PATHveen-diagram/user-friendly-interface-venn-diagram.svg" alt="capability1"
+                  style="width: 100%; height: 100%" />
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="profile3" role="tabpanel" aria-labelledby="messages-tab">
             <div class="Ai-mind-map-section">
               <div style="
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                  ">
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                    ">
                 <p class="text-2xl" style="color: #18181B">
-                  Extensive Template Library
+                  Dynamic editing tools
                 </p>
                 <h3>
-                  Access a vast collection of customizable templates designed
-                  to support various brainstorming techniques. From effective
-                  mind mapping to SWOT analysis, flowcharts, and more, these
-                  templates help teams structure their thoughts and organize
-                  information efficiently according to their unique needs. 
+                  Modify the colors of individual circles to enhance visual appeal and ensure that
+                  your diagram is aligned with your
+                  branding or thematic elements. Change fonts to match the tone of your presentation
+                  and add labels that effectively
+                  communicate key insights, all in a seamless manner that contributes to a polished
+                  final product.
                 </h3>
               </div>
               <div class="Ai-mind-map-section-img">
-                <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image3.png"
-                  alt="capability1" style="width: 100%; height: 100%" />
+                <img src="IMAGE_PATHveen-diagram/dynamic-editing-tool-venn-diagram.svg" alt="capability1"
+                  style="width: 100%; height: 100%" />
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile4" role="tabpanel" aria-labelledby="settings-tab">
+          <div class="tab-pane fade" id="profile4" role="tabpanel" aria-labelledby="messages-tab">
             <div class="Ai-mind-map-section">
               <div style="
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                  ">
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: center;
+                                                        ">
                 <p class="text-2xl" style="color: #18181B">
-                  AI-Powered Idea Generation
+                  Real-time collaboration
                 </p>
                 <h3>
-                  Think outside the box and explore innovative solutions with
-                  generative artificial intelligence. This feature suggests
-                  relevant ideas and connections based on the brainstorming
-                  context, sparking creativity and expanding thought processes
-                  thus broadening the scope of discussion. 
+                  Share your Venn diagrams with team members and stakeholders to collaborate
+                  synchronously, ensuring everyone is aligned
+                  and working towards a common goal. 
                 </h3>
               </div>
               <div class="Ai-mind-map-section-img">
-                <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image4.png"
-                  alt="capability1" style="width: 100%; height: 100%" />
+                <img src="IMAGE_PATHveen-diagram/real-time-collaboration-venn-diagram.svg" alt="capability1"
+                  style="width: 100%; height: 100%" />
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile5" role="tabpanel" aria-labelledby="settings-tab">
+          <div class="tab-pane fade" id="profile5" role="tabpanel" aria-labelledby="messages-tab">
             <div class="Ai-mind-map-section">
               <div style="
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                  ">
-                <p class="text-2xl" style="color: #18181B">Multimedia Support</p>
-
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: center;
+                                                        ">
+                <p class="text-2xl" style="color: #18181B">
+                  AI-powered assistance
+                </p>
                 <h3>
-                  Elevate your brainstorming sessions with the capability to
-                  incorporate mages, videos, and documents into your
-                  brainstorming sessions to enrich discussions and provide
-                  comprehensive context. 
+                  The AI capabilities analyze your data inputs and intelligently suggest relevant
+                  overlaps and intersections, helping you
+                  identify relationships or connections that you may have overlooked. This feature
+                  boosts both the accuracy and efficiency
+                  of your diagramming processes allowing you to make informed data-driven decisions. 
                 </h3>
               </div>
               <div class="Ai-mind-map-section-img">
-                <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image5.png"
-                  alt="capability1" style="width: 100%; height: 100%" />
+                <img src="IMAGE_PATHveen-diagram/ai-powered-assistance-venn-diagram.svg" alt="capability1"
+                  style="width: 100%; height: 100%" />
               </div>
             </div>
           </div>
@@ -2949,216 +3266,255 @@
       </div>
     </div>
   </section>
-  <section class="section-padding mobile-key-feature-hide">
+  <section class="section-padding hide-mobile-key-feature-section">
     <div class="mobile-key-feature-section container-fluid">
-      <h2 style="color: #18181B;">Why Cloudairy is the Best Choice for Brainstorming?</h2>
-      <p class="text_lg key-content-subtitle" style="color: #18181B">
-        Design flowcharts effortlessly with Cloudairy’s AI-driven tools,
-        offering smart suggestions, customizable templates, and real-time
-        collaboration for streamlined workflows.
+      <h2 style="color: #18181B;">How Cloudairy simplifies venn diagram creation ?</h2>
+      <p class="text_base key-content-subtitle" style="color: #18181B;">
+        Design professional Venn diagrams with ease using Cloudairy’s drag-and-drop interface, AI-powered
+        suggestions, and real-time editing capabilities.
       </p>
       <div class="image-faqs-box">
         <div class="container">
           <div class="question">
-            Interactive Digital Whiteboards<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Customizable templates<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Experience the versatility of virtual canvases that closely
-              resemble traditional whiteboards, allowing teams to collaborate
-              in a dynamic environment. Sketch ideas, create mind maps,
-              visualize concepts in real time and enhance your creative
-              processes. 
+              Gain immediate access to a diverse range of professionally designed templates tailored for
+              Venn diagrams or create one
+              from scratch,and have complete control to shape the visual elements according to your unique
+              specifications and
+              requirements. 
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image1.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHveen-diagram/customizable-templates-venn-diagram.svg" alt="AI-Powered Mind Mapping"
+              style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Real-Time Collaboration<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            User-friendly interface<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Engage with team members simultaneously, regardless of location,
-              to share ideas, provide feedback, and build upon each other's
-              contributions instantly. The ability to communicate seamlessly
-              enhances teamwork and accelerates the brainstorming process. 
+              Utilize an intuitive interface that allows you to add, move, and resize circles
+              effortlessly, ensuring a smooth design
+              experience for both beginners and advanced users further enabling you to focus on the
+              content of your diagram rather
+              than struggling with the software. 
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image2.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHveen-diagram/user-friendly-interface-venn-diagram.svg" alt="AI-Powered Mind Mapping"
+              style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Extensive Template Library<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Dynamic editing tools<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Access a vast collection of customizable templates designed to
-              support various brainstorming techniques. From effective mind
-              mapping to SWOT analysis, flowcharts, and more, these templates
-              help teams structure their thoughts and organize information
-              efficiently according to their unique needs. 
+              Modify the colors of individual circles to enhance visual appeal and ensure that your
+              diagram is aligned with your
+              branding or thematic elements. Change fonts to match the tone of your presentation and add
+              labels that effectively
+              communicate key insights, all in a seamless manner that contributes to a polished final
+              product.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image3.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHveen-diagram/dynamic-editing-tool-venn-diagram.svg" alt="AI-Powered Mind Mapping"
+              style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            AI-Powered Idea Generation<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Real-time collaboration<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Think outside the box and explore innovative solutions with
-              generative artificial intelligence. This feature suggests
-              relevant ideas and connections based on the brainstorming
-              context, sparking creativity and expanding thought processes
-              thus broadening the scope of discussion. 
+              Share your venn diagrams with team members and stakeholders to collaborate synchronously,
+              ensuring everyone is aligned
+              and working towards a common goal. 
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image4.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHveen-diagram/real-time-collaboration-venn-diagram.svg" alt="AI-Powered Mind Mapping"
+              style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Multimedia Support<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            AI-powered assistance<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Elevate your brainstorming sessions with the capability to
-              incorporate mages, videos, and documents into your brainstorming
-              sessions to enrich discussions and provide comprehensive
-              context. 
+              The AI capabilities analyze your data inputs and intelligently suggest relevant overlaps and
+              intersections, helping you
+              identify relationships or connections that you may have overlooked. This feature boosts both
+              the accuracy and efficiency
+              of your diagramming processes allowing you to make informed data-driven decisions. 
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/key-image5.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHveen-diagram/ai-powered-assistance-venn-diagram.svg" alt="AI-Powered Mind Mapping"
+              style="width: 100%; height: 100%" />
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="">
-    <feature-visualize-4box-fullbg data-title="Get More  Cloudairy's Brainstorming Tools "
-      text_base="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  "
-      image1="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming_tool/visualize1.png"
-      data1="Voting and Prioritization"
-      data1_desc="Enable team members to vote on ideas, facilitating consensus-building and helping prioritize concepts for implementation. "
-      image2="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming_tool/visualize2.png"
-      data2="Cloud-Based Storage"
-      data2_desc="Enjoy peace of mind with secure cloud storage for all brainstorming sessions ensuring easy access to files from any location, version control for all documents, and, data protection. "
-      image3="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming_tool/visualize3.png"
-      data3="Export Options"
-      data3_desc="Easily export the outcomes of brainstorming sessions in multiple formats, such as PDF, PNG, or SVG  for presentations, reports, or further analysis allowing teams to share their findings efficiently and professionally.  "
-      image4="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming_tool/visualize4.png"
-      data4="User-Friendly Interface"
-      data4_desc="Navigate a thoughtfully designed platform that caters to users of all technical skill levels ensuring a smooth and efficient brainstorming experience.  "></feature-visualize-4box-fullbg>
+  <!-- Why Cloudairy is Perfect for -->
+  <section>
+    <feature-visualize-4box-fullbg data-title="Why choose cloudairy for venn diagrams ? "
+      text_base="Cloudairy makes Venn diagramming easy with smart tools, dynamic templates, and collaborative features to enhance your presentations and projects."
+      image1="IMAGE_PATHveen-diagram/export-options-venn-diagram.svg" data1="Export options"
+      data1_desc="Cloudairy's Venn Diagram Maker allows you to easily share your diagrams with others. Export your diagrams in various formats, including high-quality PNG and PDF, for easy sharing and presentation.  "
+      image2="IMAGE_PATHveen-diagram/interactive-elements-venn-diagram.svg" data2="Interactive elements"
+      data2_desc="Cloudairy's Venn Diagram Maker allows you to create dynamic and interactive visualizations. Incorporate clickable links, and other interactive elements to engage your audience and provide additional context.  "
+      isShow="2" /></feature-visualize-4box-fullbg>
   </section>
-  <!-- more indmap content  -->
+  <!--Who Can Benefit from   -->
   <div class="section-padding">
-    <more-mindmap-content data-title="Who Can Benefit from Brainstorming Tools?"
-      data-image="https://s3.amazonaws.com/cloudairy-website-storage/mind-map/use-case.png"
-      text_base="Cloudairy’s brainstorming tools are ideal for creative professionals, team leaders, educators, strategists, and product managers. Empower your teams to generate ideas, collaborate seamlessly, and drive innovation. "
-      title1="Product Development" title2="Marketing Campaigns" title3="Problem-Solving Sessions"
-      title4="Educational Workshops" title5="Strategic Planning"
-      title1_data="Generate and refine ideas for new products or features, involving cross-functional teams to ensure diverse perspectives. "
-      title2_data="Plan and brainstorm creative marketing strategies, slogans, and content ideas collaboratively. "
-      title3_data="Address organizational challenges by collectively brainstorming potential solutions and action plans. "
-      title4_data="Facilitate interactive learning experiences where students or participants can collaboratively explore topics and ideas."
-      title5_data="Develop long-term strategies by gathering input from various stakeholders, ensuring a comprehensive approach. "></more-mindmap-content>
+    <more-mindmap-content data-title="Who can benefit from venn diagram tools?"
+      data-image="IMAGE_PATHveen-diagram/venn-diagram-use-cases-benifits.svg"
+      text_base="Cloudairy’s venn diagram tools are perfect for educators, data analysts, business strategists, and researchers. Simplify comparisons, visualize relationships, and present insights effectively.  "
+      title1="Educational purposes" title2="Market analysis" title3="Product development" title4="Research studies"
+      title5="Strategic planning"
+      title1_data=" Illustrate similarities and differences between concepts to enhance learning and retention.  "
+      title2_data="Compare different market segments to identify overlapping customer needs and preferences.  "
+      title3_data="Analyze feature sets across products to determine unique selling points and areas for improvement. "
+      title4_data="Visualize data intersections to identify correlations and draw meaningful conclusions. "
+      title5_data="Map out strategic initiatives and their interrelationships to ensure cohesive planning and execution. "
+      isShow="5"></more-mindmap-content>
   </div>
   <!-- benefit box section -->
-  <feature-benefit data-title="How You Can Benefit from Brainstorming Tools ?"
-    text_base="Cloudairy helps you unlock creativity with AI-driven brainstorming tools, real-time collaboration, and customizable templates. Simplify ideation, organize thoughts, and turn ideas into actionable plans effortlessly."
-    image1="IMAGE_PATHflowchart-maker/benefit-iconone.svg"
-    image2="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/benefit-icon2.svg"
-    image3="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/benefit-icon3.svg"
-    image4="https://s3.amazonaws.com/cloudairy-website-storage/brainstorming-tools/benefit-icon4.svg"
-    image5="IMAGE_PATHflowchart-maker/benefit-iconfive.svg" data1="Enhanced Creativity" data2="Improved Collaboration"
-    data3="Efficient Idea Management" data4="Increased Productivity" data5="Scalability"
-    sub_data1="Foster an environment where ideas flow freely, supported by AI-driven suggestions and diverse templates that inspire innovative thinking. "
-    sub_data2="Break down geographical barriers, allowing teams to brainstorm collectively in real-time, leading to more cohesive and well-rounded solutions. "
-    sub_data3="Organize, prioritize, and track ideas effectively, ensuring that valuable concepts are captured and developed. "
-    sub_data4="Streamline the brainstorming process with integrated tools and features, reducing time spent on administrative tasks and focusing more on idea generation.  "
-    sub_data5="Adapt to the needs of various team sizes and project complexities, making it suitable for small groups and large organizations alike.  "></feature-benefit>
+  <feature-benefit data-title="How you can benefit from venn diagram tools ?"
+    text_base="Cloudairy makes creating venn diagrams effortless with intuitive design tools, customizable templates, and real-time collaboration. Visualize overlaps and differences clearly to enhance decision-making and communication."
+    image1="IMAGE_PATHveen-diagram/enhanced-understanding.svg"
+    image2="IMAGE_PATHveen-diagram/improved-communication.svg"
+    image3="IMAGE_PATHveen-diagram/efficient-decision-making.svg"
+    image4="IMAGE_PATHveen-diagram/collaborative-analysis.svg" image5="IMAGE_PATHveen-diagram/accessibility.svg"
+    data1="Enhanced Understanding" data2="Improved communication" data3="Efficient decision-making"
+    data4="Collaborative analysis" data5="accessibility"
+    sub_data1="Visualize complex relationships between different sets of data, facilitating better comprehension and analysis.  "
+    sub_data2=" Use clear and concise diagrams to present information, making it easier for your audience to grasp key insights.  "
+    sub_data3=" Identify commonalities and differences quickly, aiding in informed decision-making processes. "
+    sub_data4="Engage team members in the analysis process through real-time collaboration, ensuring diverse perspectives are considered. "
+    sub_data5="Access your diagrams from anywhere with cloud storage, ensuring you have the information you need at your fingertips.   "></feature-benefit>
   <!-- Frequently Asked Questions -->
   <section>
     <div class="container-fluid section-padding">
-      <h3>Frequently Ask Questions</h3>
+      <h3>Frequently ask questions</h3>
       <div class="faqs-box">
         <div class="accordion">
-          <div class="accordion-bg">
+          <div class="accordian-part">
             <div class="accordion-item">
               <button id="accordion-button-1" aria-expanded="false">
-                <span class="accordion-title">Can Cloudairy's Brainstorming Tools be utilized by remote
-                  teams?   </span>
+                <span class="accordion-title">What is a venn diagram?      </span>
                 <span class="icon-faqs" aria-hidden="true"></span>
               </button>
               <div class="accordion-content">
                 <p>
-                  Certainly. Our platform is crafted to enable real-time
-                  collaboration among team members, no matter where they are
-                  located.  
+                  A venn diagram is a graphical representation that uses overlapping circles to
+                  illustrate the relationships between
+                  different sets, highlighting their commonalities and differences. 
                 </p>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Is there a maximum number of participants allowed in a
-                brainstorming session?     </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                No, Cloudairy accommodates sessions with any number of
-                participants, making it ideal for both small teams and large
-                organizations.
-              </p>
+
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  Can I collaborate with others on a venn diagram in Cloudairy?      </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, Cloudairy's venn diagram Maker supports real-time collaboration, allowing
+                  multiple
+                  users to work on the same
+                  diagram simultaneously.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                How does the AI-driven idea generation feature
-                function?      </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                The AI examines the context of your brainstorming session and
-                proposes relevant ideas and linkages to encourage creative
-                thinking.
-              </p>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  How does the AI-powered assistance enhance venn diagram creation?        </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  The AI feature analyzes your data inputs to suggest relevant overlaps and
+                  intersections,
+                  streamlining the diagram
+                  creation process and improving accuracy.
+                </p>
+              </div>
             </div>
+
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Can I connect Cloudairy with other tools we are currently
-                using?     </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Yes, Cloudairy provides smooth integration with various
-                third-party applications to improve your existing workflow.
-              </p>
+          <div class="accordian-part">
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  Is it possible to customize the appearance of my venn diagrams?      </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Absolutely. You can personalize colors, fonts, labels, and more to create a diagram
+                  that
+                  aligns with your preferences
+                  and branding.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Is there training available for new users?     </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Yes, we offer in-depth tutorials and customer support to help
-                new users effectively navigate the platform.
-              </p>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  Can I access my venn diagrams from different devices?     </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, with cloud storage, you can access your diagrams from any device with an
+                  internet
+                  connection, ensuring
+                  flexibility and convenience.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  What export options are available for my venn diagrams?    </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  You can export your Venn diagrams in various formats, such as PNG or PDF, for easy
+                  sharing and presentation.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -3166,50 +3522,139 @@
     </div>
   </section>
   <!-- Ready-to-Use Mind Map Templates -->
-  <feature-mindmap-template data-title="Brainstorming Templates to Spark Ideas"
-    subtitle="Jumpstart your ideation sessions with Cloudairy’s ready-to-use templates for brainstorming. From mind maps to idea boards, our templates provide structure to guide your creativity and collaboration."
-    data1="Meeting and Workshops" data2="Agile and Project Management" data3="Technical Diagram"
-    data4="Agile and Project Management" data5="Meeting and Workshops"></feature-mindmap-template>
-  <!-- section 7 -->
-  <section class="section-padding">
+  <!-- <feature-mindmap-template data-title="Customizable venn diagram templates"
+        subtitle="Get started quickly with Cloudairy’s pre-designed Venn diagram templates. Tailored for comparisons and relationship visualization, these templates help you deliver professional results effortlessly."
+        data1="Meeting and workshops" data2="Agile and project management" data3="Technical diagram"
+        data4="Agile and project management" data5="Meeting and workshops"></feature-mindmap-template> -->
+  <section class="category-section section-padding">
     <div class="container-fluid">
-      <div class="testimonial-section">
-        <!-- <img
-            src="IMAGE_PATHmindmap/ready to tranform.svg"
-            alt="ready to tranform"
-          /> -->
-        <div class="testimotinal-content">
-          <p class="grdient-text text-center">
-            Start Creating Your Flowcharts Today
-          </p>
-          <p class="text_xl testimotinal-subtext">
-            Unleash your creativity with Cloudairy’s AI-powered brainstorming
-            tools. Try it now to generate ideas, collaborate seamlessly, and
-            turn thoughts into action.
-          </p>
-          <button class="btn-gradient-signUp">
-            <span style="text-transform: capitalize">Sign up free</span>
-          </button>
+      <h3 class="text-center">
+        Customizable venn diagram templates
+      </h3>
+      <p class="text-center subtitle-padding sub-title text_base">
+        Get started quickly with Cloudairy’s pre-designed Venn diagram templates. Tailored for comparisons and
+        relationship
+        visualization, these templates help you deliver professional results effortlessly.
+      </p>
+      <div class="set-mindmap-swiper dekstop-mind-template">
+        <div class="swiper-container mindmap-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide" data-template="Diagramming" data-category="a79950ce-23f2-4d20-9892-a5e3b68cb366">
+              <div class="swiper-silde-box swiper-silde-box1">
+                <img src="IMAGE_PATHhome/template-swiper/diagramming.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Diagramming</div>
+            </div>
+
+            <div class="swiper-slide" data-template="AWS" data-category="1ee3c4ed-35d0-4c4b-8015-2732997de45a">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/aws.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">AWS</div>
+            </div>
+
+            <div class="swiper-slide" data-template="Azure" data-category="a7a140cf-937d-4dc3-9ec9-dfa729af34f2">
+              <div class="swiper-silde-box swiper-silde-box3">
+                <img src="IMAGE_PATHhome/template-swiper/azure.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Azure</div>
+            </div>
+
+            <div class="swiper-slide" data-template="GCP" data-category="2d9ef069-bdb9-4903-9d07-04d0abd2cfef">
+              <div class="swiper-silde-box swiper-silde-box3">
+                <img src="IMAGE_PATHhome/template-swiper/gcp.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">GCP</div>
+            </div>
+
+            <div class="swiper-slide" data-template="UML" data-category="d8dfafe2-1284-4c17-9400-ed4828e39c33">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/uml.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">UML</div>
+            </div>
+
+            <div class="swiper-slide" data-template="Flowchart" data-category="dbcca064-acc9-4687-88ee-aeb2a67ed600">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/flowchart.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Flowchart</div>
+            </div>
+
+          </div>
         </div>
-        <div class="testimonal-icon icon1">
-          <img src="IMAGE_PATHmindmap/usertwo.png" alt="user1" />
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="mindmap-template mobile-mind-template">
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Diagramming"
+          data-category="a79950ce-23f2-4d20-9892-a5e3b68cb366">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/diagramming.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Diagramming</div>
         </div>
-        <div class="testimonal-icon icon2">
-          <img src="IMAGE_PATHmindmap/userthree.png" alt="user2" />
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="AWS"
+          data-category="1ee3c4ed-35d0-4c4b-8015-2732997de45a">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/aws.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">AWS</div>
         </div>
-        <div class="testimonal-icon icon3">
-          <img src="IMAGE_PATHmindmap/userone.png" alt="user3" />
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Azure"
+          data-category="a7a140cf-937d-4dc3-9ec9-dfa729af34f2">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/azure.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Azure</div>
         </div>
-        <div class="testimonal-icon icon4">
-          <img src="IMAGE_PATHmindmap/userfour.png" alt="user4" />
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="GCP"
+          data-category="2d9ef069-bdb9-4903-9d07-04d0abd2cfef">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/gcp.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">GCP</div>
+        </div>
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="UML"
+          data-category="d8dfafe2-1284-4c17-9400-ed4828e39c33">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/uml.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">UML</div>
+        </div>
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Flowchart"
+          data-category="dbcca064-acc9-4687-88ee-aeb2a67ed600">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/flowchart.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Flowchart</div>
         </div>
       </div>
-    </div>
   </section>
-  <!-- section 9 -->
 
-  <!-- contact us -->
-  <section></section>
+  <!-- section 7 -->
+  <feature-cta data-title="Start designing venn diagrams today" data-image="IMAGE_PATHctc/venn-diagram-maker.png"
+    max-width-subtext="410px"
+    subtitle="Create clear and impactful Venn diagrams effortlessly with Cloudairy’s intuitive tools. "></feature-cta>
+  <!-- section 9 -->
+  <!-- <section class="container-fluid blog-section">
+        <h3 class="text-center">
+            Insights and techniques for venn diagram creation
+        </h3>
+        <p class="text-center more-mindmap-content sub-title text_base">
+            Explore Cloudairy’s blog for expert advice, creative use cases, and step-by-step tutorials on crafting
+            effective Venn
+            diagrams. Learn how to use them in education, analysis, and presentations.
+        </p>
+        <div class="blog-all-list" id="blog-data-detail"></div>
+    </section> -->
   <!-- start: Design, Collaborate, Innovate with Cloudchart!-->
   <section class="design-section">
     <div class="design-padding">
@@ -3241,22 +3686,22 @@
           </div>
 
           <!-- <form id="homesubscribe" class="design-content-email-input">
-                    <div>
-                      <div class="email-background">
-                        <input type="text" id="homeemail" name="homeemail" placeholder="Enter your email address"
-                          class="design-email-box" autocomplete="off" required />
+                      <div>
+                        <div class="email-background">
+                          <input type="text" id="homeemail" name="homeemail" placeholder="Enter your email address"
+                            class="design-email-box" autocomplete="off" required />
+                        </div>
+                        <div id="homeemailError" style="
+                              color: red;
+                              font-size: 12px;
+                              text-align: left;
+                              padding-top: 8px;
+                            "></div>
                       </div>
-                      <div id="homeemailError" style="
-                            color: red;
-                            font-size: 12px;
-                            text-align: left;
-                            padding-top: 8px;
-                          "></div>
-                    </div>
-                    <button class="design-get-started-btn" type="submit" id="homesignupbtn">
-                      <span style="text-transform: capitalize">Sign up free</span>
-                    </button>
-                  </form> -->
+                      <button class="design-get-started-btn" type="submit" id="homesignupbtn">
+                        <span style="text-transform: capitalize">Sign up free</span>
+                      </button>
+                    </form> -->
         </div>
       </div>
     </div>
@@ -3709,7 +4154,7 @@
           <form id="subscribeForm">
             <input type="text" id="email" name="email" placeholder="Enter your email address" class="email-input"
               autocomplete="off" required />
-            <div id="emailError" style="color:#FF592F; font-size: 12px"></div>
+            <div id="emailError" style="color: red; font-size: 12px"></div>
             <button class="footer-subscribe-button d-flex justify-content-center" type="submit" id="submitBtn2">
               <span>Subscribe</span>
             </button>
@@ -3766,26 +4211,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  let question = document.querySelectorAll(".question");
-
-  question.forEach((question) => {
-    question.addEventListener("click", (event) => {
-      const active = document.querySelector(".question.active");
-      if (active && active !== question) {
-        active.classList.toggle("active");
-        active.nextElementSibling.style.maxHeight = 0;
-      }
-      question.classList.toggle("active");
-      const answer = question.nextElementSibling;
-      if (question.classList.contains("active")) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      } else {
-        answer.style.maxHeight = 0;
-      }
-    });
-  });
-</script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".accordion button");
@@ -3844,13 +4269,47 @@
   });
 </script>
 <script>
+  let questions = document.querySelectorAll(".question");
+
+  questions.forEach((question) => {
+    const answer = question.nextElementSibling;
+    question.classList.remove("active");
+    answer.style.maxHeight = 0;
+  });
+
+  if (questions.length > 0) {
+    setTimeout(() => {
+      const firstQuestion = questions[0];
+      firstQuestion.classList.add("active");
+      const firstAnswer = firstQuestion.nextElementSibling;
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+    }, 300);
+  }
+  questions.forEach((question) => {
+    question.addEventListener("click", (event) => {
+      const active = document.querySelector(".question.active");
+      if (active && active !== question) {
+        active.classList.remove("active");
+        active.nextElementSibling.style.maxHeight = 0;
+      }
+      question.classList.toggle("active");
+      const answer = question.nextElementSibling;
+      if (question.classList.contains("active")) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = 0;
+      }
+    });
+  });
+</script>
+<script>
   document.querySelectorAll('.submenu-text').forEach((link) => {
     link.addEventListener('click', (event) => {
       // Always prevent redirection when "Coming Soon" is shown
       const comingSoon = link.querySelector('.coming-soon');
       const isVisible = getComputedStyle(comingSoon).opacity === "1";
       if (comingSoon) {
-        event.preventDefault();
+        event.preventDefault(); // Stop the redirect
       }
     });
   });
@@ -3866,5 +4325,59 @@
     });
   });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.6/swiper-bundle.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var $swiper = $(".mindmap-swiper");
+    var $bottomSlide = null;
+    var $bottomSlideContent = null;
+
+    var mySwiper = new Swiper(".mindmap-swiper", {
+      spaceBetween: 4,
+      pagination: '.swiper-pagination',
+      centeredSlides: true,
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        1559: {
+          slidesPerView: 4
+        },
+        1024: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 1.5
+        },
+        480: {
+          slidesPerView: 1
+        }
+      }
+    });
+
+    $(".mindmap-swiper .swiper-slide").click(function () {
+      var template = $(this).data("template");
+      var category = $(this).data("category");
+
+      localStorage.setItem("template", template);
+      localStorage.setItem("category", category);
+      window.location.href = "template";
+    });
+  });
+</script>
+
 
 </html>

@@ -752,7 +752,7 @@ class CommonComponent8 extends HTMLElement {
         display: block;
         content: "";
         padding-bottom: 20px;
-        border-bottom: solid 5px #5a05fe;
+        border-bottom: solid 5px #6762FE;
         transform: scaleX(0);
         transition: transform 0.3s ease-out;
       }

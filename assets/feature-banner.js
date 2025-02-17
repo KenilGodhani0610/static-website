@@ -30,6 +30,7 @@ class CommonComponent1 extends HTMLElement {
     const title = this.getAttribute("data-title") || "Default Title";
     const image = this.getAttribute("data-image") || "default.jpg";
     const text_base = this.getAttribute("text_base") || "default text";
+    const title_max_width = this.getAttribute("title_max-width") || "auto";
     const isShowSubTextLine = this.getAttribute("isShowSubTextLine") || "auto";
 
     this.shadowRoot.innerHTML = `
@@ -42,7 +43,7 @@ class CommonComponent1 extends HTMLElement {
           font-size: 42px;
           font-weight: 700;
           line-height: 54px;
-        
+          max-width:${title_max_width};
           color: #18181B;
       }
        h2 {
