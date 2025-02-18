@@ -471,7 +471,7 @@ svg.toggle-close {
   display: contents;
 }
 
-.dropdown-content-side h6 {
+.dropdown-content-side h4 {
   font-size: 16px;
   font-weight: 700;
   line-height: 19.36px;
@@ -526,7 +526,7 @@ svg.toggle-close {
   flex-direction: column;
   gap: 20px;
 }
-.product-submenu h6 {
+.product-submenu h4 {
   font-size: 18px;
   font-weight: 500;
   line-height: 22.68px;
@@ -554,7 +554,7 @@ svg.toggle-close {
   padding-left: 30px;
   
 } */
-.capability-menu h6 {
+.capability-menu h4 {
   font-size: 18px;
   font-weight: 500;
   line-height: 22.68px;

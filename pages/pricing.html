@@ -9,21 +9,20 @@
   <meta name="title" content="Cloudairy Pricing" />
   <meta name="description"
     content="Cloudairy offers flexible pricing plans. Choose from Free, Professional, and Team plans to meet your diagramming needs." />
-  <meta name="author" content="Cloudairy" />
-  <meta name="robots" content="index, follow" />
-
   <meta property="og:title" content="Cloudairy Pricing" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cloudairy.com/pricing" />
-  <meta property="og:image" content="https://cloudairy-template-storage.s3.amazonaws.com/public/metaLogo.png" />
+  <meta property="og:image" content="https://cdn.cloudairy.com/image/metaLogo.png" />
   <meta property="og:description"
     content="Cloudairy offers flexible pricing plans. Choose from Free, Professional, and Team plans to meet your diagramming needs." />
+
   <!-- external css file-->
+  <meta name="author" content="Cloudairy">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cloudairy.com/pricing" />
   <link rel="stylesheet" href="../assets/main.css" />
   <link rel="stylesheet" href="../assets/media.css" />
-  <link rel="icon" href="https://s3.amazonaws.com/cloudairy-public-website-asset-storage/favicon-icon/favicon.ico"
-    type="image/x-icon" />
+  <link rel="icon" href="https://cdn.cloudairy.com/image/favicon.ico" type="image/x-icon" />
   <script src="../assets/feature-banner.js" defer></script>
   <script src="../assets/more-mindmap-content.js" defer></script>
   <script src="../assets/feature-benefit.js" defer></script>
@@ -161,9 +160,6 @@
       width: 100%;
     }
 
-    h1 {
-      display: none;
-    }
 
 
     .banner-section {
@@ -175,7 +171,55 @@
       font-weight: 700;
       text-align: center;
       color: #18181B;
+      position: relative;
     }
+
+    .animation-1 {
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      animation: slideDown 2s forwards;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50%);
+        /* Start from off the screen top */
+        opacity: 0;
+        /* Optional: fade in effect */
+      }
+
+      to {
+        transform: translateY(0);
+        /* End at its original position */
+        opacity: 1;
+        /* Optional: fully visible */
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-50%);
+        /* Start from off the screen left */
+        opacity: 0;
+        /* Optional: fade in effect */
+      }
+
+      to {
+        transform: translateX(0);
+        /* End at its original position */
+        opacity: 1;
+        /* Optional: fully visible */
+      }
+    }
+
+    .animation-2 {
+      position: absolute;
+      bottom: -14px;
+      right: 0;
+      animation: slideIn 2s forwards;
+    }
+
 
     .banner-section-content p {
       font-size: 18px;
@@ -1729,6 +1773,13 @@
       }
     }
 
+    @media (max-width: 1264px) {
+      h1 {
+        font-size: 36px;
+        line-height: 52px;
+      }
+    }
+
     @media (max-width: 1240px) {
       .main-bg-sction {
         height: 1165px;
@@ -1785,6 +1836,14 @@
     }
 
     @media (max-width: 1139px) {
+      .banner-section {
+        height: 222px;
+      }
+
+      .animation-1 {
+        top: -19px;
+      }
+
       .pricing-sticky-section {
         top: 55px;
       }
@@ -2329,7 +2388,7 @@
       }
 
       .banner-section {
-        height: 150px;
+        height: 190px;
       }
 
       .banner-section-content p {
@@ -2403,6 +2462,15 @@
     @media (max-width: 576px) {
       #lottie-container-product {
         display: none;
+      }
+
+      .animation-1 {
+        top: -21px;
+        left: -20px;
+      }
+
+      .animation-2 {
+        width: 175px;
       }
 
       h3 {
@@ -2583,6 +2651,11 @@
         height: 189px;
       }
 
+      .animation-1,
+      .animation-2 {
+        display: none;
+      }
+
       .testimonial-section {
         min-height: 470px;
       }
@@ -2599,7 +2672,7 @@
 
     @media (max-width: 452px) {
       .banner-section {
-        height: 206px;
+        height: 230px;
       }
 
       .testimonial-section {
@@ -2874,7 +2947,6 @@
   </style>
 </head>
 
-
 <body>
   <div class="main-bg-sction">
     <img src="IMAGE_PATHhome/home-bg.png" alt="mind-banner-image" style="
@@ -2904,148 +2976,148 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
-  
+
               <ul id="productMenu" class="dropdown-menu">
                 <div class="product-menu">
                   <div class="product-submenu platform-menu">
-                    <h6>Platform</h6>
-                    <a href="unified-workspace" class="submenu-text hover-comingsoon">
-                      <img src="https://cdn.cloudairy.com/image/header/product/iconone.svg" alt="icon1" />
-                      <p>Unified Workspace</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="real-time-collaborations" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/product/icontwo.svg" alt="icon2" />
-                      <p>Real Time Collaboration</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="AI-assistance" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/product/iconthree.svg" alt="icon3" />
-                      <p>Al Powered Assistance</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/product/iconfour.svg" alt="icon4" />
-                      <p>Secured Data Storage</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="template" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/product/iconfive.svg" alt="icon5" />
-                      <p>Templates</p>
-                    </a>
-  
+                    <h4>Platform</h6>
+                      <a href="unified-workspace" class="submenu-text hover-comingsoon">
+                        <img src="https://cdn.cloudairy.com/image/header/product/iconone.svg" alt="icon1" />
+                        <p>Unified Workspace</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="real-time-collaborations" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/product/icontwo.svg" alt="icon2" />
+                        <p>Real Time Collaboration</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="AI-assistance" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/product/iconthree.svg" alt="icon3" />
+                        <p>Al Powered Assistance</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/product/iconfour.svg" alt="icon4" />
+                        <p>Secured Data Storage</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="template" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/product/iconfive.svg" alt="icon5" />
+                        <p>Templates</p>
+                      </a>
+
                   </div>
                   <div class="capability-menu">
-                    <h6>Capabilities</h6>
-                    <div class="capability-box">
-                      <div class="product-submenu">
-                        <a href="diagram-maker" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/iconsix.svg" alt="icon6" />
-                          <p>Diagramming Tool</p>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/iconseven.svg" alt="icon7" />
-                          <p>Data Visualization</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/iconeight.svg" alt="icon8" />
-                          <p>Retrospective Tool</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="mind-maps" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/iconnine.svg" alt="icon9" />
-                          <p>Mindmapping Tool</p>
-                        </a>
-                        <a href="agile" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononezero.svg" alt="icon10" />
-                          <p>Agile and Scrum Support</p>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononeone.svg" alt="icon11" />
-                          <p>Animate Connectors</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononetwo.svg" alt="icon12" />
-                          <p>Smart Goal Setting</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
+                    <h4>Capabilities</h6>
+                      <div class="capability-box">
+                        <div class="product-submenu">
+                          <a href="diagram-maker" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/iconsix.svg" alt="icon6" />
+                            <p>Diagramming Tool</p>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/iconseven.svg" alt="icon7" />
+                            <p>Data Visualization</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/iconeight.svg" alt="icon8" />
+                            <p>Retrospective Tool</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="mind-maps" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/iconnine.svg" alt="icon9" />
+                            <p>Mindmapping Tool</p>
+                          </a>
+                          <a href="agile" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononezero.svg" alt="icon10" />
+                            <p>Agile and Scrum Support</p>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononeone.svg" alt="icon11" />
+                            <p>Animate Connectors</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononetwo.svg" alt="icon12" />
+                            <p>Smart Goal Setting</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                        </div>
+                        <div class="product-submenu">
+                          <a href="strategic-planning" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononethree.svg" alt="icon13" />
+                            <p>Strategic Planning Tool</p>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononefour.svg" alt="icon14" />
+                            <p>Project and Task Management</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononefive.svg" alt="icon15" />
+                            <p>Prototyping and Wireframing</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononesix.svg" alt="icon16" />
+                            <p>Customizable Icons and Illustrations</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="brainstorming" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononeseven.svg" alt="icon17" />
+                            <p>Brainstorm and Ideation</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="online-whiteboard" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononeeight.svg" alt="icon18" />
+                            <p>Online Whiteboard</p>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icononenine.svg" alt="icon19" />
+                            <p>UX Design Maker</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                        </div>
+                        <div class="product-submenu">
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwozero.svg" alt="icon20" />
+                            <p>Automated Diagram Generation</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="version-control" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwoone.svg" alt="icon21" />
+                            <p>Version Control</p>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwotwo.svg" alt="icon22" />
+                            <p>Product Development Software</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwothree.svg" alt="icon23" />
+                            <p>Online Sticky Notes</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwofour.svg" alt="icon24" />
+                            <p>Al Powered Diagrams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/product/icontwofive.svg" alt="icon25" />
+                            <p>Scrum Tool</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                        </div>
                       </div>
-                      <div class="product-submenu">
-                        <a href="strategic-planning" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononethree.svg" alt="icon13" />
-                          <p>Strategic Planning Tool</p>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononefour.svg" alt="icon14" />
-                          <p>Project and Task Management</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononefive.svg" alt="icon15" />
-                          <p>Prototyping and Wireframing</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononesix.svg" alt="icon16" />
-                          <p>Customizable Icons and Illustrations</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="brainstorming" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononeseven.svg" alt="icon17" />
-                          <p>Brainstorm and Ideation</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="online-whiteboard" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononeeight.svg" alt="icon18" />
-                          <p>Online Whiteboard</p>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icononenine.svg" alt="icon19" />
-                          <p>UX Design Maker</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                      </div>
-                      <div class="product-submenu">
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwozero.svg" alt="icon20" />
-                          <p>Automated Diagram Generation</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="version-control" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwoone.svg" alt="icon21" />
-                          <p>Version Control</p>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwotwo.svg" alt="icon22" />
-                          <p>Product Development Software</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwothree.svg" alt="icon23" />
-                          <p>Online Sticky Notes</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwofour.svg" alt="icon24" />
-                          <p>Al Powered Diagrams</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/product/icontwofive.svg" alt="icon25" />
-                          <p>Scrum Tool</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </ul>
             </li>
-  
+
             <li>
               <a class="navbar-menu header-menu-hover" onclick="toggleMenu1()">Solutions
                 <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3053,157 +3125,157 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
               <ul id="productMenu1" class="dropdown-menu">
                 <div class="product-menu">
                   <div class="product-submenu platform-menu">
-                    <h6>Teams</h6>
-                    <a href="solutions-architect" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconone.svg" alt="icon1" />
-                      <p>Solutions Architect</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="project-management" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/icontwo.svg" alt="icon2" />
-                      <p>Product Management</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="engineering-team" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconthree.svg" alt="icon3" />
-                      <p>Engineering</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="ux-designer" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconfour.svg" alt="icon4" />
-                      <p>UX Design</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="sales-team" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconfive.svg" alt="icon5" />
-                      <p>Sales</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconsix.svg" alt="icon6" />
-                      <p>Project Management</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
-                    <a href="" class="submenu-text">
-                      <img src="https://cdn.cloudairy.com/image/header/resources/iconseven.svg" alt="icon7" />
-                      <p>IT</p>
-                      <div class="coming-soon">Coming Soon</div>
-                    </a>
+                    <h4>Teams</h6>
+                      <a href="solutions-architect" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconone.svg" alt="icon1" />
+                        <p>Solutions Architect</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="project-management" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwo.svg" alt="icon2" />
+                        <p>Product Management</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="engineering-team" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconthree.svg" alt="icon3" />
+                        <p>Engineering</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="ux-designer" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconfour.svg" alt="icon4" />
+                        <p>UX Design</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="sales-team" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconfive.svg" alt="icon5" />
+                        <p>Sales</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconsix.svg" alt="icon6" />
+                        <p>Project Management</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
+                      <a href="" class="submenu-text">
+                        <img src="https://cdn.cloudairy.com/image/header/resources/iconseven.svg" alt="icon7" />
+                        <p>IT</p>
+                        <div class="coming-soon">Coming Soon</div>
+                      </a>
                   </div>
                   <div class="capability-menu platform-menu">
-                    <h6>Cloudairy Al</h6>
-                    <div class="capability-box">
-                      <div class="product-submenu">
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/iconeight.svg" alt="icon8" />
-                          <p>Al Flowchart</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/iconnine.svg" alt="icon9" />
-                          <p>Al Mind Map</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononezero.svg" alt="icon10" />
-                          <p>Al Sequence Diagram</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeone.svg" alt="icon11" />
-                          <p>Al Docs</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononetwo.svg" alt="icon12" />
-                          <p>Al Generate Image</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononethree.svg" alt="icon13" />
-                          <p>Al Sticky Notes</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
+                    <h4>Cloudairy Al</h6>
+                      <div class="capability-box">
+                        <div class="product-submenu">
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/iconeight.svg" alt="icon8" />
+                            <p>Al Flowchart</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/iconnine.svg" alt="icon9" />
+                            <p>Al Mind Map</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononezero.svg" alt="icon10" />
+                            <p>Al Sequence Diagram</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononeone.svg" alt="icon11" />
+                            <p>Al Docs</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononetwo.svg" alt="icon12" />
+                            <p>Al Generate Image</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononethree.svg" alt="icon13" />
+                            <p>Al Sticky Notes</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                        </div>
                       </div>
-                    </div>
                   </div>
                   <div class="capability-menu">
-                    <h6>Use Cases</h6>
-                    <div class="capability-box">
-                      <div class="product-submenu">
-                        <a href="network-diagram" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononefour.svg" alt="icon14" />
-                          <p>Network Diagram Maker</p>
-                        </a>
-                        <a href="flowchart" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononefive.svg" alt="icon15" />
-                          <p>Flowchart Maker</p>
-                        </a>
-                        <a href="circuit-diagram-maker" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononesix.svg" alt="icon16" />
-                          <p>Circuit Diagram Maker</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="er-diagram" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeseven.svg" alt="icon17" />
-                          <p>ER Diagrams </p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="venn-diagram" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeeight.svg" alt="icon18" />
-                          <p>Venn Diagram Maker</p>
-                        </a>
-                        <a href="architecture-diagram" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icononenine.svg" alt="icon19" />
-                          <p>Architecture Diagram Maker</p>
-                        </a>
-                        <a href="vision-boards" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwozero.svg" alt="icon20" />
-                          <p>Vision Board maker</p>
-                        </a>
+                    <h4>Use Cases</h6>
+                      <div class="capability-box">
+                        <div class="product-submenu">
+                          <a href="network-diagram" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononefour.svg" alt="icon14" />
+                            <p>Network Diagram Maker</p>
+                          </a>
+                          <a href="flowchart" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononefive.svg" alt="icon15" />
+                            <p>Flowchart Maker</p>
+                          </a>
+                          <a href="circuit-diagram-maker" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononesix.svg" alt="icon16" />
+                            <p>Circuit Diagram Maker</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="er-diagram" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononeseven.svg" alt="icon17" />
+                            <p>ER Diagrams </p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="venn-diagram" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononeeight.svg" alt="icon18" />
+                            <p>Venn Diagram Maker</p>
+                          </a>
+                          <a href="architecture-diagram" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icononenine.svg" alt="icon19" />
+                            <p>Architecture Diagram Maker</p>
+                          </a>
+                          <a href="vision-boards" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwozero.svg" alt="icon20" />
+                            <p>Vision Board maker</p>
+                          </a>
+                        </div>
+                        <div class="product-submenu">
+                          <a href="design-canvas" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwoone.svg" alt="icon21" />
+                            <p>Design Canvas</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="uml-diagram" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwotwo.svg" alt="icon22" />
+                            <p>UML Diagram Maker</p>
+                          </a>
+                          <a href="pI-planning-tool" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwothree.svg" alt="icon23" />
+                            <p>PI Planning Tool</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="powerful-graph-maker" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwofour.svg" alt="icon24" />
+                            <p>Graphs</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="wiring-diagram-maker" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwofive.svg" alt="icon25" />
+                            <p>Wiring Diagram Maker</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="storyboard-creator" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwosix.svg" alt="icon26" />
+                            <p>Tree Diagram </p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="kanban-tool" class="submenu-text">
+                            <img src="https://cdn.cloudairy.com/image/header/resources/icontwoseven.svg" alt="icon27" />
+                            <p>Kanban Board</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                        </div>
                       </div>
-                      <div class="product-submenu">
-                        <a href="design-canvas" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwoone.svg" alt="icon21" />
-                          <p>Design Canvas</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="uml-diagram" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwotwo.svg" alt="icon22" />
-                          <p>UML Diagram Maker</p>
-                        </a>
-                        <a href="pI-planning-tool" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwothree.svg" alt="icon23" />
-                          <p>PI Planning Tool</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="powerful-graph-maker" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwofour.svg" alt="icon24" />
-                          <p>Graphs</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="wiring-diagram-maker" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwofive.svg" alt="icon25" />
-                          <p>Wiring Diagram Maker</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="storyboard-creator" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwosix.svg" alt="icon26" />
-                          <p>Tree Diagram </p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                        <a href="kanban-tool" class="submenu-text">
-                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwoseven.svg" alt="icon27" />
-                          <p>Kanban Board</p>
-                          <div class="coming-soon">Coming Soon</div>
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </ul>
@@ -3215,7 +3287,7 @@
                     d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
                     stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-  
+
               </a>
               <ul id="productMenu2" class="dropdown-menu resourcesMenu" style="padding: 20px 30px;">
                 <div class="product-menu">
@@ -3257,7 +3329,7 @@
             </path>
           </svg>
         </div>
-  
+
         <div class="navbar-drawer-sidebar">
           <ul>
             <li style="border-bottom: 1px solid #d4d4d4">
@@ -3279,27 +3351,27 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text hover-comingsoon">
-  
+
                           <p>Unified Workspace</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="real-time-collaborations" class="submenu-text">
-  
+
                           <p>Real Time Collaboration</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Al Powered Assistance</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Secured Data Storage</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="template" class="submenu-text">
-  
+
                           <p>Templates</p>
                         </a>
                       </div>
@@ -3310,43 +3382,43 @@
                       </h6>
                       <div>
                         <a href="diagram-maker" class="submenu-text">
-  
+
                           <p>Diagramming Tool</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Data Visualization</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Retrospective Tool</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="mind-maps" class="submenu-text">
-  
+
                           <p>Mindmapping Tool</p>
                         </a>
                         <a href="agile" class="submenu-text">
-  
+
                           <p>Agile and Scrum Support</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Animate Connectors</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Smart Goal Setting</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="strategic-planning" class="submenu-text">
-  
+
                           <p>Strategic Planning Tool</p>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Project and Task Management</p>
                           <div class="coming-soon">Coming Soon</div>
                           <a href="" class="submenu-text">
@@ -3362,40 +3434,40 @@
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="online-whiteboard" class="submenu-text">
-  
+
                             <p>Online Whiteboard</p>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>UX Design Maker</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Automated Diagram Generation</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="version-control" class="submenu-text">
-  
+
                             <p>Version Control</p>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Product Development Software</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Online Sticky Notes</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Al Powered Diagrams</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
                           <a href="" class="submenu-text">
-  
+
                             <p>Scrum Tool</p>
                             <div class="coming-soon">Coming Soon</div>
                           </a>
@@ -3405,7 +3477,7 @@
                 </div>
               </div>
             </li>
-  
+
             <li style="border-bottom: 1px solid #d4d4d4">
               <div class="navbar-accordion">
                 <div class="navbar-accordion-item">
@@ -3422,37 +3494,37 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text">
-  
+
                           <p>Solutions Architect</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Product Management</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Engineering</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>UX Design</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Sales</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>Project Management</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-  
+
                           <p>IT</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
@@ -3464,7 +3536,7 @@
                       </h6>
                       <div>
                         <a href="" class="submenu-text">
-  
+
                           <p>Al Flowchart</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
@@ -3564,16 +3636,16 @@
                     <div>
                       <div>
                         <a href="blog" class="submenu-text">
-  
+
                           <p>Blog</p>
-  
+
                         </a>
                         <a href="template" class="submenu-text">
-  
+
                           <p>Template</p>
-  
+
                         </a>
-  
+
                       </div>
                     </div>
                   </div>
@@ -3606,8 +3678,13 @@
   <!-- End: header -->
   <section class="banner-section">
     <div class="banner-section-content">
-      <div id="lottie-container-product"></div>
-      <h1>Get started with our flexible plans</h1>
+      <!-- <div id="lottie-container-product"></div> -->
+      <h1>Get started with our flexible plans
+        <div>
+          <img src="IMAGE_PATHpricing/animation-1.svg" alt="animation-1" class="animation-1">
+          <img src="IMAGE_PATHpricing/animation-2.svg" alt="animation-2" class="animation-2">
+        </div>
+      </h1>
       <p>Choose a Cloudairy plan that fits your goals. Whether you’re an individual, a growing team, or a large
         organization, our flexible pricing options provide access to powerful features, seamless collaboration, and
         AI-driven tools to elevate your work.</p>
@@ -3740,9 +3817,9 @@
           </div>
         </div>
         <div class="pricing-features-box" id="pricingFeaturesBox1">
-          <h6>All features in the free plan</h6>
-          <div class="pricing-features-content" id="pricing-features-free-content"></div>
-          <!-- <div class="pricing-features-content" id="pricing-features-content">
+          <h4>All features in the free plan</h6>
+            <div class="pricing-features-content" id="pricing-features-free-content"></div>
+            <!-- <div class="pricing-features-content" id="pricing-features-content">
             <div class="pricing-features">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path
@@ -3938,9 +4015,9 @@
           </div>
         </div>
         <div class="pricing-features-box" id="pricingFeaturesBox2">
-          <h6>All features in free plan, plus</h6>
-          <div class="pricing-features-content" id="pricing-features-Professional-content"></div>
-          <!-- <div class="pricing-features-content" id="pricing-features-Professional-content">
+          <h4>All features in free plan, plus</h6>
+            <div class="pricing-features-content" id="pricing-features-Professional-content"></div>
+            <!-- <div class="pricing-features-content" id="pricing-features-Professional-content">
             <div class="pricing-features">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path
@@ -4149,9 +4226,9 @@
           </div>
         </div>
         <div class="pricing-features-box" id="pricingFeaturesBox3">
-          <h6>All features in pro plan, plus</h6>
-          <div class="pricing-features-content" id="pricing-features-Business-content"></div>
-          <!-- <div class="pricing-features-content">
+          <h4>All features in pro plan, plus</h6>
+            <div class="pricing-features-content" id="pricing-features-Business-content"></div>
+            <!-- <div class="pricing-features-content">
             <div class="pricing-features">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path
@@ -4422,13 +4499,6 @@
   </section>
   <!-- start: Design, Collaborate, Innovate with Cloudchart!-->
   <section class="design-section" style="padding-top: 0;">
-    <!-- <div class="section-set-bg">
-      <img src="IMAGE_PATHhome/design-shadow.png" alt="design-shadow" style="width: 100%" />
-    </div>
-    <div class="section-set-border">
-      <img src="IMAGE_PATHdesignsection/design-set-belowshadow.png" alt="design-set-belowshadow"
-        style="width: 100%" />
-    </div> -->
     <div class="design-padding">
       <div class="design-bg">
         <div class="design-content">
@@ -7371,70 +7441,40 @@
       arrow.classList.remove('rotate');
       hideContent.textContent = 'Show key features';
     } else {
-      // Close all other feature boxes
+
       allFeaturesBoxes.forEach((box) => (box.style.display = 'none'));
       allHideContents.forEach((content) => (content.textContent = 'Show key features'));
       allArrows.forEach((arrow) => arrow.classList.remove('rotate'));
-
-      // Open the selected feature box
       featuresBox.style.display = 'block';
       arrow.classList.add('rotate');
       hideContent.textContent = 'Hide key features';
     }
   }
 
-  // Initialize all feature boxes as open by default
   document.addEventListener('DOMContentLoaded', () => {
     const allFeaturesBoxes = document.querySelectorAll('[id^="pricingFeaturesBox"]');
     const allHideContents = document.querySelectorAll('[id^="arrow"] p');
     const allArrows = document.querySelectorAll('[id^="arrow"] .arrow-box img');
 
-    allFeaturesBoxes.forEach((box) => (box.style.display = 'block')); // Show all feature boxes by default
+    allFeaturesBoxes.forEach((box) => (box.style.display = 'block'));
     allHideContents.forEach((content) => (content.textContent = 'Hide key features'));
-    allArrows.forEach((arrow) => arrow.classList.add('rotate')); // Make arrows rotated by default
-  });
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-
-    // First Lottie animation
-    var animationPaths = ["IMAGE_PATHpricing/pricing-page-title-lottie.json"];
-    var containers = [document.getElementById("lottie-container-product")];
-    setTimeout(function () {
-      containers.forEach(function (container, index) {
-        lottie.loadAnimation({
-          container: container,
-          renderer: "svg",
-          loop: false,
-          autoplay: true,
-          path: animationPaths[index],
-        });
-      });
-    }, 0);
+    allArrows.forEach((arrow) => arrow.classList.add('rotate'));
   });
 </script>
 <script>
-  // When the document is ready
   window.addEventListener('scroll', function () {
     var stickySection = document.querySelector('.pricing-sticky-section');
     var showStickySection = document.getElementById('showstickysection');
 
-    // Get the position of #showstickysection relative to the viewport
     var sectionTop = showStickySection.getBoundingClientRect().top;
     var sectionBottom = showStickySection.getBoundingClientRect().bottom;
 
-    // When the top of #showstickysection reaches the top of the viewport (sectionTop <= 0)
     if (sectionTop <= 0 && sectionBottom > 0) {
-      stickySection.style.display = 'block'; // Show the sticky section
+      stickySection.style.display = 'block';
     } else {
-      stickySection.style.display = 'none'; // Hide the sticky section if it's above the top or completely below the viewport
+      stickySection.style.display = 'none';
     }
   });
-
-
-
 </script>
-
 
 </html>

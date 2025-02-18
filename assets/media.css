@@ -213,7 +213,7 @@
   .product-submenu {
     gap: 14px;
   }
-  .product-submenu h6 {
+  .product-submenu h4 {
     font-size: 14px;
   }
   .product-submenu p {
@@ -223,7 +223,7 @@
     text-align: left;
     color: #171717;
   }
-  .capability-menu h6 {
+  .capability-menu h4 {
     font-size: 14px;
     font-weight: 400;
     line-height: 22.68px;
@@ -498,7 +498,7 @@
     justify-content: flex-start;
     gap: 10px;
   }
-  .navbar-accordion-content h6 {
+  .navbar-accordion-content h4 {
     font-weight: 500;
     color: #18181b;
   }
@@ -508,7 +508,7 @@
   .navbar-sidetoggle-button {
     display: none;
   }
-  .mobile-dropdown-menu h6 {
+  .mobile-dropdown-menu h4 {
     font-size: 18px;
     font-weight: 400;
     line-height: 22.68px;
@@ -819,7 +819,7 @@
   .navbar-accordion .navbar-accordion-content a {
     padding: 4px 8px;
   }
-  .navbar-accordion .navbar-accordion-content h6 {
+  .navbar-accordion .navbar-accordion-content h4 {
     padding: 8px 0;
   }
   .subtitle-padding {

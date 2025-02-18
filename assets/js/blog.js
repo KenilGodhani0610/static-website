@@ -272,7 +272,7 @@ async function fetchLatestBlogData() {
             <div class="blog-box-content-section">
               <div class="blog-box-heading-section d-flex align-item-center justify-content-space-between">
                 <div class="blog-box-badge">${blog.category.name}</div>
-                <h6>${formatDate(blog.createdAt)}</h6>
+                <p>${formatDate(blog.createdAt)}</p>
               </div>
               <p>${blog.title}</p>
             </div>

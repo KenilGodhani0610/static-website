@@ -148,7 +148,7 @@ app.get("/blog/:slug", async (req, res) => {
         ? blogDetail?.thumbnailImage?.includes("%")
           ? blogDetail?.thumbnailImage
           : encodeURI(blogDetail?.thumbnailImage)
-        : "https://cloudairy-template-storage.s3.amazonaws.com/public/metaLogo.png",
+        : "https://cdn.cloudairy.com/image/metaLogo.png",
       url: `https://cloudairy.com/blog/${slug}`,
       author: blogDetail?.author?.name,
       date: blogDetail?.createdAt,
@@ -193,7 +193,7 @@ app.get("/template/:slug", async (req, res) => {
         ? templateDetail?.thumbnail_image?.includes("%")
           ? templateDetail?.thumbnail_image
           : encodeURI(templateDetail?.thumbnail_image)
-        : "https://cloudairy-template-storage.s3.amazonaws.com/public/metaLogo.png",
+        : "https://cdn.cloudairy.com/image/metaLogo.png",
       url: `https://cloudairy.com/template/${slug}`,
       imagePath: imagePath,
       base_url: url,
