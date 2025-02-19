@@ -526,8 +526,8 @@ svg.toggle-close {
   flex-direction: column;
   gap: 20px;
 }
-.product-submenu h4 {
-  font-size: 18px;
+.product-submenu .menu-title {
+  font-size: 18px !important;
   font-weight: 500;
   line-height: 22.68px;
   text-align: left;
@@ -554,7 +554,7 @@ svg.toggle-close {
   padding-left: 30px;
   
 } */
-.capability-menu h4 {
+.capability-menu .menu-title {
   font-size: 18px;
   font-weight: 500;
   line-height: 22.68px;
