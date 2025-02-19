@@ -1510,3 +1510,7 @@ iframe::-webkit-scrollbar {
 .mobile-mind-template {
   display: none !important;
 }
+.meta-title{
+  opacity: 0 !important;
+  height: 0 !important;
+}
