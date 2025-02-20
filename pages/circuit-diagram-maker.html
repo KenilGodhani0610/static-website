@@ -5,15 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    Revolutionize Cloud Architecture Design and Collaboration | Cloudairy
+    Circuit Diagram Maker | Create a Flowchart | Cloudairy
   </title>
   <!-- Meta description -->
   <meta name="description"
-    content="Empower your cloud teams with Cloudairy Cloudchart, the visual collaboration platform for cloud architecture design. Streamline workflows, boost productivity, and accelerate innovation." />
-  <meta property="og:title" content="Cloudairy | From Vision to Reality" />
+    content="Easily create dynamic flowcharts to visualize processes, streamline workflows, and boost team collaboration with Cloudairy’s intuitive tools." />
+  <meta property="og:title" content="Flowchart Maker | Create a Flowchart | Cloudairy" />
   <meta property="og:description"
-    content="At Cloudairy, visual thinking is the key to unlocking potential. Cloudairy Cloudchart is your collaborative whiteboard reimagined, empowering teams to brainstorm, design, and plan seamlessly" />
+    content="Easily create dynamic flowcharts to visualize processes, streamline workflows, and boost team collaboration with Cloudairy’s intuitive tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloudairy.com/flowchart" />
+  <meta property="og:image" content="https://cdn.cloudairy.com/image/metaLogo.png" />
   <!-- external css file-->
+  <link rel="canonical" href="https://cloudairy.com/flowchart" />
+  <meta name="author" content="Cloudairy">
+  <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="../assets/main.css" />
   <link rel="stylesheet" href="../assets/media.css" />
   <link rel="icon" href="https://cdn.cloudairy.com/image/favicon.ico" type="image/x-icon" />
@@ -21,9 +27,309 @@
   <script src="../assets/more-mindmap-content.js" defer></script>
   <script src="../assets/feature-benefit.js" defer></script>
   <script src="../assets/feature-prefect-mindmapping.js" defer></script>
-  <script src="../assets/feature-mindmap-template.js" defer></script>
   <script src="../assets/feature-visualize-4box.js" defer></script>
+  <script src="../assets/feature-cta.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXLLRV7XF4"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KBT98X9R');</script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VXLLRV7XF4');
+  </script>
   <style>
+    /* category-section */
+    .category-section {
+      background: #F9FAFC;
+      backdrop-filter: blur(130.98451232910156px);
+    }
+
+    .category-section .sub-title {
+      max-width: 997px;
+      margin: 0 auto;
+      color: #18181B;
+    }
+
+    .mobile-mind-template {
+      display: none !important;
+    }
+
+    .set-mindmap-swiper {
+      position: relative;
+      padding-bottom: 50px;
+    }
+
+    .set-mindmap-swiper .swiper-container {
+      height: 300px;
+      overflow: hidden;
+      max-width: 1500px;
+      padding-left: 175px;
+      padding-bottom: 40px;
+      cursor: pointer;
+    }
+
+    .set-mindmap-swiper .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 12px;
+      left: 0;
+      width: 100%;
+      position: absolute;
+    }
+
+    .set-mindmap-swiper .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #6762FE !important;
+    }
+
+    .set-mindmap-swiper .swiper-pagination-bullet {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: #d9d9d9;
+    }
+
+    .set-mindmap-swiper .swiper-container>.swiper-slide__content {
+      position: absolute;
+      top: 0;
+    }
+
+    .set-mindmap-swiper .swiper-slide {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid #e1e1e1e1;
+      transition: all 200ms linear;
+      transform: scale(0.6);
+      box-sizing: border-box;
+      margin-right: 0;
+
+      &.swiper-slide-prev {
+        transform: scale(0.8);
+        background: #fff;
+      }
+
+      &.swiper-slide-next {
+        transform: scale(0.8);
+        background: #fff;
+      }
+
+      &.swiper-slide-active {
+        transform: scale(1);
+        background: #fff;
+
+        .swiper-box-title1 {
+          font-weight: 600;
+          color: #18181B;
+        }
+      }
+    }
+
+    .set-mindmap-swiper .swiper-slide-prev {
+      margin-left: -60px !important;
+    }
+
+    .set-mindmap-swiper .swiper-slide-next {
+      margin-right: -60px !important;
+    }
+
+
+    .set-mindmap-swiper .swiper-slide__content {
+      height: 300px;
+    }
+
+    .set-mindmap-swiper .swiper-button-next {
+      display: none;
+    }
+
+    .set-mindmap-swiper .swiper-button-prev {
+      display: none;
+    }
+
+    .swiper-box-title1 {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding-top: 20px;
+      color: #18181B;
+      font-weight: 400;
+      font-size: 18px;
+      max-width: 200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .swiper-silde-box1 img {
+      width: 100%;
+    }
+
+    .mindmap-template {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mindmap-swiper-slide {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 15.03px;
+      padding: 10px;
+      cursor: pointer;
+      width: 200px;
+      height: 267px;
+    }
+
+    .swiper-silde-box {
+      background-color: #f4f4f4f8;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 25px;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title1 {
+      padding-top: 16px;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 500;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: -7px;
+      height: 100%;
+      color: #18181B;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title2 {
+      font-size: 18px;
+      padding-top: 24px;
+      line-height: 27px;
+      font-weight: 400;
+      text-align: center;
+      color: #18181B;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-top: -7px;
+      height: 100%;
+    }
+
+    .mindmap-swiper-slide .swiper-box-title3 {
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 34px;
+      font-weight: 500;
+      text-align: center;
+      color: #171617;
+    }
+
+    .active-slide {
+      width: 350px;
+      min-width: 350px;
+      height: 357px;
+      min-height: 357px;
+      box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .active-slide img {
+      width: 200px;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .active-prev-next-slide {
+      /* width: 250px; */
+      min-width: 250px;
+      max-width: 250px;
+      height: 292px;
+      min-height: 292px;
+      max-height: 292px;
+      padding: 10px;
+    }
+
+    .active-prev-next-slide .swiper-silde-box2 {
+      /* width: 230px; */
+      height: 180px;
+      max-height: 180px;
+      min-height: 180px;
+    }
+
+    .swiper-silde-box2 img {
+      height: 160px !important;
+      object-fit: contain;
+    }
+
+    .swiper-silde-box1 img {
+      height: 160px !important;
+      /* width: 258px !important; */
+      object-fit: contain;
+    }
+
+    .swiper-silde-box-last .swiper-silde-box3 {
+      width: 138px;
+      height: 110px;
+      max-height: 110px;
+      min-height: 110px;
+    }
+
+    .swiper-silde-box3 img {
+      height: 160px !important;
+      /* width: 160px !important; */
+      object-fit: contain;
+    }
+
+    .submenu-text,
+    .footer-text {
+      position: relative;
+    }
+
+    .coming-soon {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 105%;
+      height: 130%;
+      font-size: 14px;
+      font-weight: 500;
+      color: #18181B;
+      opacity: 0;
+      pointer-events: none;
+      background-color: #FFF;
+      backdrop-filter: blur(1px);
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .submenu-text:hover .coming-soon,
+    .footer-text:hover .coming-soon {
+      opacity: 1;
+      pointer-events: none !important;
+      cursor: not-allowed !important;
+    }
+
     h1 {
       font-size: 42px;
       font-weight: 700;
@@ -59,7 +365,7 @@
     .text_base {
       font-size: 16px;
       font-weight: 400;
-      line-height: 28px;
+      line-height: 26px;
       color: #18181B;
     }
 
@@ -80,7 +386,7 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 24px;
-      color: #848382;
+      color: #18181B;
     }
 
     .text-2xl {
@@ -95,7 +401,7 @@
       top: -100px;
       left: 0;
       width: 100%;
-      height: 830px;
+      height: 960px;
     }
 
     /* section 1 */
@@ -174,6 +480,7 @@
 
     .key-content-section {
       max-width: 580px;
+      min-width: 580px;
       padding-right: 59px;
       border-right: 1px solid #d9d9d9;
     }
@@ -191,8 +498,9 @@
     .feature-section {
       max-width: 436px;
       padding: 30px 30px 30px 45px;
-      background-color: #f0eefb;
+      background-color: #F9FAFC;
       border-radius: 30px;
+      border: 1.82px solid #EEF0F5
     }
 
     .feature-options {
@@ -204,10 +512,10 @@
 
     .progress-bar {
       position: absolute;
-      width: 9px;
+      width: 4px;
       height: 100%;
       border-radius: 666px;
-      background: white;
+      background: #EBEEF5;
       left: -20px;
       top: 0;
     }
@@ -217,24 +525,24 @@
       width: 100%;
       height: 78px;
       border-radius: 666px;
-      background: linear-gradient(294.72deg, #7630ff 6.99%, #3eddfa 83.92%);
+      background: #6762FE;
       top: 0;
       left: 0;
       transition: left 0.3s ease;
     }
 
     .feature-section p {
-      color: #171617;
+      color: #18181B;
       padding: 25px 20px;
       cursor: pointer;
     }
 
     .feature-section p.active {
       background-color: #fff;
-      border: 2px solid #7630ff;
+      border: 2px solid #ACA9FE;
       border-radius: 14px;
-      font-weight: 500;
-      color: #171617 !important;
+      font-weight: 600;
+      color: #18181B !important;
     }
 
     .key-image-section p {
@@ -245,6 +553,8 @@
       overflow: hidden;
       text-overflow: ellipsis;
       height: 110px;
+      color: rgba(7, 5, 41, 0.8);
+      ;
     }
 
     .key-image-section img {
@@ -411,121 +721,7 @@
       -webkit-text-stroke-color: #e5e2f9;
     }
 
-    /* section 6 */
-    .category-section {
-      background-image: url("IMAGE_PATHhome/category-shadow.png");
-    }
 
-    .category-section .sub-title {
-      max-width: 997px;
-      margin: 0 auto;
-      color: #848382;
-    }
-
-    .mobile-mind-template {
-      display: none !important;
-    }
-
-    .mindmap-template {
-      display: flex;
-      gap: 34px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .mindmap-swiper-slide {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 12px 12px 33px;
-      cursor: pointer;
-      width: 200px;
-      height: 267px;
-    }
-
-    .swiper-silde-box {
-      background-color: #e9eafd;
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title1 {
-      padding-top: 16px;
-      font-size: 12px;
-      line-height: 17px;
-      font-weight: 400;
-      text-align: center;
-      color: #848382;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title2 {
-      font-size: 20px;
-      padding-top: 24px;
-      line-height: 18px;
-      font-weight: 400;
-      text-align: center;
-      color: #848382;
-    }
-
-    .mindmap-swiper-slide .swiper-box-title3 {
-      font-size: 20px;
-      line-height: 30px;
-      padding-top: 34px;
-      font-weight: 500;
-      text-align: center;
-      color: #171617;
-    }
-
-    .active-slide {
-      width: 350px;
-      min-width: 350px;
-      height: 357px;
-      min-height: 357px;
-      box-shadow: 0px 4px 21px 0px rgba(0, 0, 0, 0.04);
-    }
-
-    .active-slide img {
-      width: 330px;
-      height: 250px;
-      border-radius: 10px;
-    }
-
-    .active-prev-next-slide {
-      width: 250px;
-      min-width: 250px;
-      max-width: 250px;
-      height: 292px;
-      min-height: 292px;
-      max-height: 292px;
-      padding: 10px;
-    }
-
-    .active-prev-next-slide img {
-      width: 230px;
-      height: 180px;
-      max-height: 180px;
-      min-height: 180px;
-    }
-
-    .swiper-silde-box-last img {
-      width: 138px;
-      height: 110px;
-      max-height: 110px;
-      min-height: 110px;
-    }
-
-    .swiper-silde-box-last {
-      padding: 6px;
-      width: 150px;
-      min-width: 150px;
-      max-width: 150px;
-      height: 184px;
-      min-height: 184px;
-      max-height: 184px;
-    }
 
     /* section 7 */
     .testimonial-section {
@@ -605,8 +801,8 @@
 
     /* section 8 */
     .accordion {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
       padding-top: 50px;
       max-width: 1350px;
@@ -618,10 +814,17 @@
       border-radius: 14px;
     }
 
+    .accordian-part {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .accordion .accordion-item {
-      background-color: #F7F6FD;
+      background-color: #F9FAFC;
+      border: 1.82px solid #EEF0F5;
       border-radius: 14px;
-      padding: 40px;
+      padding: 28px 60px 28px 28px;
       position: relative;
     }
 
@@ -640,8 +843,8 @@
 
     .accordion button .accordion-title {
       padding: 0;
-      font-weight: 600;
-      color: #1b1139;
+      font-weight: 500;
+      color: #18181B;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
     }
@@ -658,7 +861,7 @@
       display: block;
       position: absolute;
       content: "";
-      top: 9px;
+      top: 0px;
       left: 3px;
       width: 20px;
       height: 3px;
@@ -670,7 +873,7 @@
       display: block;
       position: absolute;
       content: "";
-      top: 0px;
+      top: -8px;
       left: 12px;
       width: 3px;
       height: 20px;
@@ -680,7 +883,7 @@
 
     .accordion button[aria-expanded="true"] .icon-faqs::before,
     .accordion button[aria-expanded="true"] .icon-faqs::after {
-      background: #52bd95 !important;
+      background: #6762FE !important;
     }
 
     .accordion button[aria-expanded="true"] .icon-faqs::after {
@@ -735,9 +938,10 @@
     .blog-section .sub-title {
       max-width: 766px;
       margin: 0 auto;
+      color: #18181B;
     }
 
-    .swiper-container {
+    /* .swiper-container {
       width: 100%;
       height: 100%;
       overflow-y: auto;
@@ -746,7 +950,7 @@
     .swiper-wrapper {
       display: flex;
       gap: 16px;
-    }
+    } */
 
     .swiper-slide {
       margin-bottom: 20px;
@@ -765,6 +969,14 @@
       } */
 
     @media (max-width: 1559px) {
+      .set-mindmap-swiper .swiper-container {
+        padding-left: 105px;
+      }
+
+      .accordion .accordion-item {
+        padding: 28px 60px 28px 28px;
+      }
+
       h1 {
         font-size: 40px;
         line-height: 50px;
@@ -783,6 +995,14 @@
         padding: 16px 0 30px;
       }
 
+      .key-image-section img {
+        height: 550px;
+        min-height: 550px;
+        max-height: 550px;
+        border-radius: 17px;
+      }
+
+
       .home-banner-section {
         gap: 60px;
       }
@@ -794,7 +1014,7 @@
       }
 
       .main-bg-sction {
-        height: 760px;
+        height: 800px;
       }
 
       .key-feature-section {
@@ -803,6 +1023,8 @@
 
       .key-content-section {
         padding-right: 30px;
+        min-width: 468px;
+        max-width: 468px;
       }
 
       .key-content-section h2 {
@@ -845,7 +1067,7 @@
       }
 
       .main-bg-sction {
-        height: 741px;
+        height: 770px;
       }
 
       .mindmap-swiper-slide {
@@ -858,6 +1080,45 @@
     }
 
     @media (max-width: 1319px) {
+      .dekstop-mind-template {
+        display: none;
+      }
+
+      .mobile-mind-template {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 24px;
+      }
+
+      .active-prev-next-slide .swiper-silde-box2 {
+        display: flex;
+        align-items: center;
+      }
+
+      .mobile-mind-template .swiper-silde-box img {
+        width: 60%;
+        height: 60% !important;
+      }
+
+      .active-prev-next-slide {
+        min-height: 245px;
+        max-height: 245px;
+        border: 1px solid #e1e1e1e1;
+        border-radius: 10px;
+      }
+
+      .swiper-silde-box {
+        border-radius: 10px;
+      }
+
+      .mindmap-template {
+        justify-content: left;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
       h1 {
         font-size: 42px;
         line-height: 52px;
@@ -887,7 +1148,7 @@
       }
 
       .main-bg-sction {
-        height: 630px;
+        height: 645px;
       }
 
       /* section 1 */
@@ -930,6 +1191,7 @@
 
       .image-faqs-box {
         background-color: #F9F8FB;
+        border: 1px solid #EEF0F5;
         border-radius: 20px;
         padding: 30px;
         display: flex;
@@ -941,12 +1203,13 @@
         background-color: white;
         color: black;
         border-radius: 10px;
+        border: 1px solid #D9D9D9;
         /* margin: 20px 0; */
       }
 
       .question {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 600;
         padding: 20px;
         position: relative;
         display: flex;
@@ -958,13 +1221,20 @@
         justify-content: space-between;
       }
 
-      .question .active {
-        color: #18181B !important;
+      .image-faqs-box .container .active {
+        color: #6762FE !important;
+        font-size: 15px;
       }
 
-      .question.active img {
+      .question.active svg {
         rotate: 180deg;
       }
+
+      .question.active svg path {
+        stroke: #6762fe !important;
+        fill: none !important
+      }
+
 
       .answercont {
         max-height: 0;
@@ -974,12 +1244,15 @@
 
       .answercont img {
         padding: 0 205px 20px;
+        width: 100%;
+        height: 100%;
       }
 
       .answer {
         padding: 0 20px 20px;
         line-height: 1.5rem;
         padding-bottom: 20px;
+        color: #18181B;
       }
 
       .mobile-key-feature-section h2 {
@@ -992,41 +1265,6 @@
         max-width: 700px;
         margin: 0 auto;
         text-align: center;
-      }
-
-      /* section 3 */
-      .mind-mapping-section {
-        margin-top: 60px;
-      }
-
-      .dekstop-mind-template {
-        display: none;
-      }
-
-      .mobile-mind-template {
-        display: flex !important;
-        overflow-x: auto;
-      }
-
-      .mindmap-template {
-        justify-content: left;
-      }
-
-      .mobile-mind-template .swiper-silde-box img {
-        max-width: 100px;
-        min-width: 100px;
-        width: 100px;
-        height: 100px;
-        padding: 10px;
-      }
-
-      .active-prev-next-slide {
-        min-height: 232px;
-        max-height: 232px;
-      }
-
-      ::-webkit-scrollbar {
-        display: none;
       }
 
       .more-mindmap-section {
@@ -1093,11 +1331,29 @@
       .testimonial-section {
         min-height: 420px;
       }
+
+      .accordion .accordion-item {
+        padding: 20px 60px 20px 20px;
+      }
+
+      .accordion button .icon-faqs::after {
+        top: -18px;
+        left: 8px;
+        width: 3px;
+        height: 19px;
+      }
+
+      .accordion button .icon-faqs::before {
+        top: -10px;
+        left: 0px;
+        width: 19px;
+        height: 3px;
+      }
     }
 
     @media (max-width: 1240px) {
       .main-bg-sction {
-        height: 630px;
+        height: 640px;
       }
 
       .home-banner-section {
@@ -1259,9 +1515,14 @@
         min-width: 211px;
         max-width: 261px;
         height: 203px;
-        min-height: 225px;
+        min-height: 246px;
         max-height: 309px;
         padding: 7px;
+        border: 1px solid #eef0f5;
+      }
+
+      .active-prev-next-slide .swiper-silde-box2 {
+        width: 195px;
       }
 
       .mobile-key-feature-section h2 {
@@ -1423,7 +1684,7 @@
       }
 
       .mobile-key-feature-section {
-        padding: 30px 16px;
+        padding: 30px 16px 50px;
       }
 
       .mobile-key-feature-section h2 {
@@ -1437,14 +1698,25 @@
         max-width: 600px;
       }
 
-      .mobile-key-feature-section {
+      /* .mobile-key-feature-section {
         padding: 16px 16px;
-      }
+      } */
 
       .image-faqs-box {
         padding: 20px;
         gap: 16px;
         border-radius: 12px;
+      }
+
+      .accordion {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .accordian-part {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
     }
 
@@ -1482,7 +1754,9 @@
       }
 
       .answercont img {
-        padding: 0 20px 20px;
+        padding: 0 68px 20px;
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -1546,6 +1820,11 @@
         line-height: 34px;
       }
 
+      h3 {
+        font-size: 19px;
+        line-height: 24px;
+      }
+
       .text_base {
         font-size: 13px;
         line-height: 22px;
@@ -1567,7 +1846,7 @@
       }
 
       .main-bg-sction {
-        height: 747px;
+        height: 762px;
       }
 
       .home-banner-section {
@@ -1607,14 +1886,74 @@
       }
     }
 
+
+    @media (max-width: 540px) {
+      .main-bg-sction {
+        height: 655px;
+      }
+    }
+
+    @media (max-width: 586px) {
+      .main-bg-sction {
+        height: 675px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-bg-sction {
+        height: 680px;
+      }
+    }
+
+    @media (max-width: 467px) {
+      .main-bg-sction {
+        height: 680px;
+      }
+
+      .accordion button {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .accordion {
+        padding-top: 22px;
+      }
+    }
+     @media (max-width: 465px) {
+      .main-bg-sction {
+        height: 710px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .main-bg-sction {
+        height: 700px;
+      }
+    }
+
     @media (max-width: 425px) {
+      .active-prev-next-slide .swiper-silde-box2 {
+        height: 150px;
+        max-height: 150px;
+        min-height: 150px;
+        padding: 10px;
+      }
+
+      .active-prev-next-slide {
+        min-height: 203px;
+      }
+
+      .mindmap-template {
+        gap: 16px;
+      }
+
       h1 {
         font-size: 26px;
         line-height: 34px;
       }
 
       h3 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 24px;
       }
 
@@ -1629,7 +1968,7 @@
       }
 
       .main-bg-sction {
-        height: 725px;
+        height: 695px;
       }
 
       .home-banner {
@@ -1732,11 +2071,11 @@
       .mobile-key-feature-section h2 {
         font-size: 18px;
         line-height: 24px;
-        padding-bottom: 4px;
+        padding-bottom: 9px;
       }
 
       .mobile-key-feature-section {
-        padding: 30px 16px 16px;
+        padding: 30px 16px 50px;
       }
 
       .question {
@@ -1745,10 +2084,17 @@
 
       .answercont img {
         padding: 0 14px 14px;
+        width: 100% !important;
+        height: 100% !important;
       }
 
       .answer {
         padding: 0 14px 14px;
+      }
+    }
+     @media (max-width: 383px) {
+      .main-bg-sction {
+        height: 720px;
       }
     }
 
@@ -1795,7 +2141,7 @@
       }
 
       .main-bg-sction {
-        height: 675px;
+        height: 700px;
       }
 
       .mind-mapping-section {
@@ -1812,7 +2158,7 @@
     @media (max-width: 360px) {
       h3 {
         font-size: 18px;
-        line-height: 21px;
+        line-height: 23px;
       }
 
       .home-banner {
@@ -1825,7 +2171,7 @@
       }
 
       .main-bg-sction {
-        height: 645px;
+        height: 685px;
       }
 
       h4 {
@@ -1835,6 +2181,11 @@
 
       .more-mindmap-content {
         padding: 7px 0 24px;
+      }
+    }
+      @media (max-width: 320px) {
+      .main-bg-sction {
+        height: 700px;
       }
     }
   </style>
@@ -1852,732 +2203,734 @@
         " />
   </div>
   <!-- start: header -->
-<header class="header-bg header-hidden">
-  <div class="container-fluid-header header-part">
-    <a href="./" class="header-logo">
-      <img src="https://cdn.cloudairy.com/image/header/black-logo.svg" alt="logo" style="width: 100%; height: 100%" />
-    </a>
-    <div class="header-navigation">
-      <nav>
-        <ul class="navbar-main-menus">
-          <li>
-            <a class="navbar-menu header-menu-hover" onclick="toggleMenu()">
-              Product
-              <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
-                  stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+  <header class="header-bg header-hidden">
+    <div class="container-fluid-header header-part">
+      <a href="./" class="header-logo">
+        <img src="https://cdn.cloudairy.com/image/header/black-logo.svg" alt="logo" style="width: 100%; height: 100%" />
+      </a>
+      <div class="header-navigation">
+        <nav>
+          <ul class="navbar-main-menus">
+            <li>
+              <a class="navbar-menu header-menu-hover" onclick="toggleMenu()">
+                Product
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
+                    stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
-            </a>
+              </a>
 
-            <ul id="productMenu" class="dropdown-menu">
-              <div class="product-menu">
-                <div class="product-submenu platform-menu">
-                  <p class="menu-title">Platform</p>
-                  <a href="unified-workspace" class="submenu-text hover-comingsoon">
-                    <img src="https://cdn.cloudairy.com/image/header/product/iconone.svg" alt="icon1" />
-                    <p>Unified Workspace</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="real-time-collaborations" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/product/icontwo.svg" alt="icon2" />
-                    <p>Real Time Collaboration</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="AI-assistance" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/product/iconthree.svg" alt="icon3" />
-                    <p>Al Powered Assistance</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/product/iconfour.svg" alt="icon4" />
-                    <p>Secured Data Storage</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="template" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/product/iconfive.svg" alt="icon5" />
-                    <p>Templates</p>
-                  </a>
+              <ul id="productMenu" class="dropdown-menu">
+                <div class="product-menu">
+                  <div class="product-submenu platform-menu">
+                    <p class="menu-title">Platform</p>
+                    <a href="unified-workspace" class="submenu-text hover-comingsoon">
+                      <img src="https://cdn.cloudairy.com/image/header/product/iconone.svg" alt="icon1" />
+                      <p>Unified Workspace</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="real-time-collaborations" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/product/icontwo.svg" alt="icon2" />
+                      <p>Real Time Collaboration</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="AI-assistance" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/product/iconthree.svg" alt="icon3" />
+                      <p>Al Powered Assistance</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/product/iconfour.svg" alt="icon4" />
+                      <p>Secured Data Storage</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="template" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/product/iconfive.svg" alt="icon5" />
+                      <p>Templates</p>
+                    </a>
 
-                </div>
-                <div class="capability-menu">
-                  <p class="menu-title">Capabilities</p>
-                  <div class="capability-box">
-                    <div class="product-submenu">
-                      <a href="diagram-maker" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/iconsix.svg" alt="icon6" />
-                        <p>Diagramming Tool</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/iconseven.svg" alt="icon7" />
-                        <p>Data Visualization</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/iconeight.svg" alt="icon8" />
-                        <p>Retrospective Tool</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="mind-maps" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/iconnine.svg" alt="icon9" />
-                        <p>Mindmapping Tool</p>
-                      </a>
-                      <a href="agile" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononezero.svg" alt="icon10" />
-                        <p>Agile and Scrum Support</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononeone.svg" alt="icon11" />
-                        <p>Animate Connectors</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononetwo.svg" alt="icon12" />
-                        <p>Smart Goal Setting</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
-                    <div class="product-submenu">
-                      <a href="strategic-planning" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononethree.svg" alt="icon13" />
-                        <p>Strategic Planning Tool</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononefour.svg" alt="icon14" />
-                        <p>Project and Task Management</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononefive.svg" alt="icon15" />
-                        <p>Prototyping and Wireframing</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononesix.svg" alt="icon16" />
-                        <p>Customizable Icons and Illustrations</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="brainstorming" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononeseven.svg" alt="icon17" />
-                        <p>Brainstorm and Ideation</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="online-whiteboard" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononeeight.svg" alt="icon18" />
-                        <p>Online Whiteboard</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icononenine.svg" alt="icon19" />
-                        <p>UX Design Maker</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
-                    <div class="product-submenu">
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwozero.svg" alt="icon20" />
-                        <p>Automated Diagram Generation</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="version-control" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwoone.svg" alt="icon21" />
-                        <p>Version Control</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwotwo.svg" alt="icon22" />
-                        <p>Product Development Software</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwothree.svg" alt="icon23" />
-                        <p>Online Sticky Notes</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwofour.svg" alt="icon24" />
-                        <p>Al Powered Diagrams</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/product/icontwofive.svg" alt="icon25" />
-                        <p>Scrum Tool</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
                   </div>
-                </div>
-              </div>
-            </ul>
-          </li>
-
-          <li>
-            <a class="navbar-menu header-menu-hover" onclick="toggleMenu1()">Solutions
-              <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
-                  stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-            </a>
-            <ul id="productMenu1" class="dropdown-menu">
-              <div class="product-menu">
-                <div class="product-submenu platform-menu">
-                  <p class="menu-title">Teams</p>
-                  <a href="solutions-architect" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconone.svg" alt="icon1" />
-                    <p>Solutions Architect</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="project-management" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/icontwo.svg" alt="icon2" />
-                    <p>Product Management</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="engineering-team" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconthree.svg" alt="icon3" />
-                    <p>Engineering</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="ux-designer" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconfour.svg" alt="icon4" />
-                    <p>UX Design</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="sales-team" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconfive.svg" alt="icon5" />
-                    <p>Sales</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconsix.svg" alt="icon6" />
-                    <p>Project Management</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                  <a href="" class="submenu-text">
-                    <img src="https://cdn.cloudairy.com/image/header/resources/iconseven.svg" alt="icon7" />
-                    <p>IT</p>
-                    <div class="coming-soon">Coming Soon</div>
-                  </a>
-                </div>
-                <div class="capability-menu platform-menu">
-                  <p class="menu-title">Cloudairy Al</p>
-                  <div class="capability-box">
-                    <div class="product-submenu">
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/iconeight.svg" alt="icon8" />
-                        <p>Al Flowchart</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/iconnine.svg" alt="icon9" />
-                        <p>Al Mind Map</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononezero.svg" alt="icon10" />
-                        <p>Al Sequence Diagram</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononeone.svg" alt="icon11" />
-                        <p>Al Docs</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononetwo.svg" alt="icon12" />
-                        <p>Al Generate Image</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononethree.svg" alt="icon13" />
-                        <p>Al Sticky Notes</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="capability-menu">
-                  <p class="menu-title">Use Cases</p>
-                  <div class="capability-box">
-                    <div class="product-submenu">
-                      <a href="network-diagram" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononefour.svg" alt="icon14" />
-                        <p>Network Diagram Maker</p>
-                      </a>
-                      <a href="flowchart" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononefive.svg" alt="icon15" />
-                        <p>Flowchart Maker</p>
-                      </a>
-                      <a href="circuit-diagram-maker" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononesix.svg" alt="icon16" />
-                        <p>Circuit Diagram Maker</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="er-diagram" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononeseven.svg" alt="icon17" />
-                        <p>ER Diagrams </p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="venn-diagram" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononeeight.svg" alt="icon18" />
-                        <p>Venn Diagram Maker</p>
-                      </a>
-                      <a href="architecture-diagram" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icononenine.svg" alt="icon19" />
-                        <p>Architecture Diagram Maker</p>
-                      </a>
-                      <a href="vision-boards" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwozero.svg" alt="icon20" />
-                        <p>Vision Board maker</p>
-                      </a>
-                    </div>
-                    <div class="product-submenu">
-                      <a href="design-canvas" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwoone.svg" alt="icon21" />
-                        <p>Design Canvas</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="uml-diagram" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwotwo.svg" alt="icon22" />
-                        <p>UML Diagram Maker</p>
-                      </a>
-                      <a href="pI-planning-tool" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwothree.svg" alt="icon23" />
-                        <p>PI Planning Tool</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="powerful-graph-maker" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwofour.svg" alt="icon24" />
-                        <p>Graphs</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="wiring-diagram-maker" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwofive.svg" alt="icon25" />
-                        <p>Wiring Diagram Maker</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="storyboard-creator" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwosix.svg" alt="icon26" />
-                        <p>Tree Diagram </p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="kanban-tool" class="submenu-text">
-                        <img src="https://cdn.cloudairy.com/image/header/resources/icontwoseven.svg" alt="icon27" />
-                        <p>Kanban Board</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ul>
-          </li>
-          <li>
-            <a class="navbar-menu header-menu-hover" onclick="toggleMenu2()">Resources
-              <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
-                  stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-
-            </a>
-            <ul id="productMenu2" class="dropdown-menu resourcesMenu" style="padding: 20px 30px;">
-              <div class="product-menu">
-                <div class="product-submenu">
-                  <a href="blog" class="submenu-text">
-                    <p>Blog</p>
-                  </a>
-                  <a href="template" class="submenu-text">
-                    <p>Templates</p>
-                  </a>
-                </div>
-              </div>
-            </ul>
-          </li>
-          <li><a class="header-menu-hover" href="pricing">Pricing</a></li>
-          <li>
-            <a class="header-menu-hover" href="about">About Us</a>
-          </li>
-          <li><a class="header-menu-hover" href="sales">Contact Sales</a></li>
-        </ul>
-      </nav>
-      <div class="navbar-buttons">
-        <a href="https://app.cloudairy.com/login" class="btn-outline">Login</a>
-        <a href="https://app.cloudairy.com/signup" class="btn-gradient">Sign up free</a>
-      </div>
-      <div class="navbar-drawer-menu">
-        <svg width="20" height="20" class="toggle-open" viewBox="0 0 24 24" fill="white"
-          xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
-          <path d="M20 18H4M20 12H4M20 6H4" stroke="white" stroke-width="2" stroke-linecap="round" fill="white">
-          </path>
-        </svg>
-        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256"
-          class="text-white toggle-close" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
-          </path>
-        </svg>
-      </div>
-
-      <div class="navbar-drawer-sidebar">
-        <ul>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <a class="active" href="./">Home</a>
-          </li>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <div class="navbar-accordion">
-              <div class="navbar-accordion-item">
-                <button id="navbar-accordion-button-1" aria-expanded="false">
-                  <span class="navbar-accordion-title">Product</span>
-                  <span class="icon1" aria-hidden="true">
-                    <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
-                  </span>
-                </button>
-                <div class="navbar-accordion-content">
-                  <div>
-                    <p class="menu-title">
-                      Platform
-                    </p>
-                    <div>
-                      <a href="" class="submenu-text hover-comingsoon">
-
-                        <p>Unified Workspace</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="real-time-collaborations" class="submenu-text">
-
-                        <p>Real Time Collaboration</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Al Powered Assistance</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Secured Data Storage</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="template" class="submenu-text">
-
-                        <p>Templates</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div>
-                    <p class="menu-title">
-                      Capabilities
-                    </p>
-                    <div>
-                      <a href="diagram-maker" class="submenu-text">
-
-                        <p>Diagramming Tool</p>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Data Visualization</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Retrospective Tool</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="mind-maps" class="submenu-text">
-
-                        <p>Mindmapping Tool</p>
-                      </a>
-                      <a href="agile" class="submenu-text">
-
-                        <p>Agile and Scrum Support</p>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Animate Connectors</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Smart Goal Setting</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="strategic-planning" class="submenu-text">
-
-                        <p>Strategic Planning Tool</p>
-                      </a>
-                      <a href="" class="submenu-text">
-
-                        <p>Project and Task Management</p>
-                        <div class="coming-soon">Coming Soon</div>
+                  <div class="capability-menu">
+                    <p class="menu-title">Capabilities</p>
+                    <div class="capability-box">
+                      <div class="product-submenu">
+                        <a href="diagram-maker" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/iconsix.svg" alt="icon6" />
+                          <p>Diagramming Tool</p>
+                        </a>
                         <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/iconseven.svg" alt="icon7" />
+                          <p>Data Visualization</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/iconeight.svg" alt="icon8" />
+                          <p>Retrospective Tool</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="mind-maps" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/iconnine.svg" alt="icon9" />
+                          <p>Mindmapping Tool</p>
+                        </a>
+                        <a href="agile" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononezero.svg" alt="icon10" />
+                          <p>Agile and Scrum Support</p>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononeone.svg" alt="icon11" />
+                          <p>Animate Connectors</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononetwo.svg" alt="icon12" />
+                          <p>Smart Goal Setting</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
+                      <div class="product-submenu">
+                        <a href="strategic-planning" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononethree.svg" alt="icon13" />
+                          <p>Strategic Planning Tool</p>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononefour.svg" alt="icon14" />
+                          <p>Project and Task Management</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononefive.svg" alt="icon15" />
                           <p>Prototyping and Wireframing</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononesix.svg" alt="icon16" />
                           <p>Customizable Icons and Illustrations</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="brainstorming" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononeseven.svg" alt="icon17" />
                           <p>Brainstorm and Ideation</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="online-whiteboard" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononeeight.svg" alt="icon18" />
                           <p>Online Whiteboard</p>
                         </a>
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icononenine.svg" alt="icon19" />
                           <p>UX Design Maker</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
+                      </div>
+                      <div class="product-submenu">
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwozero.svg" alt="icon20" />
                           <p>Automated Diagram Generation</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="version-control" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwoone.svg" alt="icon21" />
                           <p>Version Control</p>
                         </a>
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwotwo.svg" alt="icon22" />
                           <p>Product Development Software</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwothree.svg" alt="icon23" />
                           <p>Online Sticky Notes</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwofour.svg" alt="icon24" />
                           <p>Al Powered Diagrams</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
                         <a href="" class="submenu-text">
-
+                          <img src="https://cdn.cloudairy.com/image/header/product/icontwofive.svg" alt="icon25" />
                           <p>Scrum Tool</p>
                           <div class="coming-soon">Coming Soon</div>
                         </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+
+            <li>
+              <a class="navbar-menu header-menu-hover" onclick="toggleMenu1()">Solutions
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
+                    stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </a>
+              <ul id="productMenu1" class="dropdown-menu">
+                <div class="product-menu">
+                  <div class="product-submenu platform-menu">
+                    <p class="menu-title">Teams</p>
+                    <a href="solutions-architect" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconone.svg" alt="icon1" />
+                      <p>Solutions Architect</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="project-management" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/icontwo.svg" alt="icon2" />
+                      <p>Product Management</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="engineering-team" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconthree.svg" alt="icon3" />
+                      <p>Engineering</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="ux-designer" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconfour.svg" alt="icon4" />
+                      <p>UX Design</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="sales-team" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconfive.svg" alt="icon5" />
+                      <p>Sales</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconsix.svg" alt="icon6" />
+                      <p>Project Management</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                    <a href="" class="submenu-text">
+                      <img src="https://cdn.cloudairy.com/image/header/resources/iconseven.svg" alt="icon7" />
+                      <p>IT</p>
+                      <div class="coming-soon">Coming Soon</div>
+                    </a>
+                  </div>
+                  <div class="capability-menu platform-menu">
+                    <p class="menu-title">Cloudairy Al</p>
+                    <div class="capability-box">
+                      <div class="product-submenu">
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/iconeight.svg" alt="icon8" />
+                          <p>Al Flowchart</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/iconnine.svg" alt="icon9" />
+                          <p>Al Mind Map</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononezero.svg" alt="icon10" />
+                          <p>Al Sequence Diagram</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeone.svg" alt="icon11" />
+                          <p>Al Docs</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononetwo.svg" alt="icon12" />
+                          <p>Al Generate Image</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononethree.svg" alt="icon13" />
+                          <p>Al Sticky Notes</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="capability-menu">
+                    <p class="menu-title">Use Cases</p>
+                    <div class="capability-box">
+                      <div class="product-submenu">
+                        <a href="network-diagram" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononefour.svg" alt="icon14" />
+                          <p>Network Diagram Maker</p>
+                        </a>
+                        <a href="flowchart" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononefive.svg" alt="icon15" />
+                          <p>Flowchart Maker</p>
+                        </a>
+                        <a href="circuit-diagram-maker" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononesix.svg" alt="icon16" />
+                          <p>Circuit Diagram Maker</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="er-diagram" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeseven.svg" alt="icon17" />
+                          <p>ER Diagrams </p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="venn-diagram" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononeeight.svg" alt="icon18" />
+                          <p>Venn Diagram Maker</p>
+                        </a>
+                        <a href="architecture-diagram" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icononenine.svg" alt="icon19" />
+                          <p>Architecture Diagram Maker</p>
+                        </a>
+                        <a href="vision-boards" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwozero.svg" alt="icon20" />
+                          <p>Vision Board maker</p>
+                        </a>
+                      </div>
+                      <div class="product-submenu">
+                        <a href="design-canvas" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwoone.svg" alt="icon21" />
+                          <p>Design Canvas</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="uml-diagram" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwotwo.svg" alt="icon22" />
+                          <p>UML Diagram Maker</p>
+                        </a>
+                        <a href="pI-planning-tool" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwothree.svg" alt="icon23" />
+                          <p>PI Planning Tool</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="powerful-graph-maker" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwofour.svg" alt="icon24" />
+                          <p>Graphs</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="wiring-diagram-maker" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwofive.svg" alt="icon25" />
+                          <p>Wiring Diagram Maker</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="storyboard-creator" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwosix.svg" alt="icon26" />
+                          <p>Tree Diagram </p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="kanban-tool" class="submenu-text">
+                          <img src="https://cdn.cloudairy.com/image/header/resources/icontwoseven.svg" alt="icon27" />
+                          <p>Kanban Board</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li>
+              <a class="navbar-menu header-menu-hover" onclick="toggleMenu2()">Resources
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 6L8.01828 8.51828C8.24537 8.74537 8.35891 8.85891 8.5 8.85891C8.64109 8.85891 8.75463 8.74537 8.98172 8.51828L11.5 6"
+                    stroke="#18181B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </a>
+              <ul id="productMenu2" class="dropdown-menu resourcesMenu" style="padding: 20px 30px;">
+                <div class="product-menu">
+                  <div class="product-submenu">
+                    <a href="blog" class="submenu-text">
+                      <p>Blog</p>
+                    </a>
+                    <a href="template" class="submenu-text">
+                      <p>Templates</p>
+                    </a>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li><a class="header-menu-hover" href="pricing">Pricing</a></li>
+            <li>
+              <a class="header-menu-hover" href="about">About Us</a>
+            </li>
+            <li><a class="header-menu-hover" href="sales">Contact Sales</a></li>
+          </ul>
+        </nav>
+        <div class="navbar-buttons">
+          <a href="https://app.cloudairy.com/login" class="btn-outline">Login</a>
+          <a href="https://app.cloudairy.com/signup" class="btn-gradient">Sign up free</a>
+        </div>
+        <div class="navbar-drawer-menu">
+          <svg width="20" height="20" class="toggle-open" viewBox="0 0 24 24" fill="white"
+            xmlns="http://www.w3.org/2000/svg" class="w-5 h-5">
+            <path d="M20 18H4M20 12H4M20 6H4" stroke="white" stroke-width="2" stroke-linecap="round" fill="white">
+            </path>
+          </svg>
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256"
+            class="text-white toggle-close" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z">
+            </path>
+          </svg>
+        </div>
+
+        <div class="navbar-drawer-sidebar">
+          <ul>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <a class="active" href="./">Home</a>
+            </li>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <div class="navbar-accordion">
+                <div class="navbar-accordion-item">
+                  <button id="navbar-accordion-button-1" aria-expanded="false">
+                    <span class="navbar-accordion-title">Product</span>
+                    <span class="icon1" aria-hidden="true">
+                      <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
+                    </span>
+                  </button>
+                  <div class="navbar-accordion-content">
+                    <div>
+                      <p class="menu-title">
+                        Platform
+                      </p>
+                      <div>
+                        <a href="" class="submenu-text hover-comingsoon">
+
+                          <p>Unified Workspace</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="real-time-collaborations" class="submenu-text">
+
+                          <p>Real Time Collaboration</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Al Powered Assistance</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Secured Data Storage</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="template" class="submenu-text">
+
+                          <p>Templates</p>
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="menu-title">
+                        Capabilities
+                      </p>
+                      <div>
+                        <a href="diagram-maker" class="submenu-text">
+
+                          <p>Diagramming Tool</p>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Data Visualization</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Retrospective Tool</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="mind-maps" class="submenu-text">
+
+                          <p>Mindmapping Tool</p>
+                        </a>
+                        <a href="agile" class="submenu-text">
+
+                          <p>Agile and Scrum Support</p>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Animate Connectors</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Smart Goal Setting</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="strategic-planning" class="submenu-text">
+
+                          <p>Strategic Planning Tool</p>
+                        </a>
+                        <a href="" class="submenu-text">
+
+                          <p>Project and Task Management</p>
+                          <div class="coming-soon">Coming Soon</div>
+                          <a href="" class="submenu-text">
+                            <p>Prototyping and Wireframing</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+                            <p>Customizable Icons and Illustrations</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="brainstorming" class="submenu-text">
+                            <p>Brainstorm and Ideation</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="online-whiteboard" class="submenu-text">
+
+                            <p>Online Whiteboard</p>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>UX Design Maker</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>Automated Diagram Generation</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="version-control" class="submenu-text">
+
+                            <p>Version Control</p>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>Product Development Software</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>Online Sticky Notes</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>Al Powered Diagrams</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                          <a href="" class="submenu-text">
+
+                            <p>Scrum Tool</p>
+                            <div class="coming-soon">Coming Soon</div>
+                          </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+            </li>
 
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <div class="navbar-accordion">
-              <div class="navbar-accordion-item">
-                <button id="navbar-accordion-button-1" aria-expanded="false">
-                  <span class="navbar-accordion-title">Solutions</span>
-                  <span class="icon1" aria-hidden="true">
-                    <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
-                  </span>
-                </button>
-                <div class="navbar-accordion-content">
-                  <div>
-                    <p class="menu-title">
-                      Teams
-                    </p>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <div class="navbar-accordion">
+                <div class="navbar-accordion-item">
+                  <button id="navbar-accordion-button-1" aria-expanded="false">
+                    <span class="navbar-accordion-title">Solutions</span>
+                    <span class="icon1" aria-hidden="true">
+                      <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
+                    </span>
+                  </button>
+                  <div class="navbar-accordion-content">
                     <div>
-                      <a href="" class="submenu-text">
+                      <p class="menu-title">
+                        Teams
+                      </p>
+                      <div>
+                        <a href="" class="submenu-text">
 
-                        <p>Solutions Architect</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>Solutions Architect</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>Product Management</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>Product Management</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>Engineering</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>Engineering</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>UX Design</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>UX Design</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>Sales</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>Sales</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>Project Management</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
+                          <p>Project Management</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
 
-                        <p>IT</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
+                          <p>IT</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <p class="menu-title">
-                      Cloudairy Al
-                    </p>
                     <div>
-                      <a href="" class="submenu-text">
+                      <p class="menu-title">
+                        Cloudairy Al
+                      </p>
+                      <div>
+                        <a href="" class="submenu-text">
 
-                        <p>Al Flowchart</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Al Mind Map</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Al Sequence Diagram</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Al Docs</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Al Generate Image</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Al Sticky Notes</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
+                          <p>Al Flowchart</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Al Mind Map</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Al Sequence Diagram</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Al Docs</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Al Generate Image</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Al Sticky Notes</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <p class="menu-title">
-                      Use Cases
-                    </p>
                     <div>
-                      <a href="network-diagram" class="submenu-text">
-                        <p>Network Diagram Maker</p>
-                      </a>
-                      <a href="flowchart" class="submenu-text">
-                        <p>Flowchart Maker</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Circuit Diagram Maker</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>ER Diagrams </p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="venn-diagram" class="submenu-text">
-                        <p>Venn Diagram Maker</p>
-                      </a>
-                      <a href="architecture-diagram" class="submenu-text">
-                        <p>Architecture Diagram Maker</p>
-                      </a>
-                      <a href="vision-boards" class="submenu-text">
-                        <p>Vision Board maker</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Design Canvas</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="uml-diagram" class="submenu-text">
-                        <p>UML Diagram Maker</p>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>PI Planning Tool</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Graphs</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Wiring Diagram Maker</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Tree Diagram </p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                      <a href="" class="submenu-text">
-                        <p>Kanban Board</p>
-                        <div class="coming-soon">Coming Soon</div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <div class="navbar-accordion">
-              <div class="navbar-accordion-item">
-                <button id="navbar-accordion-button-1" aria-expanded="false">
-                  <span class="navbar-accordion-title">Resources</span>
-                  <span class="icon1" aria-hidden="true">
-                    <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
-                  </span>
-                </button>
-                <div class="navbar-accordion-content">
-                  <div>
-                    <div>
-                      <a href="blog" class="submenu-text">
-
-                        <p>Blog</p>
-
-                      </a>
-                      <a href="template" class="submenu-text">
-
-                        <p>Template</p>
-
-                      </a>
-
+                      <p class="menu-title">
+                        Use Cases
+                      </p>
+                      <div>
+                        <a href="network-diagram" class="submenu-text">
+                          <p>Network Diagram Maker</p>
+                        </a>
+                        <a href="flowchart" class="submenu-text">
+                          <p>Flowchart Maker</p>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Circuit Diagram Maker</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>ER Diagrams </p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="venn-diagram" class="submenu-text">
+                          <p>Venn Diagram Maker</p>
+                        </a>
+                        <a href="architecture-diagram" class="submenu-text">
+                          <p>Architecture Diagram Maker</p>
+                        </a>
+                        <a href="vision-boards" class="submenu-text">
+                          <p>Vision Board maker</p>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Design Canvas</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="uml-diagram" class="submenu-text">
+                          <p>UML Diagram Maker</p>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>PI Planning Tool</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Graphs</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Wiring Diagram Maker</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Tree Diagram </p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                        <a href="" class="submenu-text">
+                          <p>Kanban Board</p>
+                          <div class="coming-soon">Coming Soon</div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <a href="about">About Us</a>
-          </li>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <a href="pricing">Pricing</a>
-          </li>
-          <li style="border-bottom: 1px solid #d4d4d4">
-            <a href="sales">Contact Sales</a>
-          </li>
-          <div style="
+            </li>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <div class="navbar-accordion">
+                <div class="navbar-accordion-item">
+                  <button id="navbar-accordion-button-1" aria-expanded="false">
+                    <span class="navbar-accordion-title">Resources</span>
+                    <span class="icon1" aria-hidden="true">
+                      <img src="https://cdn.cloudairy.com/image/pricing/arrow-down-zeroone.png" alt="arrow-down-01" />
+                    </span>
+                  </button>
+                  <div class="navbar-accordion-content">
+                    <div>
+                      <div>
+                        <a href="blog" class="submenu-text">
+
+                          <p>Blog</p>
+
+                        </a>
+                        <a href="template" class="submenu-text">
+
+                          <p>Template</p>
+
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <a href="about">About Us</a>
+            </li>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <a href="pricing">Pricing</a>
+            </li>
+            <li style="border-bottom: 1px solid #d4d4d4">
+              <a href="sales">Contact Sales</a>
+            </li>
+            <div style="
                           flex-direction: column;
                           gap: 10px;
                           align-items: center;
                           margin-top: 15px;
                         " class="navbar-sidetoggle-button">
-            <a rel="canonical" href="https://app.cloudairy.com/signup" class="btn-outline">Log in</a>
-            <a rel="canonical" href="https://app.cloudairy.com/login" class="btn-gradient">Sign up free</a>
-          </div>
-        </ul>
+              <a rel="canonical" href="https://app.cloudairy.com/signup" class="btn-outline">Log in</a>
+              <a rel="canonical" href="https://app.cloudairy.com/login" class="btn-gradient">Sign up free</a>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
   <!-- End: header -->
   <!-- section 1 -->
+  <h1 class="meta-title">Design, analyze, and collaborate with Cloudairy's circuit diagram maker </h1>
   <section class="loading">
-    <feature-banner data-title="Design, Analyze, and Collaborate with Cloudairy's Circuit Diagram Maker "
-      text_base="Elevate your electrical engineering projects with Cloudairy's powerful and intuitive circuit diagram tool. Create precise and professional diagrams, collaborate seamlessly with your team, and accelerate your design process.  "
-      data-image="https://s3.amazonaws.com/cloudairy-website-storage/home/home-banner.mp4"></feature-banner>
+    <feature-banner data-title="Design, analyze, and collaborate with Cloudairy's circuit diagram maker "
+      text_base="Elevate your electrical engineering projects with Cloudairy's powerful and intuitive circuit diagram tool. Create precise and professional diagrams, collaborate seamlessly with your team, and accelerate your design process. "
+      data-image="https://fast.wistia.net/embed/iframe/0o72t5ceoj" title_max-width="450px"></feature-banner>
   </section>
   <!-- section 2 -->
   <section class="container-fluid key-feature-section Key-feature-hide section-padding">
     <div class="key-content-section">
-      <h2>How Cloudairy Simplifies Circuit Diagramming ?</h2>
-      <p class="text_lg key-content-subtitle">
+      <h2>How Cloudairy simplifies circuit diagramming ?</h2>
+      <p class="text_base key-content-subtitle" style="color: #18181BCC;">
         Cloudairy streamlines circuit design with drag-and-drop tools, real-time collaboration, and AI-driven
-        automation, making it easy to create and share professional diagrams.
+        automation, making
+        it easy to create and share professional diagrams.
       </p>
       <div class="feature-section">
         <div class="feature-options">
@@ -2585,126 +2938,145 @@
             <div class="active-indicator"></div>
           </div>
           <p class="text_base progress-data active" data-feature="mind-mapping">
-            Extensive Symbol Collection
+            Extensive symbol collection
           </p>
           <p class="text_base progress-data" data-feature="real-time">
-            Intuitive User Interface
+            Intuitive user interface
           </p>
           <p class="text_base progress-data" data-feature="customization">
-            Drag-and-Drop Capability
+            Drag-and-drop capability
           </p>
           <p class="text_base progress-data" data-feature="integration">
-            Real-Time Team Collaboration
+            Real-time team collaboration
           </p>
           <p class="text_base progress-data" data-feature="summarization">
-            Customizable Design Templates
+            Customizable design templates
           </p>
         </div>
       </div>
     </div>
     <div class="key-image-section">
-      <h4 id="feature-title">Extensive Symbol Collection</h4>
+      <h4 id="feature-title">Extensive symbol collection</h4>
       <p class="text_sm" id="key-description">
         Gain access to a wide range of standardized electrical symbols, such as resistors, capacitors, and transistors,
-        to accurately depict your circuits and ensure that your designs are both professional and universally
+        to
+        accurately depict your circuits and ensure that your designs are both professional and universally
         understandable. 
       </p>
-      <img id="feature-image"
-        src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage1.png"
-        alt="AI-Powered Mind Mapping" />
+      <img id="feature-image" src="IMAGE_PATHflowchart-maker/extensive-shape-library-flowchart-maker-one.svg"
+        alt="extensive_shape_library_flowchart_maker (1)" />
     </div>
   </section>
   <section class="mobile-key-feature-section container-fluid">
     <div>
-      <h2>How Cloudairy Simplifies Circuit Diagramming ?</h2>
-      <p class="text_lg key-content-subtitle">
+      <h2>How Cloudairy simplifies circuit diagramming ?</h2>
+      <p class="text_base key-content-subtitle">
         Cloudairy streamlines circuit design with drag-and-drop tools, real-time collaboration, and AI-driven
-        automation, making it easy to create and share professional diagrams.
+        automation, making
+        it easy to create and share professional diagrams.
       </p>
       <div class="image-faqs-box">
         <div class="container">
           <div class="question">
-            Extensive Shape Library<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Extensive symbol collection<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Gain access to an extensive and meticulously curated collection
-              of standardized flowchart symbols, encompassing a wide range of
-              elements such as processes, decision points, inputs and outputs,
-              connectors, and more. This diverse library allows you to
-              accurately and effectively represent various workflows, ensuring
-              clarity and precision in your diagrams. 
+              Gain access to a wide range of standardized electrical symbols, such as resistors, capacitors, and
+              transistors, to
+              accurately depict your circuits and ensure that your designs are both professional and universally
+              understandable.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage1.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHflowchart-maker/extensive-shape-library-flowchart-maker-one.svg"
+              alt="extensive_shape_library_flowchart_maker (1)" style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            User-Friendly Interface<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Intuitive user interface<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Effortlessly generate and organize your ideas with our
-              AI-powered mind-mapping tool. Simply type in a central topic,
-              and our AI will generate relevant branches and subtopics. Our
-              intelligent suggestions will help you explore new avenues, while
-              our automated layout and formatting ensure your mind maps are
-              always visually appealing.  
+              Navigate through a user-friendly platform designed with simplicity in mind. The interface streamlines the
+              design
+              process, providing intuitive tools and features that make it easy to locate, place, and connect components
+              without any
+              steep learning curve.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage2.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHflowchart-maker/user-friendly-interface-flowchart-maker.svg"
+              alt="user-friendly_interface_flowchart_maker" style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Drag-and-Drop Functionality<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Drag-and-drop functionality<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Effortlessly generate and organize your ideas with our
-              AI-powered mind-mapping tool. Simply type in a central topic,
-              and our AI will generate relevant branches and subtopics. Our
-              intelligent suggestions will help you explore new avenues, while
-              our automated layout and formatting ensure your mind maps are
-              always visually appealing.  
+              Benefit from a highly efficient drag-and-drop functionality that allows you to easily select and position
+              components
+              within your schematic. This feature promotes a smoother design workflow, enabling you to build and modify
+              circuits
+              quickly with minimal effort, allowing for faster iterations and experimentation.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage3.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHflowchart-maker/drag-and-drop-functionality-flowchart-maker.svg"
+              alt="drag-and-drop-functionality-flowchart-makeA" style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Real-Time Collaboration<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Real-time team collaboration<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"
+              fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Effortlessly generate and organize your ideas with our
-              AI-powered mind-mapping tool. Simply type in a central topic,
-              and our AI will generate relevant branches and subtopics. Our
-              intelligent suggestions will help you explore new avenues, while
-              our automated layout and formatting ensure your mind maps are
-              always visually appealing.  
+              Collaborate with team members on the same project simultaneously, promoting effective communication and
+              collective
+              problem-solving. With this feature you can instantly see changes made by others, facilitating a dynamic
+              and
+              collaborative design environment.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage4.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHflowchart-maker/real-time-collaboration-flowchart-maker.svg"
+              alt="real-time_collaboration_flowchart_makerg" style="width: 100%; height: 100%" />
           </div>
         </div>
         <div class="container">
           <div class="question">
-            Customizable Templates<img src="IMAGE_PATHhome/arrow-down-zeroone-sharp.svg" alt="arrow-down-01" />
+            Customizable design templates<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"
+              viewBox="0 0 10 6" fill="none">
+              <path
+                d="M1 1L4.51828 4.51828C4.74537 4.74537 4.85891 4.85891 5 4.85891C5.14109 4.85891 5.25463 4.74537 5.48172 4.51828L9 1"
+                stroke="#18181B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <div class="answercont">
             <div class="answer text_base">
-              Effortlessly generate and organize your ideas with our
-              AI-powered mind-mapping tool. Simply type in a central topic,
-              and our AI will generate relevant branches and subtopics. Our
-              intelligent suggestions will help you explore new avenues, while
-              our automated layout and formatting ensure your mind maps are
-              always visually appealing.  
+              Take advantage of a variety of pre-designed templates specific to different circuit types, or create your
+              own custom
+              templates to standardize the design process across multiple platforms and enhance efficiency throughout
+              your workflow.
             </div>
-            <img src="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage5.png"
-              alt="AI-Powered Mind Mapping" style="width: 100%; height: 100%" />
+            <img src="IMAGE_PATHflowchart-maker/customizable-templates-flowchart-maker.svg"
+              alt="customizable_templates_flowchart_maker" style="width: 100%; height: 100%" />
           </div>
         </div>
       </div>
@@ -2712,39 +3084,38 @@
   </section>
   <!-- Why Cloudairy is Perfect for -->
   <div class="section2-padding">
-    <feature-visualize-4box data-title="Why Choose Cloudairy for Circuit Diagramming ?"
-      text_base="With AI-assisted tools, precise diagramming features, and seamless collaboration, Cloudairy ensures your circuit designs are professional and efficient every time."
-      image1="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/visualize1.png"
-      data1="High-Quality Export Options"
+    <feature-visualize-4box data-title="Why choose Cloudairy for circuit diagramming ?"
+      text_base="With AI-assisted tools, precise diagramming features, and seamless collaboration, Cloudairy ensures your circuit designs are professional and efficient every time.."
+      image1="IMAGE_PATHflowchart-maker/high-resolution-export-options-flowchart-maker.svg"
+      data1="High-quality export options"
       data1_desc="Once your circuit diagrams are finalized, export them in multiple formats, including PDF for printed documentation, PNG for web use, or SVG for scalable graphics. This versatility ensures that your designs can be easily integrated into presentations, reports, or further editing without compromising quality."
-      image2="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/visualize2.png"
-      data2="Change Tracking and Versioning"
-      data2_desc=" Keep detailed track of all modifications made to your projects. This feature allows you to monitor revisions and maintain a comprehensive record of project development, making it easy to revert to previous iterations if necessary or to assess the evolution of your design."
-      image3="https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/visualize3.png"
-      data3="Integration with Additional Tools"
+      image2="IMAGE_PATHflowchart-maker/version-control-flowchart-maker.svg" data2="Change tracking and versioning"
+      data2_desc="Keep detailed track of all modifications made to your projects. This feature allows you to monitor revisions and maintain a comprehensive record of project development, making it easy to revert to previous iterations if necessary or to assess the evolution of your design."
+      image3="IMAGE_PATHflowchart-maker/integration-with-other-tools-flowchart-maker.svg"
+      data3="Integration with additional tools"
       data3_desc="Seamlessly connect with other Cloudairy applications and third-party tools to improve your workflow. This enhances accountability and also simplifies the process of reverting to earlier design iterations if needed with smoother transitions between different software environments. "
       isShow="3"></feature-visualize-4box>
-    <!-- more indmap content  -->
   </div>
+  <!-- more indmap content  -->
   <div class="section2-padding">
-    <more-mindmap-content data-title="Who Can Benefit from Circuit Diagram Tools?"
-      data-image="https://s3.amazonaws.com/cloudairy-website-storage/mind-map/use-case.png"
-      text_base="Cloudairy’s circuit diagram tools are ideal for electrical engineers, system designers, educators, and technical teams. Simplify circuit design, optimize layouts, and ensure precision in your electrical projects. "
-      title1="Educational Institutions" title2="Research and Development" title3="Manufacturing"
-      title4="Technical Documentation" title5="Freelance Engineers"
+    <more-mindmap-content data-title="Who can benefit from circuit diagram tools?"
+      data-image="IMAGE_PATHflowchart-maker/flowchart-maker-use-case-benifits.svg"
+      text_base="Cloudairy’s circuit diagram tools are ideal for electrical engineers, system designers, educators, and technical teams. Simplify circuit design, optimize layouts, and ensure precision in your electrical projects."
+      title1="Educational institutions" title2="Research and development" title3="Manufacturing"
+      title4="Technical documentation" title5="Freelance engineers"
       title1_data="Provide students with a practical tool for learning circuit design and analysis, enhancing theoretical knowledge with hands-on experience. "
-      title2_data="Assist managers in understanding and documenting project workflows, facilitating informed decision-making. "
-      title3_data="Assist engineers in designing circuits for products, ensuring accuracy and functionality before production. "
+      title2_data="Enable researchers to prototype and test new circuit designs efficiently, accelerating innovation. "
+      title3_data="Assist engineers in designing circuits for products, ensuring accuracy and functionality before production.  "
       title4_data="Create clear and precise diagrams for manuals, patents, and other documentation purposes. "
       title5_data="Offer a versatile platform for independent professionals to design and share circuit diagrams with clients. "></more-mindmap-content>
   </div>
   <!-- benefit box section -->
-  <feature-benefit data-title="Who Can Benefit from Mind Maps?"
-    text_base=" Cloudairy’s circuit diagram tools are ideal for electrical engineers, system designers, educators, and technical teams. Simplify circuit design, optimize layouts, and ensure precision in your electrical projects."
+  <feature-benefit data-title="How you can benefit from circuit diagram tools ?"
+    text_base="Cloudairy empowers you with AI-driven tools to create precise circuit diagrams effortlessly. Collaborate in real-time, access customizable templates, and ensure error-free designs every time."
     image1="IMAGE_PATHflowchart-maker/benefit-iconone.svg" image2="IMAGE_PATHflowchart-maker/benefit-icontwo.svg"
     image3="IMAGE_PATHflowchart-maker/benefit-iconthree.svg" image4="IMAGE_PATHflowchart-maker/benefit-iconfour.svg"
-    image5="IMAGE_PATHflowchart-maker/benefit-iconfive.svg" data1="Enhanced Productivity" data2="Improved Accuracy"
-    data3="Increased Accessibility" data4="Effective Collaboration" data5="Scalability"
+    image5="IMAGE_PATHflowchart-maker/benefit-iconfive.svg" data1="Enhanced productivity" data2="Improved accuracy"
+    data3="Increased accessibility" data4="Effective collaboration" data5="Scalability"
     sub_data1="Streamline the design process with intuitive tools and real-time collaboration, reducing time-to-completion for projects."
     sub_data2="Leverage AI-powered assistance to ensure your flowcharts accurately reflect your processes."
     sub_data3="Access your projects from anywhere with cloud-based storage, facilitating remote work and flexibility.  "
@@ -2753,61 +3124,68 @@
   <!-- Frequently Asked Questions -->
   <section>
     <div class="container-fluid section-padding">
-      <h3>Frequently Ask Questions</h3>
+      <h3>Frequently ask questions</h3>
       <div class="faqs-box">
         <div class="accordion">
-          <div class="accordion-bg">
+          <div class="accordian-part">
             <div class="accordion-item">
-              <button id="accordion-button-1" aria-expanded="false">
-                <span class="accordion-title">What kinds of circuits can I create using Cloudairy's Circuit Diagram
-                  Maker?</span>
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  Can I upload my existing circuit designs onto the platform?       </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, Cloudairy allows for the import of various file types, so you can continue your work on existing
+                  designs
+                  within the
+                  platform.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  What kinds of circuits can I create using Cloudairy's circuit diagram maker? </span>
                 <span class="icon-faqs" aria-hidden="true"></span>
               </button>
               <div class="accordion-content">
                 <p>
                   You can create a variety of circuits, such as analogue, digital, and mixed-signal circuits, suitable
-                  for different applications and industries
+                  for different
+                  applications and industries
                 </p>
               </div>
             </div>
+
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Is there a cap on the number of projects I can develop?     </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                No, Cloudairy provides unlimited project creation, enabling you to manage several designs at once
-                without any limitations.
-              </p>
+
+          <div class="accordian-part">
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false">
+                <span class="accordion-title">Is there a cap on the number of projects I can develop?    </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  No, Cloudairy provides unlimited project creation, enabling you to manage several designs at once
+                  without any
+                  limitations.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Can I upload my existing circuit designs onto the platform?       </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Yes, Cloudairy allows for the import of various file types, so you can continue your work on existing
-                designs within the platform.
-              </p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false">
-              <span class="accordion-title">
-                Is there training available for new users?    </span>
-              <span class="icon-faqs" aria-hidden="true"></span>
-            </button>
-            <div class="accordion-content">
-              <p>
-                Yes, Cloudairy provides detailed tutorials and customer support to help new users effectively navigate
-                the platform.
-              </p>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false">
+                <span class="accordion-title">
+                  Is there training available for new users?   </span>
+                <span class="icon-faqs" aria-hidden="true"></span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, Cloudairy provides detailed tutorials and customer support to help new users effectively navigate
+                  the platform.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -2815,49 +3193,129 @@
     </div>
   </section>
   <!-- Ready-to-Use Mind Map Templates -->
-  <feature-mindmap-template data-title="Pre-Built Circuit Diagram Templates"
-    subtitle="Save time with Cloudairy’s ready-to-use circuit diagram templates. From basic schematics to complex layouts, our templates help you start fast and design efficiently."
-    data1="Meeting and Workshops" data2="Agile and Project Management" data3="Technical Diagram"
-    data4="Agile and Project Management" data5="Meeting and Workshops"></feature-mindmap-template>
-  <!-- section 7 -->
-  <section class="section-padding">
+  <!-- <feature-mindmap-template data-title="Ready-to-use flowchart templates"
+    subtitle="Streamline your brainstorming sessions with Cloudairy’s library of mind map templates. From project planning to creative ideation, our templates are tailored to help you organize and visualize your thoughts effortlessly."
+    data1="Meeting and workshops" data2="Agile and project management" data3="Technical diagram"
+    data4="Agile and project management" data5="Meeting and workshops"></feature-mindmap-template> -->
+
+  <section class="category-section section-padding">
     <div class="container-fluid">
-      <div class="testimonial-section">
-        <!-- <img
-            src="IMAGE_PATHmindmap/ready to tranform.svg"
-            alt="ready to tranform"
-          /> -->
-        <div class="testimotinal-content">
-          <p class="grdient-text text-center">
-            Start Designing Circuit Diagrams Today
-          </p>
-          <p class="text_xl testimotinal-subtext">
-            Design accurate and professional circuit diagrams effortlessly with Cloudairy’s intuitive tools. Try it now
-            to simplify your electrical projects and enhance precision.
-          </p>
-          <button class="btn-gradient-signUp">
-            <span style="text-transform: capitalize">Sign up free</span>
-          </button>
+      <h3 class="text-center">
+        Pre-built circuit diagram templates
+      </h3>
+      <p class="text-center subtitle-padding sub-title text_base">
+      Save time with Cloudairy’s ready-to-use circuit diagram templates. From basic schematics to complex layouts, our
+      templates help you start fast and design efficiently.
+      </p>
+      <div class="set-mindmap-swiper dekstop-mind-template">
+        <div class="swiper-container mindmap-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide" data-template="Diagramming" data-category="a79950ce-23f2-4d20-9892-a5e3b68cb366">
+              <div class="swiper-silde-box swiper-silde-box1">
+                <img src="IMAGE_PATHhome/template-swiper/diagramming.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Diagramming</div>
+            </div>
+
+            <div class="swiper-slide" data-template="AWS" data-category="1ee3c4ed-35d0-4c4b-8015-2732997de45a">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/aws.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">AWS</div>
+            </div>
+
+            <div class="swiper-slide" data-template="Azure" data-category="a7a140cf-937d-4dc3-9ec9-dfa729af34f2">
+              <div class="swiper-silde-box swiper-silde-box3">
+                <img src="IMAGE_PATHhome/template-swiper/azure.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Azure</div>
+            </div>
+
+            <div class="swiper-slide" data-template="GCP" data-category="2d9ef069-bdb9-4903-9d07-04d0abd2cfef">
+              <div class="swiper-silde-box swiper-silde-box3">
+                <img src="IMAGE_PATHhome/template-swiper/gcp.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">GCP</div>
+            </div>
+
+            <div class="swiper-slide" data-template="UML" data-category="d8dfafe2-1284-4c17-9400-ed4828e39c33">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/uml.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">UML</div>
+            </div>
+
+            <div class="swiper-slide" data-template="Flowchart" data-category="dbcca064-acc9-4687-88ee-aeb2a67ed600">
+              <div class="swiper-silde-box swiper-silde-box2">
+                <img src="IMAGE_PATHhome/template-swiper/flowchart.svg" style="width: 100%; height: 100%" />
+              </div>
+              <div class="swiper-box-title1">Flowchart</div>
+            </div>
+
+          </div>
         </div>
-        <div class="testimonal-icon icon1">
-          <img src="IMAGE_PATHmindmap/usertwo.png" alt="user1" />
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="mindmap-template mobile-mind-template">
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Diagramming"
+          data-category="a79950ce-23f2-4d20-9892-a5e3b68cb366">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/diagramming.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Diagramming</div>
         </div>
-        <div class="testimonal-icon icon2">
-          <img src="IMAGE_PATHmindmap/userthree.png" alt="user2" />
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="AWS"
+          data-category="1ee3c4ed-35d0-4c4b-8015-2732997de45a">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/aws.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">AWS</div>
         </div>
-        <div class="testimonal-icon icon3">
-          <img src="IMAGE_PATHmindmap/userone.png" alt="user3" />
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Azure"
+          data-category="a7a140cf-937d-4dc3-9ec9-dfa729af34f2">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/azure.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Azure</div>
         </div>
-        <div class="testimonal-icon icon4">
-          <img src="IMAGE_PATHmindmap/userfour.png" alt="user4" />
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="GCP"
+          data-category="2d9ef069-bdb9-4903-9d07-04d0abd2cfef">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/gcp.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">GCP</div>
+        </div>
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="UML"
+          data-category="d8dfafe2-1284-4c17-9400-ed4828e39c33">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/uml.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">UML</div>
+        </div>
+
+        <div class="mindmap-swiper-slide active-prev-next-slide" data-template="Flowchart"
+          data-category="dbcca064-acc9-4687-88ee-aeb2a67ed600">
+          <div class="swiper-silde-box swiper-silde-box2">
+            <img src="IMAGE_PATHhome/template-swiper/flowchart.svg" style="width: 100%; height: 100%" />
+          </div>
+          <div class="swiper-box-title1">Flowchart</div>
         </div>
       </div>
-    </div>
   </section>
+  <!-- section 7 -->
+  <feature-cta data-title="Start designing circuit diagrams today " data-image="IMAGE_PATHctc/flowchart-maker.png" max-width-subtext="581px"
+    subtitle="Design accurate and professional circuit diagrams effortlessly with Cloudairy’s intuitive tools."></feature-cta>
   <!-- section 9 -->
   <!-- <section class="container-fluid blog-section">
-    <h3 class="text-center">Tips and Insights for Effective Flowcharting</h3>
-    <p class="text-center more-mindmap-content sub-title text_lg">
+    <h3 class="text-center">Tips and insights for effective flowcharting</h3>
+    <p class="text-center more-mindmap-content sub-title text_base">
       Explore Cloudairy’s blog for expert advice, tutorials, and creative
       ideas on using flowcharts. Learn how to make impactful diagrams that
       simplify processes and enhance communication.
@@ -3430,61 +3888,81 @@
 
     const featureData = {
       "mind-mapping": {
-        title: "Extensive Symbol Collection",
+        title: "Extensive symbol collection",
         description:
           "Gain access to a wide range of standardized electrical symbols, such as resistors, capacitors, and transistors, to accurately depict your circuits and ensure that your designs are both professional and universally understandable. ",
         image:
-          "https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage1.png",
+          "IMAGE_PATHflowchart-maker/extensive-shape-library-flowchart-maker-one.svg",
       },
       "real-time": {
-        title: "Intuitive User Interface",
+        title: "Intuitive user interface",
         description:
-          "Navigate through a user-friendly platform designed with simplicity in mind. The interface streamlines the design process, providing intuitive tools and features that make it easy to locate, place, and connect components without any steep learning curve. ",
+          "Navigate through a user-friendly platform designed with simplicity in mind. The interface streamlines the design process, providing intuitive tools and features that make it easy to locate, place, and connect components without any steep learning curve.",
         image:
-          "https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage2.png",
+          "IMAGE_PATHflowchart-maker/user-friendly-interface-flowchart-maker.svg",
       },
       customization: {
-        title: "Drag-and-Drop Capability",
+        title: "Drag-and-drop capability",
         description:
-          "Benefit from a highly efficient drag-and-drop functionality that allows you to easily select and position components within your schematic. This feature promotes a smoother design workflow, enabling you to build and modify circuits quickly with minimal effort, allowing for faster iterations and experimentation.",
+          "Benefit from a highly efficient drag-and-drop functionality that allows you to easily select and position components within your schematic. This feature promotes a smoother design workflow, enabling you to build and modify circuits quickly with minimal effort, allowing for faster iterations and experimentation. ",
         image:
-          "https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage3.png",
+          "IMAGE_PATHflowchart-maker/drag-and-drop-functionality-flowchart-maker.svg",
       },
       integration: {
-        title: "Real-Time Team Collaboration",
+        title: "Real-time team collaboration",
         description:
-          "Collaborate with team members on the same project simultaneously, promoting effective communication and collective problem-solving. With this feature you can instantly see changes made by others, facilitating a dynamic and collaborative design environment.",
+          "Collaborate with team members on the same project simultaneously, promoting effective communication and collective problem-solving. With this feature you can instantly see changes made by others, facilitating a dynamic and collaborative design environment. ",
         image:
-          "https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage4.png",
+          "IMAGE_PATHflowchart-maker/real-time-collaboration-flowchart-maker.svg",
       },
       summarization: {
-        title: "Customizable Design Templates",
+        title: "Customizable design templates",
         description:
-          "Take advantage of a variety of pre-designed templates specific to different circuit types, or create your own custom templates to standardize the design process across multiple platforms and enhance efficiency throughout your workflow. ",
+          "Take advantage of a variety of pre-designed templates specific to different circuit types, or create your own custom templates to standardize the design process across multiple platforms and enhance efficiency throughout your workflow. ",
         image:
-          "https://s3.amazonaws.com/cloudairy-website-storage/circuit-diagram-maker/featureimage5.png",
+          "IMAGE_PATHflowchart-maker/customizable-templates-flowchart-maker.svg",
       },
     };
 
     let currentIndex = 0;
+    let autoSwitchInterval;
 
-    function updateFeatureContent() {
-      const featureKey = options[currentIndex].getAttribute("data-feature");
+    function updateFeatureContent(index = currentIndex) {
+      const featureKey = options[index].getAttribute("data-feature");
       const feature = featureData[featureKey];
       title.textContent = feature.title;
       description.textContent = feature.description;
       image.src = feature.image;
       image.alt = feature.title;
       options.forEach((opt) => opt.classList.remove("active"));
-      options[currentIndex].classList.add("active");
+      options[index].classList.add("active");
       const tabHeight = options[0].offsetHeight;
       const gap = 20;
-      const offset = currentIndex * (tabHeight + gap);
+      const offset = index * (tabHeight + gap);
       activeIndicator.style.top = `${offset}px`;
-      currentIndex = (currentIndex + 1) % options.length;
+      currentIndex = index;
     }
+
+    function startAutoSwitch() {
+      autoSwitchInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % options.length;
+        updateFeatureContent();
+      }, 2000);
+    }
+
+    function stopAutoSwitch() {
+      clearInterval(autoSwitchInterval);
+    }
+
+    options.forEach((option, index) => {
+      option.addEventListener("click", () => {
+        stopAutoSwitch();
+        updateFeatureContent(index);
+      });
+    });
+
     updateFeatureContent();
-    setInterval(updateFeatureContent, 2000);
+
   });
 </script>
 <script>
@@ -3507,13 +3985,27 @@
   });
 </script>
 <script>
-  let question = document.querySelectorAll(".question");
+  let questions = document.querySelectorAll(".question");
 
-  question.forEach((question) => {
+  questions.forEach((question) => {
+    const answer = question.nextElementSibling;
+    question.classList.remove("active");
+    answer.style.maxHeight = 0;
+  });
+
+  if (questions.length > 0) {
+    setTimeout(() => {
+      const firstQuestion = questions[0];
+      firstQuestion.classList.add("active");
+      const firstAnswer = firstQuestion.nextElementSibling;
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+    }, 300);
+  }
+  questions.forEach((question) => {
     question.addEventListener("click", (event) => {
       const active = document.querySelector(".question.active");
       if (active && active !== question) {
-        active.classList.toggle("active");
+        active.classList.remove("active");
         active.nextElementSibling.style.maxHeight = 0;
       }
       question.classList.toggle("active");
@@ -3539,7 +4031,7 @@
       const comingSoon = link.querySelector('.coming-soon');
       const isVisible = getComputedStyle(comingSoon).opacity === "1";
       if (comingSoon) {
-        event.preventDefault();
+        event.preventDefault(); // Stop the redirect
       }
     });
   });
@@ -3552,6 +4044,59 @@
       if (comingSoon) {
         event.preventDefault();
       }
+    });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.6/swiper-bundle.min.js"></script>
+<script>
+  $(document).ready(function () {
+    var $swiper = $(".mindmap-swiper");
+    var $bottomSlide = null;
+    var $bottomSlideContent = null;
+
+    var mySwiper = new Swiper(".mindmap-swiper", {
+      spaceBetween: 4,
+      pagination: '.swiper-pagination',
+      centeredSlides: true,
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        1559: {
+          slidesPerView: 4
+        },
+        1024: {
+          slidesPerView: 4
+        },
+        768: {
+          slidesPerView: 1.5
+        },
+        480: {
+          slidesPerView: 1
+        }
+      }
+    });
+
+    $(".mindmap-swiper .swiper-slide").click(function () {
+      var template = $(this).data("template");
+      var category = $(this).data("category");
+
+      localStorage.setItem("template", template);
+      localStorage.setItem("category", category);
+      window.location.href = "template";
     });
   });
 </script>
