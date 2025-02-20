@@ -32,7 +32,7 @@ class CommonComponent1 extends HTMLElement {
     const text_base = this.getAttribute("text_base") || "default text";
     const title_max_width = this.getAttribute("title_max-width") || "auto";
     const isShowSubTextLine = this.getAttribute("isShowSubTextLine") || "auto";
-    console.log("Data Title:", this.getAttribute("data-title"));
+    // console.log("Data Title:", this.getAttribute("data-title"));
 
     this.shadowRoot.innerHTML = `
       <style>
