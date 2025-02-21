@@ -1,3 +1,25 @@
+// Function to dynamically load the Amplitude script
+function loadAmplitudeScript() {
+  const amplitudeScript = document.createElement("script");
+  amplitudeScript.src =
+    "https://cdn.amplitude.com/script/bd4bb4000bd1d94c5f63eb957ea3f6d0.js";
+
+  const initScript = document.createElement("script");
+  initScript.textContent = `
+    window.amplitude.init('bd4bb4000bd1d94c5f63eb957ea3f6d0', {
+      fetchRemoteConfig: true,
+      autocapture: true
+    });
+  `;
+
+  // Append both scripts to the document's <head>
+  document.head.appendChild(amplitudeScript);
+  document.head.appendChild(initScript);
+}
+
+// Call the function to load the Amplitude script
+loadAmplitudeScript();
+
 let lastScrollTop = 0;
 const header = document.querySelector(".header-bg");
 const scrollThreshold = 100;
